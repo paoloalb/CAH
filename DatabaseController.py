@@ -32,13 +32,13 @@ class CardDealer:
 
     def pick_random_black_card(self):  # Returns text and pick value of a random black card
     	myquery = { "pick": { "$gt": 0 } }
-    	myresults = mycol.find(myquery)
+    	myresults = self.mycol.find(myquery)
     	result_card = myresults[random.randint(0, myresults.count()-1)] # Select random document
     	return result_card["text"], result_card["pick"]
 
     def pick_random_white_card(self):  # Returns text of a random white card
     	myquery = { "pick": 0 }
-    	myresults = mycol.find(myquery)
+    	myresults = self.mycol.find(myquery)
     	result_card = myresults[random.randint(0, myresults.count()-1)] # Select random document
     	return result_card["text"]
     	# Aggiungere in futuro il parametro utente, in modo da escludere carte già pescate.

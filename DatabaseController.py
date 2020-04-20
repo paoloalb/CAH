@@ -19,14 +19,11 @@ class Room:
     def add_new_user(self, user_name):
     	user_doc = {"name": user_name, "points": 0, "cards_in_hand": [], "used_white_cards": []}
     	insert_user = self.users_collection.insert_one(user_doc)
-    	self.room_document["users_list"].append(insert_user.inserted_id)
-    	self.room_collection.update_one({"_id" : self.room_id}, { "$set": self.room_document})
+    	self.room_collection.update_one({"_id" : self.room_id}, { "$push": { "users_list": insert_user.inserted_id} })
     	return insert_user.inserted_id
 
     def user_wins(self, winning_user_id):
-    	user_doc = self.users_collection.find_one({"_id" : winning_user_id})
-    	user_doc["points"] += 1
-    	self.users_collection.update_one({"_id" : winning_user_id}, { "$set": user_doc})
+    	self.users_collection.update_one({"_id" : winning_user_id}, { "$inc": { "points": 1 } })
 
 
     def add_new_cards(self, input_card_list):  # Add new documents from a list

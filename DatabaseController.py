@@ -9,11 +9,18 @@ class Room:
     mydb = myclient["cah"]
     cards_collection = mydb["cards"]
     room_collection = mydb["rooms"]
+    users_collection = mydb["users"]
 
-    def __init__(self, room_name, user_list):
-    	self.room_info = {"room_name": room_name, "used_black_cards": [], "user_list": user_list}
-    	room_document = self.room_collection.insert_one(self.room_info)
-    	self.room_id = room_document.inserted_id
+    def __init__(self, room_name):
+    	self.room_document = {"room_name": room_name, "used_black_cards": [], "users_list": []}
+    	insert_room = self.room_collection.insert_one(self.room_document)
+    	self.room_id = insert_room.inserted_id
+
+    def add_new_user(self, user_name):
+    	user_doc = {"name": user_name, "points": 0, "cards_in_hand": [], "used_white_cards": []}
+    	self.room_collection.update_one({"_id" : self.room_id}, { "$set": self.room_document})
+    	insert_user = self.users_collection.insert_one(user_doc)
+    	self.room_document["users_list"].append(insert_user.inserted_id)
 
     def add_new_cards(self, input_card_list):  # Add new documents from a list
         with open(input_card_list, 'r') as f:
@@ -36,11 +43,11 @@ class Room:
         self.cards_collection.insert_one(doc)
 
     def pick_random_black_card(self):  # Returns text and pick value of a random black card
-    	myquery = { "pick": { "$gt": 0 }, "_id": { "$nin": self.room_info["used_black_cards"]} }  # Query to select unused black cards
+    	myquery = { "pick": { "$gt": 0 }, "_id": { "$nin": self.room_document["used_black_cards"]} }  # Query to select unused black cards
     	myresults = self.cards_collection.find(myquery)
     	result_card = myresults[random.randint(0, myresults.count()-1)] # Select random document
-    	self.room_info["used_black_cards"].append(result_card["_id"]) # Add card to already used list
-    	self.room_collection.update_one({"_id" : self.room_id}, { "$set": self.room_info})
+    	self.room_document["used_black_cards"].append(result_card["_id"]) # Add card to already used list
+    	self.room_collection.update_one({"_id" : self.room_id}, { "$set": self.room_document})
     	return result_card["text"], result_card["pick"]
 
     def pick_random_white_card(self):  # Returns text of a random white card
@@ -48,4 +55,5 @@ class Room:
     	myresults = self.cards_collection.find(myquery)
     	result_card = myresults[random.randint(0, myresults.count()-1)] # Select random document
     	return result_card["text"]
-    	# Aggiungere in futuro il parametro utente, in modo da escludere carte già pescate.
+    	# Aggiungere in futuro il parametro utente che sta pescando (ed escludere carte che ha già pescato)
+	

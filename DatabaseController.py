@@ -50,14 +50,15 @@ class Room:
     	myquery = { "pick": { "$gt": 0 }, "_id": { "$nin": self.room_document["used_black_cards"]} }  # Query to select unused black cards
     	myresults = self.cards_collection.find(myquery)
     	result_card = myresults[random.randint(0, myresults.count()-1)] # Select random document
-    	self.room_document["used_black_cards"].append(result_card["_id"]) # Add card to already used list
-    	self.room_collection.update_one({"_id" : self.room_id}, { "$set": self.room_document})
+    	# Add card to already used list:
+    	self.room_collection.update_one({"_id" : self.room_id}, { "$push": { "used_black_cards": result_card["_id"]} })
     	return result_card["text"], result_card["pick"]
 
-    def pick_random_white_card(self):  # Returns text of a random white card
+    def pick_random_white_card(self, user_id):  # Takes the user who is picking the card as an argument
     	myquery = { "pick": 0 }
     	myresults = self.cards_collection.find(myquery)
     	result_card = myresults[random.randint(0, myresults.count()-1)] # Select random document
-    	return result_card["text"]
-    	# Aggiungere in futuro il parametro utente che sta pescando (ed escludere carte che ha già pescato)
-	
+    	# Updates the list of cards already used by this user:
+    	self.users_collection.update_one({"_id" : user_id}, { "$push": { "used_white_cards": result_card["_id"]} })
+    	self.users_collection.update_one({"_id" : user_id}, { "$push": { "cards_in_hand": result_card["_id"]} })
+    	return result_card["text"]	

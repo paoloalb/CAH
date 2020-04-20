@@ -1,6 +1,7 @@
 import pymongo
 import json
 import random
+from bson.objectid import ObjectId
 
 class Room:
 
@@ -35,7 +36,7 @@ class Room:
         self.cards_collection.insert_one(doc)
 
     def pick_random_black_card(self):  # Returns text and pick value of a random black card
-    	myquery = { "pick": { "$gt": 0 } }
+    	myquery = { "pick": { "$gt": 0 }, "_id": { "$nin": self.room_info["used_black_cards"]} }  # Query to select unused black cards
     	myresults = self.cards_collection.find(myquery)
     	result_card = myresults[random.randint(0, myresults.count()-1)] # Select random document
     	self.room_info["used_black_cards"].append(result_card["_id"]) # Add card to already used list

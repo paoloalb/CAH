@@ -55,9 +55,17 @@ class Room:
         self.room_collection.update_one({"_id" : self.room_id}, { "$push": { "used_black_cards": result_card["_id"]} })
         return result_card["text"], result_card["pick"]
 
-    def pick_n_random_white_cards(self, n, user_id):  # Takes the user who is picking the card as an argument
-        myquery = { "pick": 0 }
-        myresults = list(self.cards_collection.find(myquery)) 
+    def pick_n_random_white_cards(self, n, user_id):  # Takes the user who is picking the card (as an ObjectID)
+        my_user = self.users_collection.find_one({"_id": user_id})
+        if my_user is None:  # Make sure that the user exists
+        	raise Exception('The provided user ID was not found in the database')
+
+        list_of_used_cards = self.users_collection.find_one({"_id": user_id})["used_white_cards"]  # Find used white cards
+        myquery = { "pick": 0, "_id": { "$nin": list_of_used_cards} }
+        myresults = list(self.cards_collection.find(myquery))
+        if len(myresults) < n:
+        	raise Exception('Not enough new cards for this user')
+
         result_cards = random.sample(myresults, n)
         for rc in result_cards:  # Updates the list of cards already used by this person:
             self.users_collection.update_one({"_id" : user_id}, { "$push": { "used_white_cards": rc["_id"]} })

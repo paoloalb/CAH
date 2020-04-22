@@ -5,7 +5,8 @@ from bson.objectid import ObjectId
 
 
 class Room:
-    myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+    connection_string = "mongodb://localhost:27017/"
+    myclient = pymongo.MongoClient(connection_string)
     mydb = myclient["cah"]
     cards_collection = mydb["cards"]
     rooms_collection = mydb["rooms"]
@@ -80,11 +81,10 @@ class Room:
             raise Exception('The provided user ID was not found in the room')
         for card in list_of_card_ids:
             my_card = self.users_collection.find_one({"_id": ObjectId(user_id), "cards_in_hand": ObjectId(card)})
-            if my_card is None:  # Make sure that the user exists
+            if my_card is None:  # Make sure that the card is in the hand of the user
                 raise Exception('The provided card IDs were not found in the user\'s hand')
 
         for card in list_of_card_ids:
             self.rooms_collection.update_one({"_id": self.room_id}, {"$push": {"cards_on_table": ObjectId(card)}})
             self.users_collection.update_one({"_id": ObjectId(user_id)}, {"$pull": {"cards_in_hand": ObjectId(card)}})
             self.users_collection.update_one({"_id": ObjectId(user_id)}, {"$push": {"cards_on_table": ObjectId(card)}})
-

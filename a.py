@@ -32,17 +32,17 @@ db = {
 def user_rooms(user_cookie):
     # user's rooms
     return db.room.find(
-        {"users": {"<cookie>": {"$exists": True}}},
+        {"users": {user_cookie: {"$exists": True}}},
         {"_id": 1}
     )
 
 
-def user_cards(room_id, user_cokie):
+def user_cards(room_id, user_cookie):
     # room's user's cards
     cards = db.room.find(
         {"_id": room_id},
         {"users": 1}
-    )["users"][user_cokie]["cards"]
+    )["users"][user_cookie]["cards"]
     return db.room.find(
         {"_id": {"$in": cards}},
     )
@@ -71,6 +71,9 @@ def user_points(room_id):
     ]
 
 # ACTIONS
+
+def create_room():
+    pass
 
 
 def use_card(room_id, user_cookie, card_id):

@@ -235,6 +235,106 @@ SyntaxError: invalid syntax
  * Serving Flask app "server.py" (lazy loading)
  * Environment: development
  * Debug mode: on
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 236-144-815
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [24/Apr/2020 00:14:23] "[37mGET / HTTP/1.1[0m" 200 -
+127.0.0.1 - - [24/Apr/2020 00:14:23] "[37mGET / HTTP/1.1[0m" 200 -
+127.0.0.1 - - [24/Apr/2020 00:14:32] "[33mGET /PlayerPage HTTP/1.1[0m" 404 -
+127.0.0.1 - - [24/Apr/2020 00:14:33] "[33mGET /PlayerPage HTTP/1.1[0m" 404 -
+127.0.0.1 - - [24/Apr/2020 00:14:35] "[37mGET / HTTP/1.1[0m" 200 -
+ * Serving Flask app "server.py" (lazy loading)
+ * Environment: development
+ * Debug mode: on
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 236-144-815
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [24/Apr/2020 00:16:27] "[37mGET / HTTP/1.1[0m" 200 -
+127.0.0.1 - - [24/Apr/2020 00:16:27] "[37mGET / HTTP/1.1[0m" 200 -
+ * Detected change in 'C:\\Users\\mathe\\PycharmProjects\\CAH\\flask\\website.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 236-144-815
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Serving Flask app "server.py" (lazy loading)
+ * Environment: development
+ * Debug mode: on
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 236-144-815
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [24/Apr/2020 00:18:47] "[37mGET / HTTP/1.1[0m" 200 -
+127.0.0.1 - - [24/Apr/2020 00:18:47] "[37mGET / HTTP/1.1[0m" 200 -
+127.0.0.1 - - [24/Apr/2020 00:18:52] "[37mGET / HTTP/1.1[0m" 200 -
+127.0.0.1 - - [24/Apr/2020 00:18:54] "[37mGET / HTTP/1.1[0m" 200 -
+127.0.0.1 - - [24/Apr/2020 00:18:55] "[37mGET / HTTP/1.1[0m" 200 -
+127.0.0.1 - - [24/Apr/2020 00:18:55] "[37mGET / HTTP/1.1[0m" 200 -
+ * Detected change in 'C:\\Users\\mathe\\PycharmProjects\\CAH\\flask\\website.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 236-144-815
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Detected change in 'C:\\Users\\mathe\\PycharmProjects\\CAH\\flask\\website.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 236-144-815
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [24/Apr/2020 00:23:44] "[35m[1mGET / HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "C:\Users\mathe\PycharmProjects\CAH\venv\Lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\mathe\PycharmProjects\CAH\flask\server.py", line 3, in <module>
+    from website import *
+File "C:\Users\mathe\PycharmProjects\CAH\flask\website.py", line 38
+    def UserPage
+               ^
+SyntaxError: invalid syntax
+127.0.0.1 - - [24/Apr/2020 00:23:44] "[37mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+127.0.0.1 - - [24/Apr/2020 00:23:44] "[37mGET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+127.0.0.1 - - [24/Apr/2020 00:23:44] "[37mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+127.0.0.1 - - [24/Apr/2020 00:23:45] "[37mGET /?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+127.0.0.1 - - [24/Apr/2020 00:23:45] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+127.0.0.1 - - [24/Apr/2020 00:23:45] "[37mGET / HTTP/1.1[0m" 200 -
+127.0.0.1 - - [24/Apr/2020 00:23:45] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+ * Serving Flask app "server.py" (lazy loading)
+ * Environment: development
+ * Debug mode: on
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 236-144-815
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [24/Apr/2020 00:24:06] "[37mGET / HTTP/1.1[0m" 200 -
+127.0.0.1 - - [24/Apr/2020 00:24:07] "[37mGET / HTTP/1.1[0m" 200 -
+127.0.0.1 - - [24/Apr/2020 00:24:14] "[33mGET /PlayerPage HTTP/1.1[0m" 404 -
+127.0.0.1 - - [24/Apr/2020 00:24:14] "[33mGET /PlayerPage HTTP/1.1[0m" 404 -
+127.0.0.1 - - [24/Apr/2020 00:24:30] "[37mGET /UserPage HTTP/1.1[0m" 200 -
+127.0.0.1 - - [24/Apr/2020 00:24:30] "[37mGET /UserPage HTTP/1.1[0m" 200 -
+ * Serving Flask app "server.py" (lazy loading)
+ * Environment: development
+ * Debug mode: on
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 236-144-815
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [24/Apr/2020 00:37:44] "[37mGET / HTTP/1.1[0m" 200 -
+127.0.0.1 - - [24/Apr/2020 00:37:45] "[37mGET / HTTP/1.1[0m" 200 -
+127.0.0.1 - - [24/Apr/2020 00:38:05] "[33mGET /PlayerPage HTTP/1.1[0m" 404 -
+127.0.0.1 - - [24/Apr/2020 00:38:06] "[37mGET /UserPage HTTP/1.1[0m" 200 -
+127.0.0.1 - - [24/Apr/2020 00:38:06] "[37mGET /UserPage HTTP/1.1[0m" 200 -
+ * Serving Flask app "server.py" (lazy loading)
+ * Environment: development
+ * Debug mode: on
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 236-144-815
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [24/Apr/2020 00:40:32] "[37mGET /UserPage HTTP/1.1[0m" 200 -
+127.0.0.1 - - [24/Apr/2020 00:40:33] "[37mGET /UserPage HTTP/1.1[0m" 200 -
+ * Serving Flask app "server.py" (lazy loading)
+ * Environment: development
+ * Debug mode: on
  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
  * Restarting with stat
  * Debugger is active!
@@ -245,3 +345,43 @@ SyntaxError: invalid syntax
 127.0.0.1 - - [24/Apr/2020 00:23:30] "[37mGET / HTTP/1.1[0m" 200 -
 127.0.0.1 - - [24/Apr/2020 00:41:05] "[37mGET / HTTP/1.1[0m" 200 -
 127.0.0.1 - - [24/Apr/2020 00:41:05] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+ * Serving Flask app "server.py" (lazy loading)
+ * Environment: development
+ * Debug mode: on
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 236-144-815
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Detected change in 'C:\\Users\\mathe\\PycharmProjects\\CAH\\flask\\website.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 236-144-815
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Serving Flask app "server.py" (lazy loading)
+ * Environment: development
+ * Debug mode: on
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 236-144-815
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+127.0.0.1 - - [24/Apr/2020 00:45:20] "[37mGET / HTTP/1.1[0m" 200 -
+127.0.0.1 - - [24/Apr/2020 00:45:21] "[37mGET / HTTP/1.1[0m" 200 -
+127.0.0.1 - - [24/Apr/2020 00:45:26] "[33mGET /PlayerPage HTTP/1.1[0m" 404 -
+127.0.0.1 - - [24/Apr/2020 00:45:32] "[37mGET /UserPage HTTP/1.1[0m" 200 -
+127.0.0.1 - - [24/Apr/2020 00:45:32] "[37mGET /UserPage HTTP/1.1[0m" 200 -
+127.0.0.1 - - [24/Apr/2020 00:53:08] "[37mGET /UserPage HTTP/1.1[0m" 200 -
+127.0.0.1 - - [24/Apr/2020 00:53:08] "[37mGET /UserPage HTTP/1.1[0m" 200 -
+127.0.0.1 - - [24/Apr/2020 00:53:08] "[37mGET /UserPage HTTP/1.1[0m" 200 -
+127.0.0.1 - - [24/Apr/2020 00:53:09] "[37mGET /UserPage HTTP/1.1[0m" 200 -
+127.0.0.1 - - [24/Apr/2020 00:54:25] "[37mGET /UserPage HTTP/1.1[0m" 200 -
+127.0.0.1 - - [24/Apr/2020 00:54:25] "[37mGET /UserPage HTTP/1.1[0m" 200 -
+127.0.0.1 - - [24/Apr/2020 00:54:26] "[37mGET /UserPage HTTP/1.1[0m" 200 -
+127.0.0.1 - - [24/Apr/2020 00:54:27] "[37mGET /UserPage HTTP/1.1[0m" 200 -
+127.0.0.1 - - [24/Apr/2020 00:54:27] "[37mGET /UserPage HTTP/1.1[0m" 200 -
+127.0.0.1 - - [24/Apr/2020 00:54:27] "[37mGET /UserPage HTTP/1.1[0m" 200 -
+127.0.0.1 - - [24/Apr/2020 00:54:27] "[37mGET /UserPage HTTP/1.1[0m" 200 -
+127.0.0.1 - - [24/Apr/2020 00:54:28] "[37mGET /UserPage HTTP/1.1[0m" 200 -
+127.0.0.1 - - [24/Apr/2020 00:54:28] "[37mGET /UserPage HTTP/1.1[0m" 200 -
+127.0.0.1 - - [24/Apr/2020 00:54:28] "[37mGET /UserPage HTTP/1.1[0m" 200 -
+127.0.0.1 - - [24/Apr/2020 00:54:28] "[37mGET /UserPage HTTP/1.1[0m" 200 -
+127.0.0.1 - - [24/Apr/2020 00:54:28] "[37mGET /UserPage HTTP/1.1[0m" 200 -

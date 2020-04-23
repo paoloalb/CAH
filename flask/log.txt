@@ -178,3 +178,11 @@ NameError: name 'api' is not defined
  * Restarting with stat
  * Debugger is active!
  * Debugger PIN: 152-176-477
+ * Serving Flask app "server.py" (lazy loading)
+ * Environment: development
+ * Debug mode: on
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 152-176-477
+127.0.0.1 - - [23/Apr/2020 22:59:46] "[37mGET / HTTP/1.1[0m" 200 -

@@ -7,15 +7,16 @@ website = Blueprint('website', __name__,)
 def root():
     return render_template('index.html',
     rooms=[
-        {"name": "room1"},
-        {"name": "room2"},
-        {"name": "room3"},
-        {"name": "room4"},
-        {"name": "room5"},
-        {"name": "room6"},
+        {"_id": 1, "name": "room1"},
+        {"_id": 2, "name": "room2"},
+        {"_id": 3, "name": "room3"},
+        {"_id": 4, "name": "room4"},
+        {"_id": 5, "name": "room5"},
+        {"_id": 6, "name": "room6"},
     ],
     player_rooms=[
         {
+            "_id": 1,
             "name": "room1",
             "players": [
                 {"name": "player1"},
@@ -24,6 +25,7 @@ def root():
             ],
         },
         {
+            "_id": 2, 
             "name": "room2",
             "players": [
                 {"name": "player4"},

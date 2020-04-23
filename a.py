@@ -3,8 +3,12 @@ db = {
     "room": [
         {
             "_id": 0,
+            "room_name": "",
             "black": "<cards._id>",
             "caesar": "<user._id>",
+            "users": [
+                "<user._id>",
+            ],
             "used_cards": [
                 "<cards._id>",
             ],
@@ -14,7 +18,7 @@ db = {
             ],
             "password": None,
         },
-    ],
+    ]
 
     "users": [
         {
@@ -22,40 +26,13 @@ db = {
             "cookie": "",
             "name": "",
             "room": "<room._id>",
-            "cards": [
+            "cards_on_hand": [
+                "<cards._id>",
+            ],
+            "cards_on_table":[
                 "<cards._id>",
             ],
             "points": 0,
-        },
-    ],
-
-    "cards": [
-        {
-            "_id": 0,
-            "text": "",
-            "pick": 1,
-        },
-    ],
-}
-# -------------------------------------------------------------
-db = {
-    "room": [
-        {
-            "_id": 0,
-            "users": {
-                "cookie": {
-                    "name": "",
-                    "is_admin": False,
-                    "cards": [
-                        "<cards._id>",
-                    ],
-                    "points": 0,
-                },
-            },
-            "black": "<cards._id>",
-            "caesar": "<user._id>",
-            "round": 0,
-            "password": None,
         },
     ],
 

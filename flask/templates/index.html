@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>CAH</title>
+    <title>CCU</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 </head>
@@ -13,7 +13,7 @@
     <div class="row">
         <div class="col-sm">
             <div class="row">
-                <h1> Rooms <h1>
+                <h1> Stanze <h1>
             </div>
             <div class="row">
                 <ul class="list-group">
@@ -25,7 +25,7 @@
                                     {{ room.name }}
                                 </div>
                                 <div class="col-sm">
-                                    <a href="#" class="btn btn-primary">Connect</a>
+                                    <a href="#" class="btn btn-primary">Unisciti</a>
                                 </div>
                             </div>
                         </div>
@@ -38,7 +38,7 @@
         <div class="col-sm">
             <div class="col-sm">
                 <div class="row">
-                    <h1> Your rooms <h1>
+                    <h1> Le tue stanze <h1>
                 </div>
             </div>
             <div class="row">
@@ -49,12 +49,12 @@
                     </div>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item text-white bg-dark">
-                            <h5>Players:</h5>
+                            <h5>Giocatori:</h5>
                         </li>
                         {% for player in room.players %}
                         <li class="list-group-item text-white bg-dark">{{ player.name }}</li>
                         {% endfor %}
-                        <a href="#" class="btn btn-primary">Connect</a>
+                        <a href="#" class="btn btn-primary">Unisciti</a>
                     </ul>
                 </div>
                 {% endfor %}

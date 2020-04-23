@@ -7,4 +7,4 @@ source "./venv/Scripts/activate" || source "./venv/bin/activate"
 # start flask server
 ls
 cd "$here/flask"
-FLASK_APP="server.py" python -m flask run 2>&1 | tee -a "./log.txt"
+FLASK_ENV=development FLASK_APP="server.py" python -m flask run 2>&1 | tee -a "./log.txt"

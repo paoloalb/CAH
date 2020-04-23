@@ -1,25 +1,26 @@
-<!doctype html>
+{% extends "base.html" %}
 
-<html lang="en">
+{% block title %}
+hi
+{% endblock %}
 
-<head>
-    <meta charset="utf-8">
-    <title>CCU</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-</head>
+{% block head %}
+{{ super() }}
+{% endblock %}
 
-<body class="container text-white bg-dark">
+{% block content %}
+
+<div class="container bg-dark">
     <div class="row">
         <div class="col-sm">
-            <div class="row">
+            <div class="row text-white">
                 <h1> Stanze <h1>
             </div>
             <div class="row">
                 <ul class="list-group">
                     {% for room in rooms %}
-                    <li class="list-group-item text-white bg-dark">
-                        <div class="container text-white bg-dark">
+                    <li class="list-group-item">
+                        <div class="container">
                             <div class="row">
                                 <div class="col-sm">
                                     {{ room.name }}
@@ -37,22 +38,22 @@
         </div>
         <div class="col-sm">
             <div class="col-sm">
-                <div class="row">
+                <div class="row text-white">
                     <h1> Le tue stanze <h1>
                 </div>
             </div>
             <div class="row">
                 {% for room in player_rooms %}
-                <div class="card text-white bg-dark mb-3">
+                <div class="card mb-3">
                     <div class="card-header">
                         <h3>{{ room.name }}</h3>
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item text-white bg-dark">
+                        <li class="list-group-item">
                             <h5>Giocatori:</h5>
                         </li>
                         {% for player in room.players %}
-                        <li class="list-group-item text-white bg-dark">{{ player.name }}</li>
+                        <li class="list-group-item">{{ player.name }}</li>
                         {% endfor %}
                         <a href="#" class="btn btn-primary">Unisciti</a>
                     </ul>
@@ -61,8 +62,6 @@
             </div>
         </div>
     </div>
+</div>
 
-
-</body>
-
-</html>
+{% endblock %}

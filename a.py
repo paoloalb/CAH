@@ -1,29 +1,71 @@
 # DB SCHEMA
-
 db = {
-    "room": {
-        "_id": 0,
-        "users": {
-            "cookie": {
-                "name": "",
-                "is_admin": False,
-                "cards": [
-                    "<cards._id>",
-                ],
-                "points": 0,
-            },
-        },
-        "round": {
-            "n": 0,
+    "room": [
+        {
+            "_id": 0,
             "black": "<cards._id>",
+            "caesar": "<user._id>",
+            "used_cards": [
+                "<cards._id>",
+            ],
+            "round": 0,
+            "admins": [
+                "<user._id>",
+            ],
+            "password": None,
         },
-        "password": None,
-    },
-    "cards": {
-        "_id": 0,
-        "text": "",
-        "pick": 1,
-    }
+    ],
+
+    "users": [
+        {
+            "_id": 0,
+            "cookie": "",
+            "name": "",
+            "room": "<room._id>",
+            "cards": [
+                "<cards._id>",
+            ],
+            "points": 0,
+        },
+    ],
+
+    "cards": [
+        {
+            "_id": 0,
+            "text": "",
+            "pick": 1,
+        },
+    ],
+}
+# -------------------------------------------------------------
+db = {
+    "room": [
+        {
+            "_id": 0,
+            "users": {
+                "cookie": {
+                    "name": "",
+                    "is_admin": False,
+                    "cards": [
+                        "<cards._id>",
+                    ],
+                    "points": 0,
+                },
+            },
+            "black": "<cards._id>",
+            "caesar": "<user._id>",
+            "round": 0,
+            "password": None,
+        },
+    ],
+
+    "cards": [
+        {
+            "_id": 0,
+            "text": "",
+            "pick": 1,
+        },
+    ],
 }
 
 # INFO REQUESTS
@@ -71,6 +113,7 @@ def user_points(room_id):
     ]
 
 # ACTIONS
+
 
 def create_room():
     pass

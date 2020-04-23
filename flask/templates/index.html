@@ -9,24 +9,55 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 </head>
 
-<body class="container">
+<body class="container text-white bg-dark">
     <div class="row">
         <div class="col-sm">
-            hi
+            <div class="row">
+                <h1> Rooms <h1>
+            </div>
+            <div class="row">
+                <ul class="list-group">
+                    {% for room in rooms %}
+                    <li class="list-group-item text-white bg-dark">
+                        <div class="container text-white bg-dark">
+                            <div class="row">
+                                <div class="col-sm">
+                                    {{ room.name }}
+                                </div>
+                                <div class="col-sm">
+                                    <a href="#" class="btn btn-primary">Connect</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
         </div>
         <div class="col-sm">
-            {% for room in rooms %}
-                <div class=flash>{{ message }}</div>
-            {% endfor %}
-            <div class="card">
-                <div class="card-header">
-                    Featured
+            <div class="col-sm">
+                <div class="row">
+                    <h1> Your rooms <h1>
                 </div>
-                <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+            <div class="row">
+                {% for room in player_rooms %}
+                <div class="card text-white bg-dark mb-3">
+                    <div class="card-header">
+                        <h3>{{ room.name }}</h3>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item text-white bg-dark">
+                            <h5>Players:</h5>
+                        </li>
+                        {% for player in room.players %}
+                        <li class="list-group-item text-white bg-dark">{{ player.name }}</li>
+                        {% endfor %}
+                        <a href="#" class="btn btn-primary">Connect</a>
+                    </ul>
                 </div>
+                {% endfor %}
             </div>
         </div>
     </div>

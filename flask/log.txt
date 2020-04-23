@@ -186,3 +186,49 @@ NameError: name 'api' is not defined
  * Debugger is active!
  * Debugger PIN: 152-176-477
 127.0.0.1 - - [23/Apr/2020 22:59:46] "[37mGET / HTTP/1.1[0m" 200 -
+ * Serving Flask app "server.py" (lazy loading)
+ * Environment: development
+ * Debug mode: on
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 152-176-477
+127.0.0.1 - - [23/Apr/2020 23:32:07] "[37mGET / HTTP/1.1[0m" 200 -
+127.0.0.1 - - [23/Apr/2020 23:34:45] "[37mGET / HTTP/1.1[0m" 200 -
+127.0.0.1 - - [23/Apr/2020 23:38:17] "[37mGET / HTTP/1.1[0m" 200 -
+127.0.0.1 - - [23/Apr/2020 23:38:40] "[37mGET / HTTP/1.1[0m" 200 -
+127.0.0.1 - - [23/Apr/2020 23:39:16] "[37mGET / HTTP/1.1[0m" 200 -
+127.0.0.1 - - [23/Apr/2020 23:39:55] "[37mGET / HTTP/1.1[0m" 200 -
+127.0.0.1 - - [23/Apr/2020 23:40:31] "[37mGET / HTTP/1.1[0m" 200 -
+127.0.0.1 - - [23/Apr/2020 23:41:09] "[37mGET / HTTP/1.1[0m" 200 -
+127.0.0.1 - - [23/Apr/2020 23:41:39] "[37mGET / HTTP/1.1[0m" 200 -
+127.0.0.1 - - [23/Apr/2020 23:41:46] "[37mGET / HTTP/1.1[0m" 200 -
+ * Detected change in '/home/this/matteo/stuff/projects/CAH/flask/website.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 152-176-477
+ * Detected change in '/home/this/matteo/stuff/projects/CAH/flask/website.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 152-176-477
+ * Detected change in '/home/this/matteo/stuff/projects/CAH/flask/website.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 152-176-477
+127.0.0.1 - - [23/Apr/2020 23:53:37] "[35m[1mGET / HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/home/this/matteo/stuff/projects/CAH/venv/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/this/matteo/stuff/projects/CAH/flask/server.py", line 3, in <module>
+    from website import *
+File "/home/this/matteo/stuff/projects/CAH/flask/website.py", line 11
+    {"name": "room2"}
+    ^
+SyntaxError: invalid syntax
+127.0.0.1 - - [23/Apr/2020 23:53:37] "[37mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+127.0.0.1 - - [23/Apr/2020 23:53:37] "[37mGET /?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+127.0.0.1 - - [23/Apr/2020 23:53:37] "[37mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+127.0.0.1 - - [23/Apr/2020 23:53:37] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+127.0.0.1 - - [23/Apr/2020 23:53:37] "[37mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+127.0.0.1 - - [23/Apr/2020 23:53:56] "[37mGET / HTTP/1.1[0m" 200 -
+127.0.0.1 - - [23/Apr/2020 23:58:11] "[37mGET / HTTP/1.1[0m" 200 -

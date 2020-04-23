@@ -96,7 +96,7 @@ def current_black(room_id):
         {"_id": room_id},
         {"round": 1}
     )["round"]["black"]
-    return = db.room.find(
+    return db.room.find(
         {"_id": black},
     )
 

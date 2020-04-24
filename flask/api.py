@@ -51,7 +51,6 @@ def create_state(room_id, username):
         # username = "Mr. X"
         username = "anon"
 
-
     room = rooms_collection.find_one({"_id": ObjectId(room_id)})
 
     if room["n_of_users"] >= room["max_n_of_players"]:  # Check if room is full
@@ -61,7 +60,6 @@ def create_state(room_id, username):
 
     if finduser is not None:
         abort(403)
-
 
     user = users_collection.insert_one(
         {
@@ -83,8 +81,9 @@ def create_state(room_id, username):
                     "users": user.inserted_id,
                     "admins": user.inserted_id,
                 },
-
-                 "$inc": {"n_of_users": 1}
+                "$inc": {
+                    "n_of_users": 1,
+                },
             }
         )
     else:
@@ -96,8 +95,9 @@ def create_state(room_id, username):
                 "$push": {
                     "users": user.inserted_id,
                 },
-
-                 "$inc": {"n_of_users": 1}
+                "$inc": {
+                    "n_of_users": 1,
+                },
             }
         )
     return make_response("OK", 200)

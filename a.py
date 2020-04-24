@@ -6,7 +6,6 @@ db = {
             "room_name": "",
             "black": "<cards._id>", # ID della carta che si trova sul tavolo
             "caesar": "<user._id>",
-            "n_of_users": 0,
             "users": [
                 "<user._id>",
             ],

@@ -14,7 +14,7 @@ class DatabaseController():
 
     def create_room(self, room_name, max_players):
         room_document = {"room_name": room_name, "black": None, "caesar": None,
-        "n_of_users": 0, "users": [], "used_cards": [], "round": 0, "admins": [],
+        "users": [], "used_cards": [], "round": 0, "admins": [],
         "password": None, "max_n_of_players": max_players
         }
         insert_room = self.rooms_collection.insert_one(room_document)
@@ -23,7 +23,8 @@ class DatabaseController():
 
     def add_new_user(self, username, cookie, room_id):
         my_room = self.rooms_collection.find_one({"_id": ObjectId(room_id)})
-        if my_room["n_of_users"] >= my_room["max_n_of_players"]:  # Check if room is full
+
+        if len(my_room["users"]) >= my_room["max_n_of_players"]:  # Check if room is full
             raise Exception("The room is full! User was not added")
 
         res = self.users_collection.find_one({"cookie": cookie, "room": ObjectId(room_id)})
@@ -33,7 +34,7 @@ class DatabaseController():
         user_doc = {"cookie": cookie, "name": username, "admin": False, "room": ObjectId(room_id),
         "cards_in_hand": [], "cards_on_table": [], "points": 0}
         insert_user = self.users_collection.insert_one(user_doc)
-        self.rooms_collection.update_one({"_id": ObjectId(room_id)}, {"$push": {"users": insert_user.inserted_id}, "$inc": {"n_of_users": 1}})
+        self.rooms_collection.update_one({"_id": ObjectId(room_id)}, {"$push": {"users": insert_user.inserted_id}})
         return str(insert_user.inserted_id)  # Returns the ID of the user as a string
 
     def find_rooms_from_cookie(self, user_cookie):  # given the cookie, returns all about his rooms
@@ -42,14 +43,13 @@ class DatabaseController():
         return found_rooms
 
     def basic_room_info(self):  # basic info about ALL rooms in the database
-        all_rooms = list(self.rooms_collection.find({}, {"room_name": 1, "password": 1, "n_of_users": 1,
+        all_rooms = list(self.rooms_collection.find({}, {"room_name": 1, "password": 1,
         "max_n_of_players": 1, "round": 1}))
         return all_rooms  # Returns list of basic info
 
     def user_info(self, cookie, room_id):  # given cookie and room id, return all info about user
         my_user = self.users_collection.find_one({"cookie": {"$eq": cookie}, "room": ObjectId(room_id)})
         return my_user
-        # Funziona, MA ricordarsi di impedire ad una persona con un solo cookie di creare più utenti nella stessa stanza!!
 
     def user_wins(self, winning_user_id):  # Cambiare! dare vittoria in base al card id
         my_user = self.users_collection.find_one({"_id": ObjectId(winning_user_id)})

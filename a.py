@@ -4,7 +4,7 @@ db = {
         {
             "_id": 0,
             "room_name": "",
-            "black": "<cards._id>",
+            "black": "<cards._id>", # ID della carta che si trova sul tavolo
             "caesar": "<user._id>",
             "users": [
                 "<user._id>",
@@ -47,17 +47,6 @@ db = {
 }
 
 # INFO REQUESTS
-
-
-def user_cards(room_id, user_cookie):
-    # room's user's cards
-    cards = db.room.find(
-        {"_id": room_id},
-        {"users": 1}
-    )["users"][user_cookie]["cards"]
-    return db.room.find(
-        {"_id": {"$in": cards}},
-    )
 
 
 def current_black(room_id):

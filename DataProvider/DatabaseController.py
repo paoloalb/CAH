@@ -13,7 +13,7 @@ class DatabaseController():
     users_collection = mydb["users"]
 
     def create_room(self, room_name):
-        room_document = {"room_name": room_name, "black": [], "caesar": "",
+        room_document = {"room_name": room_name, "black": None, "caesar": None,
             "users": [], "used_cards": [], "round": 0, "admins": [], "password": None
         }
         insert_room = self.rooms_collection.insert_one(room_document)
@@ -34,7 +34,8 @@ class DatabaseController():
 
     def user_info(self, cookie, room_id):  # given cookie and room id, return all info about user
         my_user = self.users_collection.find_one({"cookie": {"$eq": cookie}, "room": ObjectId(room_id)})
-        return my_user #  DA TESTARE!
+        return my_user
+        # Funziona, MA ricordarsi di impedire ad una persona con un solo cookie di creare più utenti nella stessa stanza!!
 
     def user_wins(self, winning_user_id):
         my_user = self.users_collection.find_one({"_id": ObjectId(winning_user_id)})
@@ -68,7 +69,7 @@ class DatabaseController():
         myresults = self.cards_collection.find(myquery)
         result_card = myresults[random.randint(0, myresults.count()-1)]  # Select random document
         # Add card to already used list:
-        self.rooms_collection.update_one({"_id": ObjectId(room_id)}, {"$push": {"used_cards": result_card["_id"]}})
+        self.rooms_collection.update_one({"_id": ObjectId(room_id)}, {"$push": {"used_cards": result_card["_id"]}, "$set": { "black":  result_card["_id"]} })
         return result_card["text"], result_card["pick"]
 
     def pick_n_random_white_cards(self, n, user_id):  # Takes the user who is picking the card (as an ObjectID)

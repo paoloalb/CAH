@@ -10,18 +10,16 @@ from hasher import *
 
 api = Blueprint('api', __name__,)
 
-connection_string = "mongodb+srv://paoloa:123stella@mflix-3d6kd.mongodb.net/test"
-myclient = MongoClient(connection_string)
-mydb = myclient["cah"]
-cards_collection = mydb["cards"]
-rooms_collection = mydb["rooms"]
-users_collection = mydb["users"]
+client = MongoClient("mongodb+srv://paoloa:123stella@mflix-3d6kd.mongodb.net/test")
+db = client["cah"]
+cards_collection = db["cards"]
+rooms_collection = db["rooms"]
+users_collection = db["users"]
 
 
 @api.route('/new_room', methods=['GET', 'POST'])
 def create_room():
     config = request.get_json()
-    print(config)
     user_cookie = get_cookie()
     if "password" in config and len(config["password"]) > 0:
         hashed, salt = hash_password(config["password"])
@@ -69,8 +67,6 @@ def create_state(room_id, username):
             {
                 "$push": {
                     "users": user.inserted_id,
-                },
-                "$push": {
                     "admins": user.inserted_id,
                 },
             }
@@ -104,21 +100,21 @@ def rooms():
 def user_rooms():
     # given the cookie, returns all about his rooms
     user_cookie = get_cookie()
-    states = users_collection.find(
+    states = list(users_collection.find(
         {
             "cookie": user_cookie,
         },
         {
             "_id": 1,
         }
-    )
-    rooms = rooms_collection.find(
+    ))
+    rooms = list(rooms_collection.find(
         {
             "users": {
                 "$in": [state["_id"] for state in states],
             },
         }
-    )
+    ))
     if request.path != "/my_rooms":
         return rooms
     else:

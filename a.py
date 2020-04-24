@@ -52,9 +52,6 @@ db = {
 # ACTIONS
 
 
-def create_room():
-    pass
-
 
 def use_card(room_id, user_cookie, card_id):
     pass
@@ -74,17 +71,5 @@ def card_used():
     pass
 
 
-def new_black():
-    pass
-
-
 def card_uncover():
-    pass
-
-
-def drawn_cards():
-    pass
-
-
-def declare_winner():
     pass

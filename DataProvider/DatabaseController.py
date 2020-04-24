@@ -22,6 +22,14 @@ class DatabaseController():
         return str(room_id)
 
     def add_new_user(self, username, cookie, room_id):
+        my_room = self.rooms_collection.find_one({"_id": ObjectId(room_id)})
+        if my_room["n_of_users"] >= my_room["max_n_of_players"]:  # Check if room is full
+            raise Exception("The room is full! User was not added")
+
+        res = self.users_collection.find_one({"cookie": cookie, "room": ObjectId(room_id)})
+        if res is not None:
+            raise Exception("L'utente risulta essere già registrato in questa stanza con questo cookie!")
+
         user_doc = {"cookie": cookie, "name": username, "admin": False, "room": ObjectId(room_id),
         "cards_in_hand": [], "cards_on_table": [], "points": 0}
         insert_user = self.users_collection.insert_one(user_doc)
@@ -43,7 +51,7 @@ class DatabaseController():
         return my_user
         # Funziona, MA ricordarsi di impedire ad una persona con un solo cookie di creare più utenti nella stessa stanza!!
 
-    def user_wins(self, winning_user_id):
+    def user_wins(self, winning_user_id):  # Cambiare! dare vittoria in base al card id
         my_user = self.users_collection.find_one({"_id": ObjectId(winning_user_id)})
         if my_user is None:  # Make sure that the user exists
             raise Exception('The provided user ID was not found in the database')
@@ -100,7 +108,7 @@ class DatabaseController():
         return [rc["_id"] for rc in result_cards], [rc["text"] for rc in result_cards]
 
     def user_plays_cards(self, user_id, list_of_card_ids, room_id):
-        my_user = self.rooms_collection.find_one({"users": ObjectId(user_id)})
+        my_user = self.rooms_collection.find_one({"users": ObjectId(user_id)})  # Controllare e debuggare bene!
         if my_user is None:  # Make sure that the user exists
             raise Exception('The provided user ID was not found in the room')
         for card in list_of_card_ids:

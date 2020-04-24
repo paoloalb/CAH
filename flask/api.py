@@ -6,6 +6,7 @@ from pymongo import MongoClient
 from cookies import get_cookie
 from flask import (Blueprint, abort, jsonify, make_response, render_template,
                    request)
+from hasher import *
 
 api = Blueprint('api', __name__,)
 
@@ -22,6 +23,11 @@ def create_room():
     config = request.get_json()
     print(config)
     user_cookie = get_cookie()
+    if "password" in config and len(config["password"]) > 0:
+        hashed, salt = hash_password(config["password"])
+        password = {"hash": hashed, "salt": salt}
+    else:
+        password = None
     room = rooms_collection.insert_one(
         {
             "name": config["name"],
@@ -31,7 +37,7 @@ def create_room():
             "used_cards": [],
             "round": 0,
             "admins": [],
-            "password": None,
+            "password": password,
         }
     )
     return jsonify({"room_id": str(room.inserted_id)})
@@ -41,27 +47,45 @@ def create_room():
 def create_state(room_id, username):
     # Returns the ID of the user as a string
     user_cookie = get_cookie()
+    if username is None or len(username) == 0:
+        # username = "Mr. X"
+        username = "anon"
     user = users_collection.insert_one(
         {
             "cookie": user_cookie,
             "name": username,
-            "admin": False,
             "room": ObjectId(room_id),
             "cards_in_hand": [],
             "cards_on_table": [],
             "points": 0,
         }
     )
-    rooms_collection.update_one(
-        {
-            "_id": ObjectId(room_id),
-        },
-        {
-            "$push": {
-                "users": user.inserted_id,
+    room = rooms_collection.find_one({"_id": ObjectId(room_id)})
+    if len(room["users"]) == 0:
+        rooms_collection.update_one(
+            {
+                "_id": ObjectId(room_id),
             },
-        }
-    )
+            {
+                "$push": {
+                    "users": user.inserted_id,
+                },
+                "$push": {
+                    "admins": user.inserted_id,
+                },
+            }
+        )
+    else:
+        rooms_collection.update_one(
+            {
+                "_id": ObjectId(room_id),
+            },
+            {
+                "$push": {
+                    "users": user.inserted_id,
+                },
+            }
+        )
     return make_response("OK", 200)
 
 
@@ -80,25 +104,21 @@ def rooms():
 def user_rooms():
     # given the cookie, returns all about his rooms
     user_cookie = get_cookie()
-    states = list(users_collection.find(
+    states = users_collection.find(
         {
             "cookie": user_cookie,
         },
         {
             "_id": 1,
         }
-    ))
-    rooms = []
-    for state in states:
-        rooms.append(rooms_collection.find_one(
-            {
-                "users": {
-                    "$elemMatch": {
-                        "$eq": state["_id"],
-                    },
-                },
-            }
-        ))
+    )
+    rooms = rooms_collection.find(
+        {
+            "users": {
+                "$in": [state["_id"] for state in states],
+            },
+        }
+    )
     if request.path != "/my_rooms":
         return rooms
     else:

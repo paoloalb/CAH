@@ -1,6 +1,6 @@
 from api import *
 from cookies import *
-from flask import Flask, abort, url_for
+from flask import Flask, abort, send_file
 from website import *
 
 app = Flask(__name__)
@@ -22,4 +22,4 @@ app.register_blueprint(website)
 
 @app.route('/favicon.ico')
 def favicon():
-    return send_file('static/favicon.ico')
+    return send_file('static/images/favicon.ico')

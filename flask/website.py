@@ -6,7 +6,7 @@ website = Blueprint('website', __name__, )
 
 @website.route('/')
 def root():
-    return render_template('index.html.j2', rooms=rooms(), player_rooms=user_rooms())
+    return render_template('index.html', rooms=rooms(), player_rooms=user_rooms())
 
 
 @website.route('/UserPage')

@@ -6,6 +6,7 @@ db = {
             "room_name": "",
             "black": "<cards._id>", # ID della carta che si trova sul tavolo
             "caesar": "<user._id>",
+            "n_of_users": 0,
             "users": [
                 "<user._id>",
             ],
@@ -17,6 +18,7 @@ db = {
                 "<user._id>",
             ],
             "password": None,
+            "max_n_of_players": 5
         },
     ]
 
@@ -46,19 +48,6 @@ db = {
     ],
 }
 
-# INFO REQUESTS
-
-
-def user_points(room_id):
-    # room's users' points
-    users = db.room.find(
-        {"_id": room_id},
-        {"users": 1}
-    )
-    return [
-        {u["name"]: u["points"]}
-        for u in users
-    ]
 
 # ACTIONS
 

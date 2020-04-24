@@ -12,9 +12,10 @@ class DatabaseController():
     rooms_collection = mydb["rooms"]
     users_collection = mydb["users"]
 
-    def create_room(self, room_name):
+    def create_room(self, room_name, max_players):
         room_document = {"room_name": room_name, "black": None, "caesar": None,
-            "users": [], "used_cards": [], "round": 0, "admins": [], "password": None
+        "n_of_users": 0, "users": [], "used_cards": [], "round": 0, "admins": [],
+        "password": None, "max_n_of_players": max_players
         }
         insert_room = self.rooms_collection.insert_one(room_document)
         room_id = insert_room.inserted_id
@@ -24,13 +25,18 @@ class DatabaseController():
         user_doc = {"cookie": cookie, "name": username, "admin": False, "room": ObjectId(room_id),
         "cards_in_hand": [], "cards_on_table": [], "points": 0}
         insert_user = self.users_collection.insert_one(user_doc)
-        self.rooms_collection.update_one({"_id": ObjectId(room_id)}, {"$push": {"users": insert_user.inserted_id}})
+        self.rooms_collection.update_one({"_id": ObjectId(room_id)}, {"$push": {"users": insert_user.inserted_id}, "$inc": {"n_of_users": 1}})
         return str(insert_user.inserted_id)  # Returns the ID of the user as a string
 
     def find_rooms_from_cookie(self, user_cookie):  # given the cookie, returns all about his rooms
         myusers = list(self.users_collection.find({"cookie": user_cookie}, {"_id": 1}))
         found_rooms = [self.rooms_collection.find_one({"users": {"$elemMatch": {"$eq": u["_id"]}}}) for u in myusers]
         return found_rooms
+
+    def basic_room_info(self):  # basic info about ALL rooms in the database
+        all_rooms = list(self.rooms_collection.find({}, {"room_name": 1, "password": 1, "n_of_users": 1,
+        "max_n_of_players": 1, "round": 1}))
+        return all_rooms  # Returns list of basic info
 
     def user_info(self, cookie, room_id):  # given cookie and room id, return all info about user
         my_user = self.users_collection.find_one({"cookie": {"$eq": cookie}, "room": ObjectId(room_id)})

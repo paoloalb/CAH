@@ -29,13 +29,15 @@ def create_room():
     room = rooms_collection.insert_one(
         {
             "name": config["name"],
-            "black": [],
-            "caesar": "",
+            "black": None,
+            "caesar": None,
+            "n_of_users": 0,
             "users": [],
             "used_cards": [],
             "round": 0,
             "admins": [],
             "password": password,
+            "max_n_of_players": 5
         }
     )
     return jsonify({"room_id": str(room.inserted_id)})
@@ -48,6 +50,19 @@ def create_state(room_id, username):
     if username is None or len(username) == 0:
         # username = "Mr. X"
         username = "anon"
+
+
+    room = rooms_collection.find_one({"_id": ObjectId(room_id)})
+
+    if room["n_of_users"] >= room["max_n_of_players"]:  # Check if room is full
+        abort(403)
+
+    finduser = users_collection.find_one({"cookie": user_cookie, "room": ObjectId(room_id)})
+
+    if finduser is not None:
+        abort(403)
+
+
     user = users_collection.insert_one(
         {
             "cookie": user_cookie,
@@ -55,10 +70,9 @@ def create_state(room_id, username):
             "room": ObjectId(room_id),
             "cards_in_hand": [],
             "cards_on_table": [],
-            "points": 0,
+            "points": 0
         }
     )
-    room = rooms_collection.find_one({"_id": ObjectId(room_id)})
     if len(room["users"]) == 0:
         rooms_collection.update_one(
             {
@@ -69,6 +83,8 @@ def create_state(room_id, username):
                     "users": user.inserted_id,
                     "admins": user.inserted_id,
                 },
+
+                 "$inc": {"n_of_users": 1}
             }
         )
     else:
@@ -80,6 +96,8 @@ def create_state(room_id, username):
                 "$push": {
                     "users": user.inserted_id,
                 },
+
+                 "$inc": {"n_of_users": 1}
             }
         )
     return make_response("OK", 200)

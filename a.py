@@ -49,17 +49,6 @@ db = {
 # INFO REQUESTS
 
 
-def current_black(room_id):
-    # room's current black
-    black = db.room.find(
-        {"_id": room_id},
-        {"round": 1}
-    )["round"]["black"]
-    return db.room.find(
-        {"_id": black},
-    )
-
-
 def user_points(room_id):
     # room's users' points
     users = db.room.find(

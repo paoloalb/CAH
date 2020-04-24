@@ -1,27 +1,25 @@
 from api import *
-from flask import Flask, url_for
+from cookies import *
+from flask import Flask, abort, url_for
 from website import *
 
 app = Flask(__name__)
 
 
+class JSONEncoder(json.JSONEncoder):
+    def default(self, o):
+        if isinstance(o, ObjectId):
+            return str(o)
+        return json.JSONEncoder.default(self, o)
+
+
+app.json_encoder = JSONEncoder
+
+app.register_blueprint(cookies)
 app.register_blueprint(api)
 app.register_blueprint(website)
 
 
 @app.route('/favicon.ico')
 def favicon():
-    return url_for('static', filename='favicon.ico')
-
-
-@app.route('/biscottini', methods=['POST', 'GET'])
-def setcookie():
-    resp = make_response(render_template('readcookie.html'))
-    resp.set_cookie('userID', user)
-    return resp
-
-
-@app.route('/getcookie')
-def getcookie():
-    name = request.cookies.get('userID')
-    return '<h1>welcome ' + name + '</h1>'
+    return send_file('static/favicon.ico')

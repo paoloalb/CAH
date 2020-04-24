@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template
 
-website = Blueprint('website', __name__,)
+website = Blueprint('website', __name__, )
 
 
 @website.route('/')
@@ -25,7 +25,7 @@ def root():
             ],
         },
         {
-            "_id": 2, 
+            "_id": 2,
             "name": "room2",
             "players": [
                 {"name": "player4"},
@@ -35,3 +35,8 @@ def root():
         },
     ]
     )
+
+
+@website.route('/UserPage')
+def UserPage():
+    return render_template('UserPage.html')

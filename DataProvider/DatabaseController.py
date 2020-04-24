@@ -21,11 +21,22 @@ class DatabaseController():
         return str(room_id)
 
     def add_new_user(self, username, cookie, room_id):
-        user_doc = {"cookie": cookie, "name": username, "room": room_id,
+        user_doc = {"cookie": cookie, "name": username, "admin": False, "room": ObjectId(room_id),
         "cards_in_hand": [], "cards_on_table": [], "points": 0}
         insert_user = self.users_collection.insert_one(user_doc)
         self.rooms_collection.update_one({"_id": ObjectId(room_id)}, {"$push": {"users": insert_user.inserted_id}})
         return str(insert_user.inserted_id)  # Returns the ID of the user as a string
+
+    def find_rooms_from_cookie(self, user_cookie):  # given the cookie, returns all about his rooms
+        myusers = list(self.users_collection.find({"cookie": user_cookie}, {"_id": 1}))
+        found_rooms = []
+        for u in myusers:
+            found_rooms.append(self.rooms_collection.find_one({"users": {"$elemMatch": {"$eq": u["_id"]}}}))
+        return found_rooms
+
+    def user_info(self, cookie, room_id):  # given cookie and room id, return all info about user
+        my_user = self.users_collection.find_one({"cookie": {"$eq": cookie}, "room": ObjectId(room_id)})
+        return my_user #  DA TESTARE!
 
     def user_wins(self, winning_user_id):
         my_user = self.users_collection.find_one({"_id": ObjectId(winning_user_id)})

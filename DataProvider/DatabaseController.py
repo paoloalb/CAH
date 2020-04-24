@@ -72,6 +72,10 @@ class DatabaseController():
         self.rooms_collection.update_one({"_id": ObjectId(room_id)}, {"$push": {"used_cards": result_card["_id"]}, "$set": { "black":  result_card["_id"]} })
         return result_card["text"], result_card["pick"]
 
+    def current_black(self, room_id):  # Takes room id as a string
+        black = self.rooms_collection.find_one({"_id": ObjectId(room_id)}, {"black": 1})["black"]
+        return str(black)  # returns ID of current black card as a string
+
     def pick_n_random_white_cards(self, n, user_id):  # Takes the user who is picking the card (as an ObjectID)
         my_user = self.users_collection.find_one({"_id": ObjectId(user_id)})
         if my_user is None:  # Make sure that the user exists

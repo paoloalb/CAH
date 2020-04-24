@@ -49,14 +49,6 @@ db = {
 # INFO REQUESTS
 
 
-def user_rooms(user_cookie):
-    # user's rooms
-    return db.room.find(
-        {"users": {user_cookie: {"$exists": True}}},
-        {"_id": 1}
-    )
-
-
 def user_cards(room_id, user_cookie):
     # room's user's cards
     cards = db.room.find(

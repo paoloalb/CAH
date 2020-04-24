@@ -29,9 +29,7 @@ class DatabaseController():
 
     def find_rooms_from_cookie(self, user_cookie):  # given the cookie, returns all about his rooms
         myusers = list(self.users_collection.find({"cookie": user_cookie}, {"_id": 1}))
-        found_rooms = []
-        for u in myusers:
-            found_rooms.append(self.rooms_collection.find_one({"users": {"$elemMatch": {"$eq": u["_id"]}}}))
+        found_rooms = [self.rooms_collection.find_one({"users": {"$elemMatch": {"$eq": u["_id"]}}}) for u in myusers]
         return found_rooms
 
     def user_info(self, cookie, room_id):  # given cookie and room id, return all info about user

@@ -2,3 +2,9 @@ __pycache__/
 *.log
 *.pyc
 /venv
+/.idea/CAH.iml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/inspectionProfiles/profiles_settings.xml
+/.idea/vcs.xml
+/.idea/.gitignore

@@ -1,6 +1,7 @@
 import json
 
 from bson.objectid import ObjectId
+from bson.son import SON
 from pymongo import MongoClient
 
 from cookies import get_cookie
@@ -8,7 +9,7 @@ from flask import (Blueprint, abort, jsonify, make_response, render_template,
                    request)
 from hasher import *
 
-api = Blueprint('api', __name__,)
+api = Blueprint('api', __name__, )
 
 client = MongoClient("mongodb+srv://paoloa:123stella@mflix-3d6kd.mongodb.net/test")
 db = client["cah"]
@@ -157,3 +158,26 @@ def user_room_state(room_id):
 @api.route('/teapot')
 def teapot():
     abort(418)
+
+
+# just for test it should be add user cookie and room id
+@api.route('/randomWhiteCards/<int:number_of_cards>')
+def random_white_cards(number_of_cards):
+    pipeline = [
+             {"$match": {"pick": 0}},
+             {"$sample": {"size": number_of_cards}}
+     ]
+    cards = list(cards_collection.aggregate(pipeline))
+    return cards
+
+
+# just for test it should be add user cookie and room id
+@api.route('/randomBlackCard')
+def random_black_card():
+    pipeline = [
+        {"$match": {"pick": {"$gt": 0}}},
+        {"$sample": {"size": 1}}
+    ]
+
+    card = list(cards_collection.aggregate(pipeline))
+    return card

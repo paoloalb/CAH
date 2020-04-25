@@ -2,7 +2,9 @@ body {
   background-color: #100e17;
   font-family: 'Open Sans', sans-serif;
 }
-
+.bg-dark{
+  background: dimgray!important;
+}
 
 .WhiteCardContainer {
   padding-top: 50px;
@@ -16,7 +18,7 @@ body {
   display: flex;
   height: 280px;
   width: 200px;
-  background-color: #17141d;
+  background-color: whitesmoke;
   border-radius: 10px;
   box-shadow: -1rem 0 3rem #000;
 /*   margin-left: -50px; */
@@ -53,6 +55,7 @@ body {
   left: 50px;
   transition: 0.2s ease-out;
 }
+
 
 .titleWhiteCard {
   color: black;

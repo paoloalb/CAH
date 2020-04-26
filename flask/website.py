@@ -13,4 +13,4 @@ def root():
 def UserPage():
     card = random_black_card()
     print(type(card))
-    return render_template('UserPage.html', whiteCards=random_white_cards(3), blackCard=card)
+    return render_template('UserPage.html', whiteCards=random_white_cards_test(3), blackCard=card)

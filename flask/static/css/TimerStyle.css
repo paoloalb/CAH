@@ -1,8 +1,8 @@
 /* Sets the containers height and width */
 .base-timer {
   position: relative;
-  height: 300px;
-  width: 300px;
+  width: 100px;
+  height: 100px;
 }
 
 /* Removes SVG styling that would hide the time label */
@@ -32,7 +32,7 @@
   justify-content: center;
 
   /* Sort of an arbitrary number; adjust to your liking */
-  font-size: 48px;
+  font-size: 32px;
 }
 
 .base-timer__path-remaining {

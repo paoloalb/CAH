@@ -171,6 +171,21 @@ def random_white_cards(number_of_cards):
     return cards
 
 
+# @api.route('/randomWhiteCards/<string:my_room_id>/<int:number_of_cards>')
+# def random_white_cards(number_of_cards, my_room_id):
+#     user_cookie = get_cookie()
+#     my_user_id = users_collection.find_one({"cookie": user_cookie, "room": ObjectId(my_room_id)})["_id"]
+#     list_of_used_cards = rooms_collection.find_one({"_id": ObjectId(my_room_id)})["used_cards"]
+#     pipeline = [
+#         {"$match": {"pick": 0, "_id": {"$nin": list_of_used_cards}}},
+#         {"$sample": {"size": number_of_cards}}
+#     ]
+#     cards = list(cards_collection.aggregate(pipeline))
+#     rooms_collection.update_one({"_id": ObjectId(my_room_id)}, {"$push": {"used_cards": [c["_id"] for c in cards]}})
+#     users_collection.update_one({"_id": ObjectId(my_user_id)}, {"$push": {"cards_in_hand": [c["_id"] for c in cards]}})
+#     return cards
+
+
 # just for test it should be add user cookie and room id
 @api.route('/randomBlackCard')
 def random_black_card():

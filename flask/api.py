@@ -1,5 +1,5 @@
 import json
-
+import sys
 from bson.objectid import ObjectId
 from bson.son import SON
 from pymongo import MongoClient
@@ -164,9 +164,9 @@ def teapot():
 @api.route('/randomWhiteCards/<int:number_of_cards>')
 def random_white_cards(number_of_cards):
     pipeline = [
-             {"$match": {"pick": 0}},
-             {"$sample": {"size": number_of_cards}}
-     ]
+        {"$match": {"pick": 0}},
+        {"$sample": {"size": number_of_cards}}
+    ]
     cards = list(cards_collection.aggregate(pipeline))
     return cards
 

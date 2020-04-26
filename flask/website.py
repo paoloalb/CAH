@@ -11,4 +11,6 @@ def root():
 
 @website.route('/UserPage')
 def UserPage():
-    return render_template('UserPage.html', whiteCards=random_white_cards(3), blackCard=random_black_card())
+    card = random_black_card()
+    print(type(card))
+    return render_template('UserPage.html', whiteCards=random_white_cards(3), blackCard=card)

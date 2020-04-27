@@ -38,14 +38,15 @@ class User:
         black_card = self.session.get(url + "/randomBlackCard/" + room_id).json()
         return black_card
 
-
     def play_cards(self, room_id, list_of_ids):
         self.session.get(url + "/play_cards/" + room_id, json={"list": list_of_ids})
-
 
     def user_wins(self, room_id):
         self.session.get(url + "/user_wins/" + str(room_id))
 
+    def current_black(self, room_id):
+        black_card = self.session.get(url + "/current_black/" + room_id).json()["black"]
+        return black_card
 
 
 player_a = User()

@@ -48,6 +48,10 @@ class User:
         black_card = self.session.get(url + "/current_black/" + room_id).json()
         return black_card
 
+    def current_white(self, room_id):
+        white_cards = self.session.get(url + "/current_white/" + room_id).json()
+        return white_cards
+
     def user_list(self, room_id):
         users = self.session.get(url + "/user_list/" + room_id).json()
         return users

@@ -269,6 +269,16 @@ def user_wins(my_room_id):
                              multi = True)
     return make_response("OK", 200)
 
+@api.route('/current_white/<string:my_room_id>')
+def current_white(my_room_id):
+    # Returns current white card Ids and text in the user hand
+    user_cookie = get_cookie()
+    my_card_ids = users_collection.find_one({"cookie": user_cookie,
+                                            "room": ObjectId(my_room_id)},
+                                            {"cards_in_hand": 1})
+
+    my_cards = list(cards_collection.find({"_id": {"$in": my_card_ids["cards_in_hand"]}}, {"text": 1}))
+    return jsonify(my_cards)
 
 @api.route('/current_black/<string:my_room_id>')
 def current_black(my_room_id):

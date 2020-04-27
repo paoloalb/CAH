@@ -28,7 +28,7 @@ db = {
             "cookie": "",
             "name": "",
             "room": "<room._id>",
-            "cards_on_hand": [
+            "cards_in_hand": [
                 "<cards._id>",
             ],
             "cards_on_table":[

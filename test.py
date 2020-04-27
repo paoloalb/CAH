@@ -78,19 +78,20 @@ cards_a = player_a.pick_white_cards(N_OF_CARDS, room)
 print("\na picked these cards: \n",  json.dumps(cards_a, indent="\t"))
 
 cards_b = player_b.pick_white_cards(N_OF_CARDS, room)
-print("\nb picked these cards: \n",  json.dumps(cards_a, indent="\t"))
+print("\nb picked these cards: \n",  json.dumps(cards_b, indent="\t"))
 
 black_card = player_a.pick_black(room)
 print("\nblack card was picked:\n" + black_card["text"] + "\nPick " + str(black_card["pick"]))
 
-input_string = input("Inserisci la posizione delle carte da giocare per il player a (x es: 0 2 3):\n")
+input_string = input("\nInserisci la posizione delle carte da giocare per il player a (x es: 0 2 3):\n")
 list_of_ids = [c["_id"] for i, c in enumerate(cards_a) if i in [int(u) for u in input_string.split()]]
 player_a.play_cards(room, list_of_ids)
+print("\nplayer_a ha giocato le seguenti carte:\n" + str([c["text"] for i, c in enumerate(cards_a) if i in [int(u) for u in input_string.split()]]))
 
 input_string = input("Inserisci la posizione delle carte da giocare per il player b (x es: 0 2 3):\n")
 list_of_ids = [c["_id"] for i, c in enumerate(cards_b) if i in [int(u) for u in input_string.split()]]
 player_b.play_cards(room, list_of_ids)
-
+print("\nplayer_b ha giocato le seguenti carte:\n" + str([c["text"] for i, c in enumerate(cards_b) if i in [int(u) for u in input_string.split()]]))
 
 
 print("select a winner (a/b):\n")

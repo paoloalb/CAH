@@ -181,14 +181,23 @@ def random_white_cards(number_of_cards, my_room_id):
          {"$sample": {"size": number_of_cards}}
      ]
      cards = list(cards_collection.aggregate(pipeline))
-     rooms_collection.update_one({"_id": ObjectId(my_room_id)}, {"$push": {"used_cards": [c["_id"] for c in cards]}})
-     users_collection.update_one({"_id": ObjectId(my_user_id)}, {"$push": {"cards_in_hand": [c["_id"] for c in cards]}})
-     return cards
+
+     rooms_collection.update_one({"_id": ObjectId(my_room_id)},
+                                {"$push":
+                                {"used_cards": {"$each": [c["_id"] for c in cards]}}
+                                })
+
+     users_collection.update_one({"_id": ObjectId(my_user_id)},
+                                {"$push":
+                                {"cards_in_hand": {"$each": [c["_id"] for c in cards]}}
+                                })
+
+     return jsonify(cards) # if i want only text : return jsonify({"cards": [c["text"] for c in cards]})
 
 
 # just for test it should be add user cookie and room id
-@api.route('/randomBlackCard')
-def random_black_card():
+@api.route('/randomBlackCardTest')
+def random_black_card_test():
     pipeline = [
         {"$match": {"pick": {"$gt": 0}}},
         {"$sample": {"size": 1}}
@@ -196,3 +205,41 @@ def random_black_card():
 
     card = list(cards_collection.aggregate(pipeline))
     return card
+
+
+@api.route('/randomBlackCard/<string:my_room_id>')
+def random_black_card(my_room_id):
+    pipeline = [
+        {"$match": {"pick": {"$gt": 0}}},
+        {"$sample": {"size": 1}}
+    ]
+
+    card = cards_collection.aggregate(pipeline).next()
+
+    rooms_collection.update_one(
+                                {"_id": ObjectId(my_room_id)},
+                                {"$push": {"used_cards": card["_id"]},
+                                "$set": { "black":  card["_id"]} }
+                                )
+
+    return card
+
+
+@api.route('/play_cards/<string:my_room_id>')
+def play_cards(my_room_id, list_of_card_ids):
+    user_cookie = get_cookie()
+    my_user_id = users_collection.find_one({"cookie": user_cookie, "room": ObjectId(my_room_id)})["_id"]
+    for card in list_of_card_ids:
+        my_card = users_collection.find_one(
+                                            {"_id": ObjectId(my_user_id),
+                                            "cards_in_hand": ObjectId(card)}
+                                            )
+        if my_card is None:  # Make sure that the card is in the hand of the user
+            abort(403)  # If not, forbidden error
+
+    for card in list_of_card_ids:
+        # remove card from player's hand and put it on the table
+        users_collection.update_one({"_id": ObjectId(user_id)},
+                                    {
+                                    "$pull": {"cards_in_hand": ObjectId(card)},
+                                    "$push": {"cards_on_table": ObjectId(card)}})

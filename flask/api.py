@@ -225,13 +225,16 @@ def random_black_card(my_room_id):
     return card
 
 
-@api.route('/play_cards/<string:my_room_id>')
-def play_cards(my_room_id, list_of_card_ids):
+@api.route('/play_cards/<string:my_room_id>', methods=['GET', 'POST'])
+def play_cards(my_room_id):
+    config = request.get_json()
+    list_of_card_ids = config["list"]
     user_cookie = get_cookie()
     my_user_id = users_collection.find_one({"cookie": user_cookie, "room": ObjectId(my_room_id)})["_id"]
+    
     for card in list_of_card_ids:
         my_card = users_collection.find_one(
-                                            {"_id": ObjectId(my_user_id),
+                                            {"_id": my_user_id,
                                             "cards_in_hand": ObjectId(card)}
                                             )
         if my_card is None:  # Make sure that the card is in the hand of the user
@@ -239,7 +242,7 @@ def play_cards(my_room_id, list_of_card_ids):
 
     for card in list_of_card_ids:
         # remove card from player's hand and put it on the table
-        users_collection.update_one({"_id": ObjectId(user_id)},
+        users_collection.update_one({"_id": my_user_id},
                                     {
                                     "$pull": {"cards_in_hand": ObjectId(card)},
                                     "$push": {"cards_on_table": ObjectId(card)}})
@@ -251,7 +254,7 @@ def play_cards(my_room_id, list_of_card_ids):
 def user_wins(my_room_id):
     user_cookie = get_cookie()
     my_user_id = users_collection.find_one({"cookie": user_cookie, "room": ObjectId(my_room_id)})
-    if my_user_id is None:  # Make sure that the user exists
+    if my_user_id is None:  # Make sure that the user exists with this cookie
         abort(403)
     users_collection.update_one({"_id": ObjectId(my_user_id["_id"])}, {"$inc": {"points": 1}})
     return make_response("OK", 200)

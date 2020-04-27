@@ -32,11 +32,16 @@ class User:
 
     def pick_white_cards(self, n, room_id):
         card_list = self.session.get(url + "/randomWhiteCards/" + room_id + "/" + str(n)).json()
-        return card_list#["cards"]
+        return card_list
 
     def pick_black(self, room_id):
         black_card = self.session.get(url + "/randomBlackCard/" + room_id).json()
         return black_card
+
+
+    def play_cards(self, room_id, list_of_ids):
+        self.session.get(url + "/play_cards/" + room_id, json={"list": list_of_ids})
+
 
     def user_wins(self, room_id):
         self.session.get(url + "/user_wins/" + str(room_id))
@@ -77,6 +82,16 @@ print("\nb picked these cards: \n",  json.dumps(cards_a, indent="\t"))
 
 black_card = player_a.pick_black(room)
 print("\nblack card was picked:\n" + black_card["text"] + "\nPick " + str(black_card["pick"]))
+
+input_string = input("Inserisci la posizione delle carte da giocare per il player a (x es: 0 2 3):\n")
+list_of_ids = [c["_id"] for i, c in enumerate(cards_a) if i in [int(u) for u in input_string.split()]]
+player_a.play_cards(room, list_of_ids)
+
+input_string = input("Inserisci la posizione delle carte da giocare per il player b (x es: 0 2 3):\n")
+list_of_ids = [c["_id"] for i, c in enumerate(cards_b) if i in [int(u) for u in input_string.split()]]
+player_b.play_cards(room, list_of_ids)
+
+
 
 print("select a winner (a/b):\n")
 winner = input()

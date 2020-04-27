@@ -12,6 +12,7 @@ from hasher import *
 api = Blueprint('api', __name__, )
 
 client = MongoClient("mongodb+srv://paoloa:123stella@mflix-3d6kd.mongodb.net/test")
+#client = MongoClient("mongodb://localhost:27017/")
 db = client["cah"]
 cards_collection = db["cards"]
 rooms_collection = db["rooms"]
@@ -231,7 +232,7 @@ def play_cards(my_room_id):
     list_of_card_ids = config["list"]
     user_cookie = get_cookie()
     my_user_id = users_collection.find_one({"cookie": user_cookie, "room": ObjectId(my_room_id)})["_id"]
-    
+
     for card in list_of_card_ids:
         my_card = users_collection.find_one(
                                             {"_id": my_user_id,
@@ -256,5 +257,11 @@ def user_wins(my_room_id):
     my_user_id = users_collection.find_one({"cookie": user_cookie, "room": ObjectId(my_room_id)})
     if my_user_id is None:  # Make sure that the user exists with this cookie
         abort(403)
-    users_collection.update_one({"_id": ObjectId(my_user_id["_id"])}, {"$inc": {"points": 1}})
+    # Update the points of the user
+    users_collection.update_one({"_id": ObjectId(my_user_id["_id"])},
+                                {"$inc": {"points": 1}})
+    # Remove all the cards on the table:
+    users_collection.update({"room": ObjectId(my_room_id)},
+                            { "$set": { "cards_on_table": [] }},
+                             multi = True)
     return make_response("OK", 200)

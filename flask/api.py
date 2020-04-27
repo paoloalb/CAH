@@ -273,3 +273,9 @@ def current_black(my_room_id):
                                          {"black": 1})
     black = cards_collection.find_one({"_id": black_id["black"]})
     return jsonify(black)
+
+@api.route('/user_list/<string:my_room_id>')
+# Returns a list with all the informations about users in the room
+def user_list(my_room_id):
+    users = list(users_collection.find({"room": ObjectId(my_room_id)}))
+    return jsonify(users)

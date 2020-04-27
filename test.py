@@ -48,6 +48,9 @@ class User:
         black_card = self.session.get(url + "/current_black/" + room_id).json()
         return black_card
 
+    def user_list(self, room_id):
+        users = self.session.get(url + "/user_list/" + room_id).json()
+        return users
 
 player_a = User()
 player_b = User()

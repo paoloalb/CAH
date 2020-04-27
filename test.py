@@ -38,6 +38,10 @@ class User:
         black_card = self.session.get(url + "/randomBlackCard/" + room_id).json()
         return black_card
 
+    def user_wins(self, room_id):
+        self.session.get(url + "/user_wins/" + str(room_id))
+
+
 
 player_a = User()
 player_b = User()
@@ -73,3 +77,12 @@ print("\nb picked these cards: \n",  json.dumps(cards_a, indent="\t"))
 
 black_card = player_a.pick_black(room)
 print("\nblack card was picked:\n" + black_card["text"] + "\nPick " + str(black_card["pick"]))
+
+print("select a winner (a/b):\n")
+winner = input()
+if winner == "a":
+    player_a.user_wins(room)
+    print("player a was granted 1 point!")
+elif winner == "b":
+    player_b.user_wins(room)
+    print("player b was granted 1 point!")

@@ -243,3 +243,15 @@ def play_cards(my_room_id, list_of_card_ids):
                                     {
                                     "$pull": {"cards_in_hand": ObjectId(card)},
                                     "$push": {"cards_on_table": ObjectId(card)}})
+    return make_response("OK", 200)
+
+
+
+@api.route('/user_wins/<string:my_room_id>')
+def user_wins(my_room_id):
+    user_cookie = get_cookie()
+    my_user_id = users_collection.find_one({"cookie": user_cookie, "room": ObjectId(my_room_id)})
+    if my_user_id is None:  # Make sure that the user exists
+        abort(403)
+    users_collection.update_one({"_id": ObjectId(my_user_id["_id"])}, {"$inc": {"points": 1}})
+    return make_response("OK", 200)

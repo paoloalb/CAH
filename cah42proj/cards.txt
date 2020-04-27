@@ -1,0 +1,1400 @@
+g.0[0]x[0]_w:	Una maledizione di un Gitano.  €aH  vw Cards Against Humanity
+g.0[1]x[0]_w:	Un momento di silenzio.  WF cards against Humanity
+g.0[2]x[0]_w:	Un festival della salsiccia.  €@aH  vw Cards Against Humanity
+g.0[3]x[0]_w:	Un poliziotto onesto che non ha niente da perdere.  NP cards Against Humanity
+g.0[0]x[1]_w:	Carestia.  vw cards Ageinst Humanity
+g.0[1]x[1]_w:	Batteri Mangia-Carne.  w Cards Against Humanity
+g.0[2]x[1]_w:	Serpenti volanti che fanno sesso.  w Cards Against Humanity
+g.0[3]x[1]_w:	Non fregarsene un cazzo del Terzo Mondo.  _ — €8H  w Cards Against Humanity
+g.0[0]x[2]_w:	Sexting.  Gelal  v cards Against Humanity
+g.0[1]x[2]_w:	Benny Benassi.  w Cards Against Humanity
+g.0[2]x[2]_w:	Pornostar.  w Cards Against Humanity
+g.0[3]x[2]_w:	Stupro e Saccheggio.  w Cards Against Humanity
+g.0[0]x[3]_w:	72 vergini.  vw Cards Against Humanity
+g.0[1]x[3]_w:	Sparatoria da auto in corsa.  w Cards Against Humanity
+g.0[2]x[3]_w:	Un paradosso da viaggio nel tempo.  w Cards Against Humanity
+g.0[3]x[3]_w:	Cucina autentica messicana.  wr Cards Against Humanity
+g.0[0]x[4]_w:	Gioielli da rapper.  vw Cards Against Humanity
+g.0[1]x[4]_w:	Consulente.  w Cards Against Humanity
+g.0[2]x[4]_w:	Oberato dai debiti.  EH  vw Cards Against Humanity
+g.0[3]x[4]_w:	Problemi col babbo.  w Cards Against Humanity
+g.1[0]x[0]_w:	Avere  l'approvazione di Lapo Elkann      vw Cards Against Humanity
+g.1[1]x[0]_w:	Far cadere un lampadario sopra ai tuoi nemici e farsi sollevare dalla corda che lo sosteneva.  vw Cards Against Humanity
+g.1[2]x[0]_w:	L'ex presidente George W. Bush.  vw Cards Against Humanity
+g.1[3]x[0]_w:	Nudità completa.  v I Cards Against Humanity
+g.1[0]x[1]_w:	Iniezioni ormonali.  w Cards Against Humanity
+g.1[1]x[1]_w:	Covare un uovo.  vw Cards Against Humanity
+g.1[2]x[1]_w:	Spogliarsi e mettersi a guardare l’Albero Azzurro.  w Cards Against Humanity
+g.1[3]x[1]_w:	Far finta di interessarsi.  €aH  w Cards Against Humanity
+g.1[0]x[2]_w:	Ridicolizzarsi in pubblico.  w Cards Against Humanity
+g.1[1]x[2]_w:	Scambiarsi le siringhe.  w Cards Against Humanity
+g.1[2]x[2]_w:	Caccole.
+g.1[3]x[2]_w:	L’inevitabile morte termica dell’universo.  w Cards Against Humanity
+g.1[0]x[3]_w:	Il miracolo della nascita.  w Cards Against Humanity
+g.1[1]x[3]_w:	Il rapimento alieno.  EaH  vw Cards Against Humanity
+g.1[2]x[3]_w:	Tirarlo fuori.  w Cards Against Humanity
+g.1[3]x[3]_w:	I privilegi dei bianchi.  vw Gards Against Humanity
+g.1[0]x[4]_w:	Compiti da moglie.  w Cards Against Humanity
+g.1[1]x[4]_w:	La banda Bassotti.  vw Cards Against Humanity
+g.1[2]x[4]_w:	Deodorante AXE.
+g.1[3]x[4]_w:	Il sangue di Cristo.  vw Cards Against Humanity
+g.2[0]x[0]_w:	Orribili incidenti dovuti alla depilazione laser.  EaH  vw Cards Against Humanity
+g.2[1]x[0]_w:	BATMAN!!!  vw Cards Against Humanity
+g.2[2]x[0]_w:	Agricoltura.  | al)  vw Cards Against Humanity
+g.2[3]x[0]_w:	Un robusto mongoloide.  w 7 cards Ageinst Humanity
+g.2[0]x[1]_w:	Selezione naturale.  vw Cards Against Humanity
+g.2[1]x[1]_w:	Aborti fatti con l’appendiabiti.  vw Cards Against Humanity
+g.2[2]x[1]_w:	Mangiarsi tutti  i dolci prima dell’inizio  della cena di beneficenza per i malati di AIDS.  vw Cards Against Humanity
+g.2[3]x[1]_w:	Le braccia di Michelle Obama.     (2  w I cards Against Humanity
+g.2[0]x[2]_w:	World of Warcraft.  w Cards Against Humanity
+g.2[1]x[2]_w:	Andare in picchiata.  vw Cards Against Humanity
+g.2[2]x[2]_w:	Obesità.
+g.2[3]x[2]_w:	Un montaggio pallavolistico omoerotico.  vw Cards Against Humanity
+g.2[0]x[3]_w:	Tetano.  w Cards Against Humanity
+g.2[1]x[3]_w:	Una dimostrazione di un accoppiamento.  w Cards Against Humanity
+g.2[2]x[3]_w:	Torsione del testicolo.  vw Cards Against Humanity
+g.2[3]x[3]_w:	Cena a buffet per 5 euro.  vw Cards Against Humanity
+g.2[0]x[4]_w:	Pizza con la nutella.  €àH  w Cards Against Humanity
+g.2[1]x[4]_w:	Gigi D’Alessio.  w Cards Against Humanity
+g.2[2]x[4]_w:	Formaggio piccante.  | @aH  vw Cards Against Humanity
+g.2[3]x[4]_w:	Attacchi di Velociraptor.  vw Gards Against Humanity
+g.3[0]x[0]_w:	Togliersi la maglietta.  vw Cards Against Humanity
+g.3[1]x[0]_w:	v 1) Cards Against Humanity
+g.3[2]x[0]_w:	Alcolismo.  al)  vw Cards Against Humanity
+g.3[3]x[0]_w:	Un uomo di mezza eta’ con un paio di pattini in linea.  w Cards Against Humanity
+g.3[0]x[1]_w:	Lo sguardo fisso di una Winx.  vw Cards Against Humanity
+g.3[1]x[1]_w:	Abbuffarsi e vomitare.  w 7 Cards Ageinst Humanity
+g.3[2]x[1]_w:	Lecca-Lecca giganti.  w Cards Against Humanity
+g.3[3]x[1]_w:	Disgusto di sé.  Call  w Cards Against Humanity
+g.3[0]x[2]_w:	Bambini al guinzaglio.  vw Cards Against Humanity
+g.3[1]x[2]_w:	Preliminari meschini.  w 1) cards Against Humanity
+g.3[2]x[2]_w:	La sacra Bibbia.  ah  w Cards Against Humanity
+g.3[3]x[2]_w:	Porno in un sotterraneo tedesco.  w Cards Against Humanity
+g.3[0]x[3]_w:	Essere in fiamme.  vw Cards Against Humanity
+g.3[1]x[3]_w:	Gravidanza in età adolescenziale.  w Cards Against Humanity
+g.3[2]x[3]_w:	Gandhi.  vw Cards Against Humanity
+g.3[3]x[3]_w:	Lasciare un messaggio imbarazzante in segreteria.  w Cards Against Humanity
+g.3[0]x[4]_w:	Montanti.
+g.3[1]x[4]_w:	Agente del servizio clienti.  vw Cards Against Humanity
+g.3[2]x[4]_w:	Un’erezione che dura più di quattro ore.  | @aH  w Gards Against Humanity
+g.3[3]x[4]_w:	I miei genitali.  vw Gards Against Humanity
+g.4[0]x[0]_w:	Rimorchiare  ragazze all’ospedale dopo un aborto.  vw Cards Against Humanity
+g.4[1]x[0]_w:	Scienza.  MP cards against Humanity
+g.4[2]x[0]_w:	Sesso orale non ricambiato.  €@aH  w Cards Against Humanity
+g.4[3]x[0]_w:	Uccelli incapaci di volare.  MP cares against Humanity
+g.4[0]x[1]_w:	Una buona sniffata.  MP cards against Humanity
+g.4[1]x[1]_w:	Tortura cinese.  MP cards Against Humanity
+g.4[2]x[1]_w:	Una colazione bilanciata  MP cares Against Humanity
+g.4[3]x[1]_w:	Scuole gestite da suore.  €aH  vw Cards Against Humanity
+g.4[0]x[2]_w:	Rubare veramente le caramelle ad un bambino.  w Cards Against Humanity
+g.4[1]x[2]_w:	La fondazione Make-A-Wish®.  w Cards Against Humanity
+g.4[2]x[2]_w:	Una grattata di culo clandestina.  €aH  vw Cards Against Humanity
+g.4[3]x[2]_w:	Post-it passivi aggressivi.  w Cards Against Humanity
+g.4[0]x[3]_w:	La squadra di ginnastica artistica cinese.  w Cards Against Humanity
+g.4[1]x[3]_w:	Passare a Vodafone.  EaH  w Cards Against Humanity
+g.4[2]x[3]_w:	Fare solo un pochino di pipì.  vw Cards Against Humanity
+g.4[3]x[3]_w:	Video di Barbara D’Urso in lacrime mentre ascolta una storia triste.  vw Cards Against Humanity
+g.4[0]x[4]_w:	Polluzione notturna.  EaH  w Cards Against Humanity
+g.4[1]x[4]_w:	Gli ebrei.  wr Cards Against Humanity
+g.4[2]x[4]_w:	Le mie tette.     w Cards Against Humanity
+g.4[3]x[4]_w:	Cosce poderose.  w Cards Against Humanity
+g.5[0]x[0]_w:	Fare l’occhiolino  a persone anziane.  w Cards Against Humanity
+g.5[1]x[0]_w:	Mr. Muscolo, giusto dietro di te.  w Cards Against Humanity
+g.5[2]x[0]_w:	Una gentile carezza nell’interno della coscia.  €aH  w Cards Against Humanity
+g.5[3]x[0]_w:	Tensione sessuale.  w Cards Against Humanity
+g.5[0]x[1]_w:	Il frutto proibito.  wr Cards Against Humanity
+g.5[1]x[1]_w:	Skeletor.  w Cards Against Humanity
+g.5[2]x[1]_w:	KiteKat®.  w Cards Against Humanity
+g.5[3]x[1]_w:	Essere ricco.  €all  w Cards Against Humanity
+g.5[0]x[2]_w:	Dolce, dolce vendetta.  vw Cards Against Humanity
+g.5[1]x[2]_w:	Popolo delle Libertà.  WMO cards against Humanity
+g.5[2]x[2]_w:	Scaccolarsi con l'alluce del piede sinistro  ah  vw Cards Against Humanity
+g.5[3]x[2]_w:	Un’antilope che soffre di flatulenza.  WE cards against Humanity
+g.5[0]x[3]_w:	Natalie Portman.  MP cards against Humanity
+g.5[1]x[3]_w:	Toccare una tetta senza dare nell’occhio.  Vie: cahpro Jectua.it
+g.5[2]x[3]_w:	Piloti Kamikaze.  MP cards against Humanity
+g.5[3]x[3]_w:	Sean Connery.  MP cards Against Humanity
+g.5[0]x[4]_w:	Obbiettivi politici degli omosessuali.  w Cards Against Humanity
+g.5[1]x[4]_w:	Un operoso cinese.  WI cards Against Humanity
+g.5[2]x[4]_w:	Un falco con un cappuccio in testa.  @aH  vw Cards Against Humanity
+g.5[3]x[4]_w:	Chierichetti.  WP > cards Against Humanity
+g.6[0]x[0]_w:	Pac-Man.  @àH)  qm Gards Against Humanity
+g.6[1]x[0]_w:	Diventare così arrabbiati da farsi venire un’erezione.  vw Cards Against Humanity
+g.6[2]x[0]_w:	Campioni gratuiti.  wr Cards Against Humanity
+g.6[3]x[0]_w:	Un gran rumore per nulla.  W Cards Against Humanity
+g.6[0]x[1]_w:	Fare la cosa giusta.  NP cards Against Humanity
+g.6[1]x[1]_w:	| patti Lateranensi.  MP cards against Humanity
+g.6[2]x[1]_w:	Allattamento.  MP cards against Humanity
+g.6[3]x[1]_w:	La pace nel  mondo.        vw Cards Against Humanity
+g.6[0]x[2]_w:	RoboCop.  @aH  wo Cards Against Humanity
+g.6[1]x[2]_w:	Faccia tosta.  MP cards against Humanity
+g.6[2]x[2]_w:	Justin Bieber.  Can  Lil Cards Against Humanity
+g.6[3]x[2]_w:	Oompa-Loompa.  MP cards against Humanity
+g.6[0]x[3]_w:	Gorgheggi in momenti inappropriati.  WMO cards Against Humanity
+g.6[1]x[3]_w:	Pubertà.  @aH  vw Cards Again: st many
+g.6[2]x[3]_w:	Fantasmi.  MP cards Against Humanity
+g.6[3]x[3]_w:	Una spagnola non simmetrica.  WI cards Against Humanity
+g.6[0]x[4]_w:	Mani vigorose da jazzista.     w Cards Against Humanity
+g.6[1]x[4]_w:	Ditalini.  w Cards Against Humanity
+g.6[2]x[4]_w:	Bruno Vespa che si impiglia con lo scroto in  un gancio per le  tende.  - €aH  H     w Cards Against Humanity
+g.6[3]x[4]_w:	Polaretti®.  w Cards Against Humanity
+g.7[0]x[0]_w:	Violenza della polizia.  @àH)  wo Cards Against Humanity
+g.7[1]x[0]_w:	Totò Riina.  w Cards Against Humanity
+g.7[2]x[0]_w:	Preadolescente.  al)  vw Cards Against Humanity
+g.7[3]x[0]_w:	Scalpare.  WF cars Against Humanity
+g.7[0]x[1]_w:	Mascherare  una risata quando vengono menzionati gli Hutu e i Tutsi.  w Cards Against Humanity
+g.7[1]x[1]_w:	Twittare.  w 1) Cards Against Humanity
+g.7[2]x[1]_w:	Darth Fenner.  w Cards Against Humanity
+g.7[3]x[1]_w:	Una pugnetta  triste.     w Cards Against Humanity
+g.7[0]x[2]_w:	Esattamente quello che ti aspetti.  vw Cards Against Humanity
+g.7[1]x[2]_w:	Aspettarsi un rutto e invece vomitare sul pavimento.  vw I cards Against Humanity
+g.7[2]x[2]_w:	Psicofarmaci.  w Cards Against Humanity
+g.7[3]x[2]_w:	Cellule staminali embrionali.  w Cards Against Humanity
+g.7[0]x[3]_w:	Un succulento seno.  vw Cards Against Humanity
+g.7[1]x[3]_w:	Sesso tra panda.  - Viu. capro jectua.it  vw Cards Against Humanity
+g.7[2]x[3]_w:	Una lobotomia fatta con un punteruolo.  w Cards Against Humanity
+g.7[3]x[3]_w:	Tom Cruise.  w Cards Against Humanity
+g.7[0]x[4]_w:	Herpes labiale.  w Cards Against Humanity
+g.7[1]x[4]_w:	Capodogli.  w Cards Against Humanity
+g.7[2]x[4]_w:	Barboni.
+g.7[3]x[4]_w:	Petting duro.  w Cards Against Humanity
+g.8[0]x[0]_w:	Incesto.  wr Cards Against Humanity
+g.8[1]x[0]_w:	Pac-Man che trangugia sperma.  vw Cards Against Humanity
+g.8[2]x[0]_w:	Un mimo che ha un infarto.  €aH  wr Cards Against Humanity
+g.8[3]x[0]_w:	Hulk Hogan.  LL Cards Against Humanity
+g.8[0]x[1]_w:	vw Cards Against Humanity
+g.8[1]x[1]_w:	Esfoliarsi la pelle sotto i rotoli di grasso.  vw Cards Against Humanity
+g.8[2]x[1]_w:	Doccia di piscio.  vw Cards Against Humanity
+g.8[3]x[1]_w:	Emozioni.  @aH)  UA Gards Against Humanity
+g.8[0]x[2]_w:	Leccare cose per rivendicarle come proprie.  vi Cards Against Humanity
+g.8[1]x[2]_w:	Birra Moretti.  WR cards against Humanity
+g.8[2]x[2]_w:	La placenta.     v Cards Against Humanity
+g.8[3]x[2]_w:	Combustione umana spontanea.  WF cards against Humanity
+g.8[0]x[3]_w:	Scopamici.  WR cards against Humanity
+g.8[1]x[3]_w:	Dipingere con le dita.      v Cards Against Humanity
+g.8[2]x[3]_w:	L’odore delle persone vecchie.  WR cards against Humanity
+g.8[3]x[3]_w:	Avere soltanto un pollo di gomma con una carrucola in mezzo.  MP cars Against Humanity
+g.8[0]x[4]_w:	I miei demoni  interiori.     v Cards Against Humanity
+g.8[1]x[4]_w:	Un Liquidator® pieno di piscio di gatto.  w Cards Against Humanity
+g.8[2]x[4]_w:	Giuseppe Mazzini.  @aH  v Cards Against Humanity
+g.8[3]x[4]_w:	Coccolarsi.  NP cards Against Humanity
+g.9[0]x[0]_w:	Rosso relativo.  Ea  wr Cards Against Humanity
+g.9[1]x[0]_w:	Combattimenti tra galli.  wr Cards Against Humanity
+g.9[2]x[0]_w:	Fuoco amico.  al)  w Cards Against Humanity
+g.9[3]x[0]_w:	Ronald Reagan.  wr Cards Against Humanity
+g.9[0]x[1]_w:	Un compleanno deludente.  w Cards Against Humanity
+g.9[1]x[1]_w:	Una sfacciata donna di colore.  vw Cards Against Humanity
+g.9[2]x[1]_w:	Ragazzini che partecipano alle olimpiadi della  matematica.  vw Cards Against Humanity
+g.9[3]x[1]_w:	Un minuscolo  cavallo.      vw Gards Against Humanity
+g.9[0]x[2]_w:	Diego Abatantuono.  vw Cards Against Humanity
+g.9[1]x[2]_w:	Cavalcare al tramonto.  vw Cards Against Humanity
+g.9[2]x[2]_w:	Un colpo di scena degno di M. Night  Shyamalan.  €aH  v Cards Against Humanity
+g.9[3]x[2]_w:	Dreadlock.  MP cards Against Humanity
+g.9[0]x[3]_w:	Distruzione reciproca.  WR cards Against Humanity
+g.9[1]x[3]_w:	Pedofili.  @3H  qw Cards Against Humanity
+g.9[2]x[3]_w:	Lievito.  WI cards against Humanity
+g.9[3]x[3]_w:	Saccheggiare tombe.  WR cards against Humanity
+g.9[0]x[4]_w:	Mangiare l’ultimo bisonte.  EaH  vw Cards Against Humanity
+g.9[1]x[4]_w:	Catapulte.  WR cards Against Humanity
+g.9[2]x[4]_w:	Persone povere.  vw Cards Against Humanity
+g.9[3]x[4]_w:	Il nome della rosa.  NP) cards Against Humanity
+g.10[0]x[0]_w:	Hustle - | signori della truffa.      vw Cards Against Humanity
+g.10[1]x[0]_w:	La forza.  vw Cards Against Humanity
+g.10[2]x[0]_w:	Pulirle il culo.  al)  w Cards Against Humanity
+g.10[3]x[0]_w:	Creazionismo.  vw Cards Against Humanity
+g.10[0]x[1]_w:	Bocca larga.  NP cards Against Humanity
+g.10[1]x[1]_w:	PO cards against Humanity
+g.10[2]x[1]_w:	Foto di tette.  WP cards against Humanity
+g.10[3]x[1]_w:	Il superuomo.  @aH)  w Cards Against Humanity
+g.10[0]x[2]_w:	Sarah Palin.  Call  vw Cards Against Humanity
+g.10[1]x[2]_w:	Giochi senza frontiere.  MP cards against Humanity
+g.10[2]x[2]_w:	Sballarsi.     Li) Cards Against Humanity
+g.10[3]x[2]_w:	Scientology.  MP cars against Humanity
+g.10[0]x[3]_w:	L’invidia per il pene.  WI) cards Against Humanity
+g.10[1]x[3]_w:	Curare l’omosessualità pregando.  Vie: cahpro Jectua it
+g.10[2]x[3]_w:	Spassarsela.  MP cards against Humanity
+g.10[3]x[3]_w:	Due nani che stanno cagando in un secchio.  MP cards Against Humanity
+g.10[0]x[4]_w:	Il Ku Klux Klan.  w Cards Against Humanity
+g.10[1]x[4]_w:	Gengis Khan.  w Cards Against Humanity
+g.10[2]x[4]_w:	Cristalli di metanfetamina.  | @aH  w Cards Against Humanity
+g.10[3]x[4]_w:	Servi della gleba.  vw Cards Against Humanity
+g.11[0]x[0]_w:	Ace Ventura l’acchiappa animali.  €aH  w Cards Against Humanity
+g.11[1]x[0]_w:	La carriera di attore di Shaquille O’Neal.  w Cards Against Humanity
+g.11[2]x[0]_w:	Baldanzoso.  €aH  w Cards Against Humanity
+g.11[3]x[0]_w:	La giustizia spicciola.  vw Cards Against Humanity
+g.11[0]x[1]_w:	Un bukkake censurato.  wr Cards Against Humanity
+g.11[1]x[1]_w:	Una vita di tristezza.  w Cards Against Humanity
+g.11[2]x[1]_w:	Razzismo.  w Cards Against Humanity
+g.11[3]x[1]_w:	Lancio dei nani.  _ €09  vw Cards Against Humanity
+g.11[0]x[2]_w:	Sole e arcobaleni.  €aH  w Cards Against Humanity
+g.11[1]x[2]_w:	Una scimmia che fuma un sigaro.  w Cards Against Humanity
+g.11[2]x[2]_w:	Inondazione improvvisa.  €aH  vw Cards Against Humanity
+g.11[3]x[2]_w:	Il testicolo mancante di Lance Armstrong.  w Cards Against Humanity
+g.11[0]x[3]_w:	Conati di vomito.  w Cards Against Humanity
+g.11[1]x[3]_w:	| terroristi.  €àH  qv Cards Again: sm
+g.11[2]x[3]_w:	Britney Spears a 55 anni.  w Cards Against Humanity
+g.11[3]x[3]_w:	Atteggiamento.  w Cards Against Humanity
+g.11[0]x[4]_w:	Entrare a canzone iniziata e mettersi  a ballare selvaggiamente.  vw Gards Against Humanity
+g.11[1]x[4]_w:	Lebbra.
+g.11[2]x[4]_w:	Gloryholes.
+g.11[3]x[4]_w:	Lame nei capezzoli.  w Cards Against Humanity
+g.12[0]x[0]_w:	Il cuore di un bambino.  €aH  vw Cards Against Humanity
+g.12[1]x[0]_w:	Cuccioli!  wr Cards Against Humanity
+g.12[2]x[0]_w:	Svegliarsi mezzo nudo nel parcheggio di un McDonald.  w Cards Against Humanity
+g.12[3]x[0]_w:	Dighe dentali.  w Cards Against Humanity
+g.12[0]x[1]_w:	La vagina di Oriana Fallaci.  w Gards Against Humanity
+g.12[1]x[1]_w:	Il perineo.  w Cards Against Humanity
+g.12[2]x[1]_w:	Ascolto interessato.  w Cards Against Humanity
+g.12[3]x[1]_w:	Pulizia etnica.  Call  w Cards Against Humanity
+g.12[0]x[2]_w:	Il brutto anatroccolo.  €aH  w Cards Against Humanity
+g.12[1]x[2]_w:	La mano invisibile.  w Cards Against Humanity
+g.12[2]x[2]_w:	Aspettare fino al matrimonio.  C€aH  w Cards Against Humanity
+g.12[3]x[2]_w:	Stupidità incomprensibile.  w Cards Against Humanity
+g.12[0]x[3]_w:	Euphoria”M di Calvin Klein.  wr Cards Against Humanity
+g.12[1]x[3]_w:	Riciclare regali.  + Viu. capro jectua.it  w Cards Against Humanity
+g.12[2]x[3]_w:	Disfunzione erettile.  wr Cards Against Humanity
+g.12[3]x[3]_w:	Sovracompensazione.  w Cards Against Humanity
+g.12[0]x[4]_w:	Autocannibalismo.     €  vw Cards Against Humanity
+g.12[1]x[4]_w:	La mia collezione di giocattoli erotici  high-tech.  vw Cards Against Humanity
+g.12[2]x[4]_w:	
+g.12[3]x[4]_w:	Le persone non di colore.  w Cards Against Humanity
+g.13[0]x[0]_w:	Porno Tentacolari.  _ —_ €al  vw Cards Against Humanity
+g.13[1]x[0]_w:	Giuliano Ferrara che vomita convulsamente mentre una nidiata  di granchi-ragno  si schiude nel suo cervello e fuoriesce dai suoi condotti lacrimali.  vw Cards Against Humanity
+g.13[2]x[0]_w:	Troppo gel per capelli.  EaH  vw Cards Against Humanity
+g.13[3]x[0]_w:	Seppuku.  wr Cards Against Humanity
+g.13[0]x[1]_w:	Ballare sul ghiaccio con persone dello stesso sesso.  vw Cards Against Humanity
+g.13[1]x[1]_w:	Barare alle Paraolimpiadi.  vw Gards Against Humanity
+g.13[2]x[1]_w:	Carisma.  vw Gards Against Humanity
+g.13[3]x[1]_w:	Keanu Reeves.
+g.13[0]x[2]_w:	Dario Argento.  vw Gards Against Humanity
+g.13[1]x[2]_w:	Nickelback.  w Gards Against Humanity
+g.13[2]x[2]_w:	Una rapida occhiata.  €aH  vw Gards Against Humanity
+g.13[3]x[2]_w:	Cagarsi l’anima.  vw Gards Against Humanity
+g.13[0]x[3]_w:	Mestruazioni  vw Gards Against Humanity
+g.13[1]x[3]_w:	Una sorpresa salata.  GEaH  qÙ Gards Against Humanity
+g.13[2]x[3]_w:	Il sud.  vw Gards Against Humanity
+g.13[3]x[3]_w:	La violazione dei nostri diritti umani basilari.  vw Cards Against Humanity
+g.13[0]x[4]_w:	DEVI COSTRUIRE ALTRI PILONI.  w Gards Against Humanity
+g.13[1]x[4]_w:	Stupro su appuntamento.  vw Cards Against Humanity
+g.13[2]x[4]_w:	Essere fantastici.     vw Cards Against Humanity
+g.13[3]x[4]_w:	Necrofilia  vw Cards Against Humanity
+g.14[0]x[0]_w:	Super Quark.  (la  w Cards Against Humanity
+g.14[1]x[0]_w:	Le persone di colore.  w Cards Against Humanity
+g.14[2]x[0]_w:	Codice cavalleresco.  | €@aH  vw Cards Against Humanity
+g.14[3]x[0]_w:	Lunchables®M.  w Cards Against Humanity
+g.14[0]x[1]_w:	Stronze.  vw Gards Against Humanity
+g.14[1]x[1]_w:	Le persone totalmente handicappate.  vw Gards Against Humanity
+g.14[2]x[1]_w:	Orfani commoventi.  vw Gards Against Humanity
+g.14[3]x[1]_w:	Hitler.  wr Cards Against Humanity
+g.14[0]x[2]_w:	Cacca che fa bruciare il culo.  vw Gards Against Humanity
+g.14[1]x[2]_w:	Un altro dannato film sui vampiri.  vw Gards Against Humanity
+g.14[2]x[2]_w:	Molle Slinky attorcigliate.  €aH  w Gards Against Humanity
+g.14[3]x[2]_w:	Il vero significato del Natale.  w Cards Against Humanity
+g.14[0]x[3]_w:	Estrogeni.  vw Gards Against Humanity
+g.14[1]x[3]_w:	Un’aspra marmellata per colazione.  Vie: cahpro Jectua it
+g.14[2]x[3]_w:	Quella cosa che dà la scossa agli addominali.  w Gards Against Humanity
+g.14[3]x[3]_w:	Espellere un calcolo renale.  vw Cards Against Humanity
+g.14[0]x[4]_w:	Un buco del culo sbiancato.  vw Gards Against Humanity
+g.14[1]x[4]_w:	Michael Jackson.  w Cards Against Humanity
+g.14[2]x[4]_w:	Impianti cibernetici.     vw Cards Against Humanity
+g.14[3]x[4]_w:	Ragazzi che non telefonano.  vw Cards Against Humanity
+g.15[0]x[0]_w:	Untori.  @àH  vw Cards Against Humanity e
+g.15[1]x[0]_w:	Masturbazione.  vw Cards Against Humanity
+g.15[2]x[0]_w:	Allusione sul ceto sociale.  | €@aH  vw Cards Against Humanity
+g.15[3]x[0]_w:	Flato vaginale.  v I cards Against Humanity
+g.15[0]x[1]_w:	Nascondere un’erezione.  vw Cards Against Humanity
+g.15[1]x[1]_w:	Intimo commestibile.  vw Cards Against Humanity
+g.15[2]x[1]_w:	Viagra®.  vw Cards Against Humanity
+g.15[3]x[1]_w:	Zuppa che è troppo calda.  v I cards Against Humanity
+g.15[0]x[2]_w:	Maometto.  Call  w Cards Against Humanity
+g.15[1]x[2]_w:	Sesso a sorpresa!  w Cards Against Humanity
+g.15[2]x[2]_w:	Big Mac".  w Cards Against Humanity
+g.15[3]x[2]_w:	Bere da solo.  vw Cards Against Humanity
+g.15[0]x[3]_w:	Dita a forma di cazzo.  w Cards Against Humanity
+g.15[1]x[3]_w:	Ferite da arma da taglio multiple.  EaH  w Cards Against Humanity
+g.15[2]x[3]_w:	Farsela addosso.  w Cards Against Humanity
+g.15[3]x[3]_w:	Abusi infantili.  vw Gards Against Humanity
+g.15[0]x[4]_w:	Palline anali.     w Cards Against Humanity
+g.15[1]x[4]_w:	Morti civili.  w Cards Against Humanity
+g.15[2]x[4]_w:	Salto della quaglia.  EH     vw Gards Against Humanity
+g.15[3]x[4]_w:	Christian De Sica.  vw Gards Against Humanity
+g.16[0]x[0]_w:	Carne di cavallo.  . —_ €aH  w Cards Against Humanity
+g.16[1]x[0]_w:	Un cappello davvero alla moda.  vw Cards Against Humanity
+g.16[2]x[0]_w:	Kim Jong-il.  . al)  vw Cards Against Humanity
+g.16[3]x[0]_w:	Peli pubici sul bordo del cesso.  vw Cards Against Humanity
+g.16[0]x[1]_w:	Testimoni di Geova.  w Cards Against Humanity
+g.16[1]x[1]_w:	Discriminazione politica.  w Cards Against Humanity
+g.16[2]x[1]_w:	Farlo dall’entrata posteriore.  vw Cards Against Humanity
+g.16[3]x[1]_w:	Imboccare Platinette.  _ — €aH  vw Cards Against Humanity
+g.16[0]x[2]_w:	Insegnare a un robot ad amare.  wr Cards Against Humanity
+g.16[1]x[2]_w:	Un mare di guai.  vw Cards Against Humanity
+g.16[2]x[2]_w:	Un mulino a vento pieno di cadaveri.  Ca  w Cards Against Humanity
+g.16[3]x[2]_w:	La tigre dei Kellogg's.  w Cards Against Humanity
+g.16[0]x[3]_w:	Indossare la biancheria al contrario per evitare di lavarla.  w Cards Against Humanity
+g.16[1]x[3]_w:	Un raggio della morte.  Vie: cahpro Jectua it
+g.16[2]x[3]_w:	Il soffitto di vetro.  w Cards Against Humanity
+g.16[3]x[3]_w:	Un frigorifero pieno di organi.  w Cards Against Humanity
+g.16[0]x[4]_w:	Il sogno americano.  w Cards Against Humanity
+g.16[1]x[4]_w:	Bere un barile di birra a testa in giù.  w Cards Against Humanity
+g.16[2]x[4]_w:	Quando scoreggi ma ti esce anche una sgommata.  @aH  w Cards Against Humanity
+g.16[3]x[4]_w:	Rimangiarsi quello che si è detto.  w Cards Against Humanity
+g.17[0]x[0]_w:	Neonati morti.
+g.17[1]x[0]_w:	Prepuzio.  vw Cards Against Humanity
+g.17[2]x[0]_w:	Assoli di Sassofoni.  €aH  vw Cards Against Humanity
+g.17[3]x[0]_w:	Americani.  vw Cards Against Humanity
+g.17[0]x[1]_w:	Un feto.  w Cards Against Humanity
+g.17[1]x[1]_w:	Sparare fucilate al cielo mentre stai penetrando fino alle palle un cinghiale urlante.  w Cards Against Humanity
+g.17[2]x[1]_w:	Giorgio Napolitano.  vw Cards Against Humanity
+g.17[3]x[1]_w:	Mutilati.  vw Cards Against Humanity
+g.17[0]x[2]_w:	Eugenetica.  Call  w Cards Against Humanity
+g.17[1]x[2]_w:	La mia situazione sentimentale.  w Cards Against Humanity
+g.17[2]x[2]_w:	Christopher Walken.  ah  vw Cards Against Humanity
+g.17[3]x[2]_w:	Scroto  vw Cards Against Humanity
+g.17[0]x[3]_w:	Harry Potter erotica.  w Cards Against Humanity
+g.17[1]x[3]_w:	Scuole Superiori.  | EaH  w Cards Against Humanity
+g.17[2]x[3]_w:	Sbronzarsi di colluttorio.  w Cards Against Humanity
+g.17[3]x[3]_w:	Nazisti.  vw Gards Against Humanity
+g.17[0]x[4]_w:	1 kg di eroina Messicana di scarsa qualità.  w Cards Against Humanity
+g.17[1]x[4]_w:	Stephen Hawking che parla sporco.  w Cards Against Humanity
+g.17[2]x[4]_w:	Genitori morti.
+g.17[3]x[4]_w:	Permanenza degli oggetti nello sviluppo cognitivo.  vw Gards Against Humanity
+g.18[0]x[0]_w:	Pollici opponibili.      w Cards Against Humanity
+g.18[1]x[0]_w:	Test di intelligenza con domande razziste.  w Cards Against Humanity
+g.18[2]x[0]_w:	Parlare a vanvera.  al)  w Cards Against Humanity
+g.18[3]x[0]_w:	Motoseghe al posto delle mani.  w Cards Against Humanity
+g.18[0]x[1]_w:	Nicolas Cage.  vw Cards Against Humanity
+g.18[1]x[1]_w:	Una sfilata di bellezza per bambini.  w Cards Against Humanity
+g.18[2]x[1]_w:	Esplosioni.  vw Cards Against Humanity
+g.18[3]x[1]_w:	Sniffare colla.  __ GN  w Cards Against Humanity
+g.18[0]x[2]_w:	Bruno Vespa molestato da uno stormo di avvoltoi.  €aH  vw Cards Against Humanity
+g.18[1]x[2]_w:	Repressione.  w Cards Against Humanity
+g.18[2]x[2]_w:	Droga dello stupro.  l ah  wr Cards Against Humanity
+g.18[3]x[2]_w:	La mia vagina.  w Cards Against Humanity
+g.18[0]x[3]_w:	Pantaloni da cowboy senza sedere.  vw Gards Against Humanity
+g.18[1]x[3]_w:	Psyco.  @3H  UA Gards Against Humanity
+g.18[2]x[3]_w:	Dare il 110%.  vw Gards Against Humanity
+g.18[3]x[3]_w:	Sua altezza reale, la regina Elisabetta Il.  w Gards Against Humanity
+g.18[0]x[4]_w:	| Rhapsody of Fire.  vw Gards Against Humanity
+g.18[1]x[4]_w:	Essere tenuto in disparte.  vw Gards Against Humanity
+g.18[2]x[4]_w:	Goblin.     w Gards Against Humanity
+g.18[3]x[4]_w:	Speranza.  w Cards Against Humanity
+g.19[0]x[0]_w:	Martin Luther King.  vw Cards Against Humanity
+g.19[1]x[0]_w:	Un micropene.  vw Gards Against Humanity
+g.19[2]x[0]_w:	La mia anima.  al)  qw Cards Against Humanity
+g.19[3]x[0]_w:	Un’orgia.  vw Cards Against Humanity
+g.19[0]x[1]_w:	Vichinghi.  WR cards Against Humanity
+g.19[1]x[1]_w:	Persone eccitanti.  NP) cards Against Humanity
+g.19[2]x[1]_w:	Seduzione.  WF cards Against Humanity
+g.19[3]x[1]_w:	Il complesso di  Edipo.      vi Cards Against Humanity
+g.19[0]x[2]_w:	@aH  vw Cards Against Humanity
+g.19[1]x[2]_w:	Riscaldamento globale.  MP cars against Humanity
+g.19[2]x[2]_w:	Musica New Age.  ah  vw Cards Against Humanity
+g.19[3]x[2]_w:	Scaldamani tascabili.  NP cards Against Humanity
+g.19[0]x[3]_w:	Fare il labbrino.  vi 1) Cards Against Humanity
+g.19[1]x[3]_w:	Omicidio mediante veicolo a motore.  Vie: cahpro Jectua.it
+g.19[2]x[3]_w:	Suffragio femminile.  w Cards Against Humanity
+g.19[3]x[3]_w:	Un profilattico difettoso.  MP cards against Humanity
+g.19[0]x[4]_w:	Forum.
+g.19[1]x[4]_w:	Bambini africani.  w Cards Against Humanity
+g.19[2]x[4]_w:	Massacro di Utoya in Norvegia.  | @aH  w Cards Against Humanity
+g.19[3]x[4]_w:	Barack Obama.  w Cards Against Humanity
+g.20[0]x[0]_w:	Asiatici che non sono bravi in matematica.  vw Cards Against Humanity
+g.20[1]x[0]_w:	Anziani uomini giapponesi.  vw Cards Against Humanity
+g.20[2]x[0]_w:	Scambiarsi battute divertenti.      w 1) cards Against tiumanity
+g.20[3]x[0]_w:	Coppie omosessuali.  w Cards Against Humanity
+g.20[0]x[1]_w:	Dividere le acque del Mar Rosso.  vw Cards Against Humanity
+g.20[1]x[1]_w:	Arnold Schwarzenegger.  vw Cards Against Humanity
+g.20[2]x[1]_w:	Pompino alla guida.  w Cards Against Humanity
+g.20[3]x[1]_w:	Addominali spettacolari.  _ — €8H  vw Cards Against Humanity
+g.20[0]x[2]_w:	Panettone.  Call  w Cards Against Humanity
+g.20[1]x[2]_w:	Un leone depresso.  w Cards Against Humanity
+g.20[2]x[2]_w:	Un sacchetto di fagioli magici.  Ca  vw Gards Against Humanity
+g.20[3]x[2]_w:	Scelte di vita sbagliate.  vw Cards Against Humanity
+g.20[0]x[3]_w:	La mia vita sessuale.  w Cards Against Humanity
+g.20[1]x[3]_w:	Auschwitz.  @3H  caRpr vw Gards Against Humanity
+g.20[2]x[3]_w:	Una tartaruga alligatore che ti sta mordendo la punta del pene.  w Gards Against Humanity
+g.20[3]x[3]_w:	Una detonazione termonucleare.  w Gards Against Humanity
+g.20[0]x[4]_w:	Il clitoride.
+g.20[1]x[4]_w:	Il Big Bang.  vw Gards Against Humanity
+g.20[2]x[4]_w:	Mine antiuomo.     vw Gards Against Humanity
+g.20[3]x[4]_w:	Amici che si mangiano tutti i salatini.  w Gards Against Humanity
+g.21[0]x[0]_w:	Capre che si stanno mangiando  lattine.      vw Cards Against Humanity
+g.21[1]x[0]_w:	Lo Schiaccianoci: La danza della Fata Cofanetto.  vw Cards Against Humanity
+g.21[2]x[0]_w:	Farsi una sega in una piscina di lacrime di bambini.  €aH  w I Cards Against tiumanity
+g.21[3]x[0]_w:	Flauto a pelle.  w Cards Against Humanity
+g.21[0]x[1]_w:	Il mio momento.  vw Cards Against Humanity
+g.21[1]x[1]_w:	La metropolitana.  vw Cards Against Humanity
+g.21[2]x[1]_w:	Battute fuori luogo sull’olocausto.  vw Cards Against Humanity
+g.21[3]x[1]_w:	Un mare di guai.  €all  vw Cards Against Humanity
+g.21[0]x[2]_w:	Fantasie di un taglialegna.  w Cards Against Humanity
+g.21[1]x[2]_w:	Voce di Morgan Freeman.  vw Cards Against Humanity
+g.21[2]x[2]_w:	Donne nelle pubblicità di yogurt.  €aH  w Cards Against Humanity
+g.21[3]x[2]_w:	Metodo naturale di allungamento del pene.  vw Cards Against Humanity
+g.21[0]x[3]_w:	Essere un fottuto stregone.  w Cards Against Humanity
+g.21[1]x[3]_w:	Piercing nei genitali.  l EaH  w Cards Against Humanity
+g.21[2]x[3]_w:	Travestiti passabili.  vw Gards Against Humanity
+g.21[3]x[3]_w:	Combattimenti sexy con i cuscini.  vw Gards Against Humanity
+g.21[0]x[4]_w:	Palle.       vw Cards Against Humanit
+g.21[1]x[4]_w:	Nonna.  vw Cards Against Humanity
+g.21[2]x[4]_w:	Attrito.
+g.21[3]x[4]_w:	Rompicoglioni.  vw Gards Against Humanity
+g.22[0]x[0]_w:	Scoreggiare e andarsene via.  w Cards Against Humanity
+g.22[1]x[0]_w:	Essere uno stronzo con i bambini.  w Cards Against Humanity
+g.22[2]x[0]_w:	Installare, in casa, trappole esplosive per  ostacolare i ladri.  EaH  w Cards Against Humanity
+g.22[3]x[0]_w:	Sistema Oasi Tecnologica del Riposo materassi  EminflexM,  w Cards Against Humanity
+g.22[0]x[1]_w:	Morire.  wr Cards Against Humanity
+g.22[1]x[1]_w:	L’uragano Katrina.  wr Cards Against Humanity
+g.22[2]x[1]_w:	| gay.  wr Cards Against Humanity
+g.22[3]x[1]_w:	La follia di un uomo.  _ — €8H  w Cards Against Humanity
+g.22[0]x[2]_w:	Uomini.  Cal  w Cards Against Humanity
+g.22[1]x[2]_w:	Gli Amish.  w Cards Against Humanity
+g.22[2]x[2]_w:	Uova di pterodattilo.  Ca  w Cards Against Humanity
+g.22[3]x[2]_w:	Esercizi di “costruzione del  gruppo”.  w Cards Against Humanity
+g.22[0]x[3]_w:	Un tumore al cervello.  vw Gards Against Humanity
+g.22[1]x[3]_w:	Carte contro l'umanità.  | EaH  w Cards Against Humanity
+g.22[2]x[3]_w:	Aver paura di se stesso.  w Cards Against Humanity
+g.22[3]x[3]_w:	Lady Gaga.  w Cards Against Humanity
+g.22[0]x[4]_w:	L'uomo del latte.  vw Gards Against Humanity
+g.22[1]x[4]_w:	Essere sboccati.  w Cards Against Humanity
+g.22[2]x[4]_w:	Vomitare a denti stretti per sentire i pezzettoni.  w Cards Against Humanity
+g.22[3]x[4]_w:	Avere peli pubici fra i denti.  w Cards Against Humanity
+g.23[0]x[0]_b:	La nuova norma sulla sicurezza ora proibisce  sugli aerei.  la Cards Against Humanity
+g.23[1]x[0]_b:	È un peccato che i ragazzini al giorno d’oggi partecipino a  lo Cards Against Humanity
+g.23[2]x[0]_b:	Fra 1.000 anni, quando le banconote saranno soltanto un ricordo  lontano, sarà il nostro denaro.  lo Cards Against Humanity
+g.23[3]x[0]_b:	La lega serie A ha vietato  poiché dà un  vantaggio ingiusto ai giocatori.  lo Cards Against Humanity
+g.23[0]x[1]_b:	Qual’è il vizio segreto di Batman?  lt Cards Against Humanity
+g.23[1]x[1]_b:	Il prossimo romanzo di J.K.Rowling. Harry Potter e la camera dei  lo Cards Against Humanity
+g.23[2]x[1]_b:	Si, ho ucciso  Ti domandi come?     Fly c.. PICK@
+g.23[3]x[1]_b:	Prof. mi dispiace ma non ho potuto finire i  compiti per colpa di  lo Cards Against Humanity
+g.23[0]x[2]_b:	E il premio Oscar per vaa
+g.23[1]x[2]_b:	Per il mio prossimo numero tirerò fuori  da  Fly ca. PICK@
+g.23[2]x[2]_b:	
+g.23[3]x[2]_b:	Cosa ho portato dal Messico?  la Cards Against Humanity
+g.23[0]x[3]_b:	2 C’è un app per quello.  la Cards Against Humanity
+g.23[1]x[3]_b:	Passo 1: Passo 2: Passo 3: Guadagno!  Fly ce PICK@Q
+g.23[2]x[3]_b:	Scommetto che non ne desideri soltanto uno!  la Cards Against Humanity
+g.23[3]x[3]_b:	Qual'è il mio antidroga?  lt Cards Against Humanity
+g.23[0]x[4]_b:	Mentre gli USA e la Russia gareggiavano per la conquista della Luna. Il messico ha investito milioni di pesos in  la Cards Against Humanity
+g.23[1]x[4]_b:	Nel nuovo film della Disney, Hannah Montana si scontra per la prima volta contro  la Cards Against Humanity
+g.23[2]x[4]_b:	Qual è il mio potere segreto?  la Cards Against Humanity
+g.23[3]x[4]_b:	Qual è la nuova dieta del momento?  la Cards Against Humanity
+g.24[0]x[0]_b:	Cosa si mangia Vin Diesel per cena?  la Cards Against Humanity
+g.24[1]x[0]_b:	Quando il faraone rimase impassibile, Mosè scatenò la piaga  la Cards Against Humanity
+g.24[2]x[0]_b:	Come faccio  a mantenere  la mia attuale relazione?  lo Cards Against Humanity
+g.24[3]x[0]_b:	Qual è la cosa più incrostata?  lo Cards Against Humanity
+g.24[0]x[1]_b:	Mentre ero sotto gli effetti di acidi,  si trasformò in  Fip c.: PICK@Q
+g.24[1]x[1]_b:	Nel carcere di Los Angeles le voci dicono che puoi scambiare 200 sigarette per  la Cards Against Humanity
+g.24[2]x[1]_b:	Dopo il terremoto Sean Penn portò  alle  persone di Haiti.  lo Cards Against Humanity
+g.24[3]x[1]_b:	Invece del carbone la Befana ora porta ai bambini cattivi  lo Cards Against Humanity
+g.24[0]x[2]_b:	La vita degli indiani d’America cambiò per sempre quando gli uomini bianchi  li introdussero a  la Cards Against Humanity
+g.24[1]x[2]_b:	Cosa usano gli insegnanti per ispirare al successo i ragazzi?  lo Cards Against Humanity
+g.24[2]x[2]_b:	Amaro Montenegro sapore di  lo Cards Against Humanity
+g.24[3]x[2]_b:	Negli ultimi istanti di vita, Michael Jackson pensò a  ho Cards Against Humanity
+g.24[0]x[3]_b:	Ai neri piace  la Cards Against Humanity
+g.24[1]x[3]_b:	è una tendenza pericolosa che porta a  My ca PICK@
+g.24[2]x[3]_b:	Perché ho male ovunque?  lo Cards Against Humanity
+g.24[3]x[3]_b:	Una romantica cena a lume  di candela è incompleta senza .  lo Cards Against Humanity
+g.24[0]x[4]_b:	Cosa posso andare a prendere dal passato per convincere la gente di essere un potente stregone?  la Cards Against Humanity
+g.24[1]x[4]_b:	Sono Valerio Staffelli e sono qui per parlarvi di  MY coco aa tnt
+g.24[2]x[4]_b:	La gita scolastica fu completamente  rovinata da  lo Cards Against Humanity
+g.24[3]x[4]_b:	Qual è il miglior amico di una ragazza?  lo Cards Against Humanity
+g.25[0]x[0]_b:	Cara TopGirl, ho difficoltà con  e vorrei qualche consiglio.  lo Cards Against Humanity
+g.25[1]x[0]_b:	Quando sarò  il capo del governo creerò il Ministero del  lo Cards Against Humanity
+g.25[2]x[0]_b:	Cosa mi stanno nascondendo i miei genitori?  la Cards Against Humanity
+g.25[3]x[0]_b:	Cosa non fallisce mai nel ravvivare una festa?  lo Cards Against Humanity
+g.25[0]x[1]_b:	In un mondo depredato da  il nostro unico conforto è .  / De PICK@Q
+g.25[1]x[1]_b:	Inventa un haiku.
+g.25[2]x[1]_b:	Nel nuovo film di Shyamalan Bruce Willis scopre che  era invece per tutto il tempo.  / PA PICK@
+g.25[3]x[1]_b:	Cosa migliora con l’età?  lo Cards Against Humanity
+g.25[0]x[2]_b:	buono fino all’ultima goccia.  la Cards Against Humanity
+g.25[1]x[2]_b:	Ho un sacco di problemi ma  non è fra questi.  / PN PICK@
+g.25[2]x[2]_b:	È una trappola!  lo Cards Against Humanity
+g.25[3]x[2]_b:	Il nuovo reality show di MTV presenterà otto celebrità sull’orlo dello sfinimento che vivranno con  lo Cards Against Humanity
+g.25[0]x[3]_b:	Cos'è che mia nonna troverebbe allarmante ma nello stesso tempo anche stranamente affascinante?  la Cards Against Humanity
+g.25[1]x[3]_b:	Chi è il più emo?  la Cards Against Humanity
+g.25[2]x[3]_b:	Non avevo veramente compreso finché non incontrai  Ply ca PICK@
+g.25[3]x[3]_b:	Durante il sesso mi piace pensare a .  lo Cards Against Humanity
+g.25[0]x[4]_b:	Cosa fece finire la mia passata relazione?  lo Cards Against Humanity
+g.25[1]x[4]_b:	Cos'è questo suono?  lo Cards Against Humanity
+g.25[2]x[4]_b:	Così è come voglio morire!  lo Gards Against Humanity
+g.25[3]x[4]_b:	Perché sono appiccicoso?  lo Cards Against Humanity
+g.26[0]x[0]_b:	Quale sarà  il prossimo giocattolo dell’Happy Meal?  la Cards Against Humanity
+g.26[1]x[0]_b:	Cosa sarà disponibile a volontà in paradiso?  la Cards Against Humanity
+g.26[2]x[0]_b:	Non so con  che armi sarà combattuta la terza guerra mondiale. Ma nella guarta si useranno .  lo Cards Against Humanity
+g.26[3]x[0]_b:	Cosa ti permette di portarti a letto, con assoluta certezza, una ragazza?  lo Cards Against Humanity
+g.26[0]x[1]_b:	Voci dicono che il piatto preferito di Vladimir Putin è  ripieno di  / Pe PICK@Q
+g.26[1]x[1]_b:	LA7D presenta  la storia di
+g.26[2]x[1]_b:	testato dai bambini, approvato dalle madri.  la Cards Against Humanity
+g.26[3]x[1]_b:	Perché non riesco a dormire?  la Cards Against Humanity
+g.26[0]x[2]_b:	Cos’è questo odore?  lo Cards Against Humanity
+g.26[1]x[2]_b:	Cosa aiturebbe Mario Monti a rilassarsi?  la Cards Against Humanity
+g.26[2]x[2]_b:	Questo e’ come il mondo finirà, non con una esplosione ma con  la Cards Against Humanity
+g.26[3]x[2]_b:	In arrivo a Broadway quest’anno,  il musical.  la Cards Against Humanity
+g.26[0]x[3]_b:	Gli antropologi hanno recentemente scoperto un’antica tribù che venera  lo Cards Against Humanity
+g.26[1]x[3]_b:	Ma prima  che la uccida Signor Bond le voglio mostrare  la Cards Against Humanity
+g.26[2]x[3]_b:	Recenti studi hanno mostrato che topi di laboratorio impiegano il 50% in meno per uscire da un labirinto se sono stati esposti a  la Cards Against Humanity
+g.26[3]x[3]_b:	Quale sarà la prossima coppia di supereroi?  Fip ce: PICK@
+g.26[0]x[4]_b:	Prossimamente su Rai Sport 2: i mondiali di  lo Cards Against Humanity
+g.26[1]x[4]_b:	Quando sarò milionario erigerò una statua di  30 metri per commemorare  nta
+g.26[2]x[4]_b:	Nel tentativo di attrarre nuove persone, il museo nazionale di Storia Naturale inaugurerà una mostra interattiva su  la Cards Against Humanity
+g.26[3]x[4]_b:	Guerra! A cosa ci serve?  lo Cards Against Humanity
+g.27[0]x[0]_b:	Cosa mi crea flatulenze incontrollabili?  lo Cards Against Humanity
+g.27[1]x[0]_b:	Di cosa odorano le persone anziane?  lo Cards Against Humanity
+g.27[2]x[0]_b:	A cosa rinuncio per la quaresima?  la Cards Against Humanity
+g.27[3]x[0]_b:	La medicina alternativa sta ora adottando i poteri curativi di  la Cards Against Humanity
+g.27[0]x[1]_b:	Quale cosa l’Italia ha paracadutato ai bambini afghani?  ly Cards Against Humanity
+g.27[1]x[1]_b:	Cosa piace a Silvio Berlusconi?  U_] Cards Against Humanity
+g.27[2]x[1]_b:	Durante il trascurato Periodo Marrone, Picasso ha prodotto centinaia di quadri su  la Cards Against Humanity
+g.27[3]x[1]_b:	Cosa non vorresti trovare nel tuo cibo cinese?  la Cards Against Humanity
+g.27[0]x[2]_b:	Bevo per dimenticare  la Cards Against Humanity
+g.27[1]x[2]_b:	Dammi un cinque fratello!  la Cards Against Humanity
+g.27[2]x[2]_b:	Sei simpatico come  lt Cards Against Humanity
+g.27[3]x[2]_b:	Il video della canzone "YMCA" fu registrato dai VillagePepole vestiti da marinaio, pompiere, indiano e  n Cards Against Humanity
+g.27[0]x[3]_b:	Arricchisciti rapidamente con  la Cards Against Humanity
+g.27[1]x[3]_b:	è la radice di tutti i mali del mondo!  la Cards Against Humanity
+g.27[2]x[3]_b:	Questa bibita energetica ha un sapore di  ly Cards Against Humanity
+g.27[3]x[3]_b:	L'assenza di è un evidente sintomo di  ES PICK@
+g.27[0]x[4]_b:	Era una notte buia e tempestosa. Ad un tratto la porta sbattè e  la Cards Against Humanity
+g.27[1]x[4]_b:	KEEP CALM  AND
+g.27[2]x[4]_b:	Rimedi naturali per combattere l'aerofagia:  la Cards Against Humanity
+g.27[3]x[4]_b:	Dopo 10 anni di fidanzamento ti lascia con due semplici parole:  sono omosessuale. La tua reazione è     la Cards Against Humanity
+g.28[0]x[0]_w:	Bomba Atomica  _ €aH  w Cards Against Humanity
+g.28[1]x[0]_w:	The Big Bang Theory  w Cards Against Humanity
+g.28[2]x[0]_w:	Pulire un water incrostato, in un autogrill nel napoletano. EaH     vw Cards Against Humanity
+g.28[3]x[0]_w:	Tatuaggio sbagliato  vw Cards Against Humanity
+g.28[0]x[1]_w:	Martello Pneumatico  w Cards Against Humanity
+g.28[1]x[1]_w:	Cavallo Pazzo  w Cards Against Humanity
+g.28[2]x[1]_w:	Cicciolina nuda  w Cards Against Humanity
+g.28[3]x[1]_w:	Sheldon Cooper  €  vw Cards Against Humanity
+g.28[0]x[2]_w:	BAZINGA!!  Gelal  w Cards Against Humanity
+g.28[1]x[2]_w:	Si trasforma in un razzo missile.  w Cards Against Humanity
+g.28[2]x[2]_w:	Poliziotti senza pantaloni con grossi problem di igiene personale ,_. Ea  vw Cards Against Humanity
+g.28[3]x[2]_w:	Uscimmo a riveder le stelle  w Cards Against Humanity
+g.28[0]x[3]_w:	Giovanni Verga  w Cards Against Humanity
+g.28[1]x[3]_w:	Un'orda famelica di napoletani che non hanno pagato il  grattino e vogliono  il pizzo! | €aH  w Cards Against Humanity
+g.28[2]x[3]_w:	Aver paura dei vicoli bui mentre cammini per strada con addosso soltanto un impermeabile rosa.  vw Cards Against Humanity
+g.28[3]x[3]_w:	Tarapia tapioco come se fosse antani con la supercazzola prematurata, con lo scappellamento a destra.  w Cards Against Humanity
+g.28[0]x[4]_w:	Salendo in soffitta ho aperto l'antico baule di mia nonna e al suo interno ho trovato  U_] Gards Against Humanity
+g.28[1]x[4]_w:	E' il mio primo volo Tali: (ST = tor LI passeggero seduto accanto a me  U_| Gards Against Humanity
+g.28[2]x[4]_w:	L'Italia è fallita! Non ci sono più soldi. Adesso non mi resta che  U_] (IIS
+g.28[3]x[4]_w:	(TIVE til dove potrete ammirare  allo stato brado!  U_LS PICK@
+g.29[0]x[0]_w:	Un panino col prosciutto.  _ __€al  w Cards Against Humanity
+g.29[1]x[0]_w:	Organizzare cene eleganti per scopi professionali.  wr Cards Against Humanity
+g.29[2]x[0]_w:	Simulare un orgasmo gridando come una capra affamata.  €aH  wr Cards Against Humanity
+g.29[3]x[0]_w:	Una Peroni® sudata.  w Cards Against Humanity
+g.29[0]x[1]_w:	La nipote di Mubarak.  vw Cards Against Humanity
+g.29[1]x[1]_w:	Un vaffanculo a colazione è quello che ci vuole.  w Cards Against Humanity
+g.29[2]x[1]_w:	Ho stato io.  vw Cards Against Humanity
+g.29[3]x[1]_w:	Il celodurismo bossiano.  w Cards Against Humanity
+g.29[0]x[2]_w:	Scorreggiare nell'ascensore affollato e guardare schifato quello  accanto. 24H  wr Cards Against Humanity
+g.29[1]x[2]_w:	Volere la botte piena, la moglie ubriaca e un cazzo in culo.  WP O cards against Humanity
+g.29[2]x[2]_w:	Alessandro Cecchi Paone  Ca  WMO cards against Humanity
+g.29[3]x[2]_w:	Un milione per gli organizzatori, dieci per la questura.  WP cards against Humanity
+g.29[0]x[3]_w:	Dormire a quattro di spade come se non ci fosse un domani.  PO cards against Humanity
+g.29[1]x[3]_w:	Mangiare il ben di Dio e cagare l'opera del diavolo.  Li) Cards Against Humanity
+g.29[2]x[3]_w:	Diabolico nell'amplesso, sproporzionato per quel che riguarda le dimensioni del sesso.  MP cards against Humanity
+g.29[3]x[3]_w:	Il generatore di fusione che dà energia ai tempo-circuiti e al flusso canalizzatore.  MP cares Against Humanity
+g.29[0]x[4]_w:	Caro Babbo Natale, quest'anno in regalo vorrei  VU} (CETLSIIII
+g.29[1]x[4]_w:	Amore mio, sono qui in ginocchio davanti a te per  V|) Cards Against Humanity
+g.29[2]x[4]_w:	Ciao, sono Silvio Berlusconi e quando verrò eletto restituirò,  U_] Cards Against Humanity
+g.29[3]x[4]_w:	Ogni volta che ascolto in tv la voce di      mi vien voglia di
+g.30[0]x[0]_w:	Schiacciare i ricci con il culo.  €aH  vw Cards Against Humanity
+g.30[1]x[0]_w:	Ascoltare Marco Masini durante un giro alla  Roulette Russa.  MP cards against Humanity
+g.30[2]x[0]_w:	Travestirsi da puttanone da competizione.  €aH  vw Cards Against Humanity
+g.30[3]x[0]_w:	Scaccolarsi al semaforo e dire al venditore di non volere i fazzoletti.  WR cards Against Humanity
+g.30[0]x[1]_w:	Fare i gargarismi con il cemento liquido a presa  rapida.  w Cards Against Humanity
+g.30[1]x[1]_w:	Controllare le sgommate nelle mutande.  w Cards Against Humanity
+g.30[2]x[1]_w:	Fare una puzza ed incolpare il cane.  vw Cards Against Humanity
+g.30[3]x[1]_w:	Dire,appena svegli, "buongiorno Aaamore"  espirando la A per 3 sec.  vw Cards Against Humanity
+g.30[0]x[2]_w:	Autopsicanalisi.  _ €  wr Cards Against Humanity
+g.30[1]x[2]_w:	La crisi economica.  w Cards Against Humanity
+g.30[2]x[2]_w:	L'ascella maleodorante.  €aH  w Cards Against Humanity
+g.30[3]x[2]_w:	Vendere la verginità su ebay.  vw Cards Against Humanity
+g.30[0]x[3]_w:	Truccarsi come Moira Orfei.  w Cards Against Humanity
+g.30[1]x[3]_w:	Guidare a fari spenti nella notte per vedere, se poi è tanto difficile morire  Vie: cahpro Jectua.it
+g.30[2]x[3]_w:	Perché tutto attaccato si scrive staccato mentre staccato si scrive tutto attaccato?  w Cards Against Humanity
+g.30[3]x[3]_w:	Essere inculato con veemenza, senza vasellina e con la sabbia da un nero mastodontico.  vw Cards Against Humanity
+g.30[0]x[4]_w:	Il mio primo pensiero al mattino è  U_} (COCOS III
+g.30[1]x[4]_w:	Piuttosto che andare dalla IU ToSeI-1 = PMO ALIA Io)  U_] Gards Against Humanity
+g.30[2]x[4]_w:	A proposito di , per me la soluzione è
+g.30[3]x[4]_w:	Non so BI] c-1 cerco come si fa su Nel vitV|o13]  U_] (CISA
+g.31[0]x[0]_w:	Ragazze senza gambe che ti  fanno i footjob coi moncherini
+g.31[1]x[0]_w:	Minchia nel costume a manico di ombrello  w cards Against Humanity —‘@24H
+g.31[2]x[0]_w:	Inguine rasato per la prova bikini          Ca  ww Cards Against Humanity € H)
+g.31[3]x[0]_w:	Sesso anale a sorpresa  wi Cards Against Humanity Cà H
+g.31[0]x[1]_w:	Correre con un AK-47 urlando come un pazzo  w 7 Cards Against Humanity Ea H
+g.31[1]x[1]_w:	Le briciole nel letto  vw ÎY cards Against Humanity GaH)
+g.31[2]x[1]_w:	Dildo rosa gigante  w Cards Against Humanity  Cal
+g.31[3]x[1]_w:	Supposta al curry  @aH  w Cards Against Humanity — (@aH)
+g.31[0]x[2]_w:	Usare un defibrillatore sulle proprie palle
+g.31[1]x[2]_w:	Tazzina da caffè  vw TY Cards Against Humanity Ga)
+g.31[2]x[2]_w:	Seghe mentali     Cal  vw Ù Cards Against Humanity @aàW
+g.31[3]x[2]_w:	Portare gli epilettici in discoteca  v Î) Cards Against Humanity €aH
+g.31[0]x[3]_w:	Leccare martelli insieme a Miley Cyrus  w cards Against Humanity @aH
+g.31[1]x[3]_w:	Capitan Uncino che vuole farsi il bidet  €aH  w Cards Against Humanity
+g.31[2]x[3]_w:	Uno duro imbastito  WI ceros against Humanty -— "AH
+g.31[3]x[3]_w:	La crisi economica mondiale  vw Cards Against Humanity  @aH)
+g.31[0]x[4]_w:	SONO ANTAGONISTA E  ME NE COMPIACCIO PAGLIACCIO DI  GHIACCIO! H  GaH     vw Cards Against Humanity
+g.31[1]x[4]_w:	la lama celata di Assassin's Creed.  vw Ù Cards Against Humanity @aH
+g.31[2]x[4]_w:	Merda rancida  €aH  w Cards Against Humanity
+g.31[3]x[4]_w:	Fenicottero assassino  vw Cards Against Humanity  GaH
+g.32[0]x[0]_w:	William Wallace in una spiaggia di nudisti      w Gards Against Humanity
+g.32[1]x[0]_w:	Obi Wan Kenobi  che simula una pugnetta con la spada laser  vw Cards Against Humanity
+g.32[2]x[0]_w:	Salto della quaglia  al)  w Cards Against Humanity
+g.32[3]x[0]_w:	La mamma di Stifler  w Cards Against Humanity
+g.32[0]x[1]_w:	Fare economia comprando la carta igienica ruvida  w Cards Against Humanity
+g.32[1]x[1]_w:	Video porno di Belen  MP cards Against Humanity
+g.32[2]x[1]_w:	Mutande piene di sabbia [della lettiera del gatto]  MP cards against Humanity
+g.32[3]x[1]_w:	Peli pubici di sconosciuti  €  vw Cards Against Humanity
+g.32[0]x[2]_w:	Saponette fatte con grasso umano  €aH  vw Cards Against Humanity
+g.32[1]x[2]_w:	Pianta di ficus, simbolo del potere  w Cards Against Humanity
+g.32[2]x[2]_w:	Un caffè corretto con del pessimo piscio di cane  Ea  w Cards Against Humanity
+g.32[3]x[2]_w:	Cotton fioc usati  vw Cards Against Humanity
+g.32[0]x[3]_w:	L'occhio di Sauron con la congiuntivite  vw Gards Against Humanity
+g.32[1]x[3]_w:	Riaccendersi il mozzicone di una sigaretta trovata per terra  | EaH  vw Gards Against Humanity
+g.32[2]x[3]_w:	L'insistente signorina che ti propone di cambiare piano telefonico  w Cards Against Humanity
+g.32[3]x[3]_w:	Scorreggiare così tanto da far scattare l'allarme antigas  w Cards Against Humanity
+g.32[0]x[4]_w:	Dlin dlon, un addetto pulizie al reparto  |] (CASI III
+g.32[1]x[4]_w:	Il peggior regalo di natale mai avuto da bambino è  stato  V_) COELI II
+g.32[2]x[4]_w:	Prova il nuovo philadelphia al gusto di  U | Cards Against Humanity
+g.32[3]x[4]_w:	Quando aprì il vaso, Pandora vi trovò un'unica cosa:  U_] Cards Against Humanity
+g.33[0]x[0]_w:	Scaccolarsi il naso ed essere scoperti  €aH  vw Gards Against Humanity
+g.33[1]x[0]_w:	Cristiano Malgioglio  vw Cards Against Humanity
+g.33[2]x[0]_w:	Toccarsi i genitali senza farsi vedere  @aH  w Cards Against Humanity
+g.33[3]x[0]_w:	Sculacciata  vw Cards Against Humanity
+g.33[0]x[1]_w:	La bambina de "L’esorcista"  NP) cards Against Humanity
+g.33[1]x[1]_w:	Uomini nudi che fanno l'elicottero  NP cards Against Humanity
+g.33[2]x[1]_w:	Marshmallows avvelenati  MP cares against Humanity
+g.33[3]x[1]_w:	v Cards Against Humanity
+g.33[0]x[2]_w:	La versione porno dei Simpsons  _ €809  w Cards Against Humanity
+g.33[1]x[2]_w:	Squali volanti  w Cards Against Humanity
+g.33[2]x[2]_w:	Sbagliare DVD e far partire un porno.  €aH  w Cards Against Humanity
+g.33[3]x[2]_w:	Fare piedino alla persona sbagliata.  vw Cards Against Humanity
+g.33[0]x[3]_w:	Suocera rompipalle  vw Gards Against Humanity
+g.33[1]x[3]_w:	Fare un rutto mentre si recita la poesia di Natale.  EaH  vw Gards Against Humanity
+g.33[2]x[3]_w:	Vecchietti che guardano lavori in corso con le braccia dietro la schiena  w Cards Against Humanity
+g.33[3]x[3]_w:	Una collezione di porno con protagonisti nani ben dotati.  w Cards Against Humanity
+g.33[0]x[4]_w:	Walt Disney presenta  un nuovo cartoon che parla di  UPS PICK@
+g.33[1]x[4]_w:	Stai facendo sesso selvaggio e succede  che  U_] COCOS II
+g.33[2]x[4]_w:	Rocco Siffredi nel tempo libero colleziona  U_| Cards Against Humanity
+g.33[3]x[4]_w:	"Mamma/papà come nascono i bambini?"  U |] (COSTUI
+g.34[0]x[0]_w:	Blue screen of  death     w Cards Against Humanity
+g.34[1]x[0]_w:	La pipì che scappa appena usciti di casa  w Cards Against Humanity
+g.34[2]x[0]_w:	Un cane che lecca il gelato spalmato sulle tue palle  €aH  w Cards Against Humanity
+g.34[3]x[0]_w:	Il funerale di Nietzsche  w Cards Against Humanity
+g.34[0]x[1]_w:	Un quadro dipinto da una scimmia con le emorroidi  MP cards against Humanity
+g.34[1]x[1]_w:	Annusare il culo ai passanti credendosi un cane  MP cards against Humanity
+g.34[2]x[1]_w:	Pulizia Etnica  vw Cards Against Humanity
+g.34[3]x[1]_w:	WikiLeaks©  v Cards Against Humanity
+g.34[0]x[2]_w:	Essere  controllati dagli USA tramite I'NSA  w Cards Against Humanity
+g.34[1]x[2]_w:	Agenti FBI che si comportano come checche isteriche.  vw Cards Against Humanity
+g.34[2]x[2]_w:	*Nome@Scelta*  GARTA SPEGIALE : Nominare un nome proprio  a scelta tra quello di amici, conoscenti o personaggi famosi. (A giudizio dei presenti)  vw Cards Against Humanity
+g.34[3]x[2]_w:	PiGreco (1)     uu. eahprojectuz.it  w Cards Against Humanity
+g.34[0]x[3]_w:	*Nome@Scelta*  GARTA SPEGIALE : Nominare un nome proprio  a scelta tra quello di amici, conoscenti o personaggi famosi. (A giudizio dei presenti)  w Cards Against Humanity
+g.34[1]x[3]_w:	Mettere il dito nel culo di pikachu e prendere la scossa  Vie: cahpro Jectua it
+g.34[2]x[3]_w:	Fingere un malessere per non rispondere ad una domanda  w Gards Against Humanity
+g.34[3]x[3]_w:	Diventare invisibile e fare scherzi sconci alle ragazze negli spogliatoi delle piscine comunali, mentre il vescovo è in visita alla struttura.  vw Gards Against Humanity
+g.34[0]x[4]_w:	Il 1930 è spesso indicato come l'età d'oro del  U_] (CI I
+g.34[1]x[4]_w:	Un al giorno leva di torno!
+g.34[2]x[4]_w:	La verità è che alla fine dell'universo c'è soltanto  U | (CISU
+g.34[3]x[4]_w:	E' ampiamente diffusa l'idea che i nostri antenati non si sarebbero mai evoluti STr4]  U i CISU
+g.35[0]x[0]_w:	Bambole voodoo.  w Cards Against Humanity
+g.35[1]x[0]_w:	Acconciarsi i capelli con letame di cavallo.  w Cards Against Humanity
+g.35[2]x[0]_w:	Sfidarsi a una gara di lancio di bocce  incendiarie.  €aH  w Gards Against Humanity
+g.35[3]x[0]_w:	Un nuovo sistema di allungamento del pene.  vw Gards Against Humanity
+g.35[0]x[1]_w:	Farsi un piercing ai genitali con una sparachiodi.  w Cards Against Humanity
+g.35[1]x[1]_w:	Porno acrobatico.  w Cards Against Humanity
+g.35[2]x[1]_w:	Un rutto da Coppa dei Campioni.  w Cards Against Humanity
+g.35[3]x[1]_w:	Gare di rutti.  vw Cards Against Humanity
+g.35[0]x[2]_w:	Apparire come guest star nel  nuovo video di Gemmadelsud.  vw Cards Against Humanity
+g.35[1]x[2]_w:	Infilarsi un ravanello nel culo.  MP cards against Humanity
+g.35[2]x[2]_w:	Mangiare teste umane.  ah  vw Cards Against Humanity
+g.35[3]x[2]_w:	Autoerotismo.  w Cards Against Humanity
+g.35[0]x[3]_w:	Brucare.  w Cards Against Humanity
+g.35[1]x[3]_w:	Tingersi il pube a righe bianche e rosa.  - Viu. capro jectua.it  w Cards Against Humanity
+g.35[2]x[3]_w:	Action Man.  vw Cards Against Humanity
+g.35[3]x[3]_w:	Entrare in una chiesa urlando di essere l'Anticristo.  w Cards Against Humanity
+g.35[0]x[4]_w:	(WI a FAY: e leaT1E] vuole solo  U_] Cards Against Humanity
+g.35[1]x[4]_w:	Un'invenzione che potrebbe salvare il mondo.  la Cards Against Humanity
+g.35[2]x[4]_w:	Ho un'idea vincente let: Ia Mal!ToAY%0) programma tv.  UU} (MOLO TUTI
+g.35[3]x[4]_w:	La ricetta del successo.  VU} SIUSI
+g.36[0]x[0]_w:	Tutte le conigliette di PlayBoy
+g.36[1]x[0]_w:	Uno svizzero, un francese, un tedesco e  un'italiano.  w Cards Against Humanity
+g.36[2]x[0]_w:	Ho visto cose che voi umani non potreste  immaginare...  EaH  vw Cards Against Humanity
+g.36[3]x[0]_w:	L'uomo saggio ama usare l'ombrello quando piove!  vw Cards Against Humanity
+g.36[0]x[1]_w:	L'uomo coraggioso ama sentire la natura sulla pelle  vw Gards Against Humanity
+g.36[1]x[1]_w:	uTorrent  w Cards Against Humanity
+g.36[2]x[1]_w:	Patat, Riso e Cozze.  vw Cards Against Humanity
+g.36[3]x[1]_w:	Voglio Godere!!!  _  €an  vw Gards Against Humanity
+g.36[0]x[2]_w:	Un mondo di dolore!  w Cards Against Humanity
+g.36[1]x[2]_w:	Finchè c'è vita c'è speranza  w Cards Against Humanity
+g.36[2]x[2]_w:	Sono il conducente del treno di cacca!  €aH  vw Cards Against Humanity
+g.36[3]x[2]_w:	Ferrari FF  vw Cards Against Humanity
+g.36[0]x[3]_w:	Fiamme torreggianti  MP cards against Humanity
+g.36[1]x[3]_w:	Qui e lì, notte e dì, questo il mondo fa girar.
+g.36[2]x[3]_w:	A Bangkok nel quartiere dei ladyboy.  vw Cards Against Humanity
+g.36[3]x[3]_w:	Navi da combattimento  in fiamme al largo dei bastioni di Orione e raggi B balenare nel buio vicino alle porte di Tannhauser  NP) cards Against Humanity
+g.36[0]x[4]_w:	Uccidi i tuoi nemici con  EaH lo (SITU
+g.36[1]x[4]_w:	AI primo appuntamento ti presenti con  UU] Cards Against Humanity
+g.36[2]x[4]_w:	Cos'hai fatto l'estate scorsa?  UU} Cards Against Humanity
+g.36[3]x[4]_w:	Vieni sorpreso da un temporale, per non bagnarti ti rifugi  UU} (COCOS ULI
+g.37[0]x[0]_w:	Un Tandem  Ca  w Cards Against Humanity
+g.37[1]x[0]_w:	La pillola del giorno dopo  w Cards Against Humanity
+g.37[2]x[0]_w:	Drag queen  €@aH  w Cards Against Humanity
+g.37[3]x[0]_w:	AI mio via scatenate l'inferno!  vw Cards Against Humanity
+g.37[0]x[1]_w:	Y.0.L.0.  vw Cards Against Humanity
+g.37[1]x[1]_w:	Acido Acetilsalicilico  w Cards Against Humanity
+g.37[2]x[1]_w:	Il gatto di Schròdinger  w Cards Against Humanity
+g.37[3]x[1]_w:	La Sirenetta di Copenaghen     vw Cards Against Humanity
+g.37[0]x[2]_w:	Un Clochard  Gela)  wr Cards Against Humanity
+g.37[1]x[2]_w:	Vita, morte e miracoli  wr Cards Against Humanity
+g.37[2]x[2]_w:	L'Union Jack
+g.37[3]x[2]_w:	Il Jolly Roger  wr Cards Against Humanity
+g.37[0]x[3]_w:	Supercalifragilist ichespiralidoso  NP cards Against Humanity
+g.37[1]x[3]_w:	@3H  qÙ Cards Against Humanity
+g.37[2]x[3]_w:	Uno alla testa ed uno al cuore  WP carcis against Humanity
+g.37[3]x[3]_w:	Bevo il the a testa in giù usando i piedi  MP cards Against Humanity
+g.37[0]x[4]_w:	non così che vi fate male!  la (FOTO TUCI
+g.37[1]x[4]_w:	Vorrei per conquistare  / PA PICK@
+g.37[2]x[4]_w:	Primo classificato in  U_] Gards Against Humanity
+g.37[3]x[4]_w:	La mia ultima frase sul letto di morte sarà:  la (COOL III
+g.38[0]x[0]_w:	L'aiuto del pubblico.  (la  wo Cards Against Humanity
+g.38[1]x[0]_w:	Matitina IKEA.  vw Cards Against Humanity
+g.38[2]x[0]_w:	Jessica Fletcher.  al)  w Cards Against Humanity
+g.38[3]x[0]_w:	Dieta mediterranea.  w Cards Against Humanity
+g.38[0]x[1]_w:	Tre Metri Sopra il Cielo.  wr Cards Against Humanity
+g.38[1]x[1]_w:	Fughe di gas.  wr Cards Against Humanity
+g.38[2]x[1]_w:	Evadere il canone RAI.  wr Cards Against Humanity
+g.38[3]x[1]_w:	Alice nel Paese delle Pornomeraviglie.  _ €80  w Cards Against Humanity
+g.38[0]x[2]_w:	Un tristissimo film Bielorusso.  vw Cards Against Humanity
+g.38[1]x[2]_w:	Adolescenti arrapati.  NP cards against Humanity
+g.38[2]x[2]_w:	Bombardamenti indiscriminati.  €aH  vw Cards Against Humanity
+g.38[3]x[2]_w:	Reggere la candela.  WP O cares Against Humanity
+g.38[0]x[3]_w:	L'ennesima canzone neomelodica napoletana.  vw Cards Against Humanity
+g.38[1]x[3]_w:	Il Colonnello  Giuliacci.     w Cards Against Humanity
+g.38[2]x[3]_w:	Mirabolanti cadute da tacco 12!  w Cards Against Humanity
+g.38[3]x[3]_w:	Milf estremamente espansive!  w Cards Against Humanity
+g.38[0]x[4]_w:	Moto NE] vita!  U_] Cards Against Humanity
+g.38[1]x[4]_w:	Il mio sogno ricorrente: che  la CLELIA ULI
+g.38[2]x[4]_w:	C'è crisi, si torna al baratto: per  V| (CTS II
+g.38[3]x[4]_w:	Avevo un piano perfetto, ma non avevo considerato  U_] Cards Against Humanity
+g.39[0]x[0]_w:	Sindrome di  Down      vw Cards Against Humani
+g.39[1]x[0]_w:	PornoStar con desideri sessuali per il proprio padre  vw Cards Against Humanity
+g.39[2]x[0]_w:	Cowboy gay che mangiano budino  io w Cards Against Humanity
+g.39[3]x[0]_w:	Comprare due banane per mangiarne almeno una  w Cards Against Humanity
+g.39[0]x[1]_w:	Immigrati clandestini  w Gards Against Humanity
+g.39[1]x[1]_w:	Ascelle puzzolenti  vw Cards Against Humanity
+g.39[2]x[1]_w:	Un ninja con una diarrea incontrollabile  w Cards Against Humanity
+g.39[3]x[1]_w:	Un culo grasso in pantaloni da  yoga  _ €80  w Cards Against Humanity
+g.39[0]x[2]_w:	Usare poco lubrificante  v Cards Against Humanity
+g.39[1]x[2]_w:	Un seno così floscio che le arriva alle ginocchia  MP cards Against Humanity
+g.39[2]x[2]_w:	Cercatore d'oro  ah  vw Cards Against Humanity
+g.39[3]x[2]_w:	Scrivere un sms alla propria EX mentre si è ubriachi di  vodka  WE cards against Humanity
+g.39[0]x[3]_w:	Un travestito  vw Cards Against Humanity
+g.39[1]x[3]_w:	Una Death Race tra sedie a rotelle  | GàH)  w Cards Against Humanity
+g.39[2]x[3]_w:	Un aborto fallito.  w Cards Against Humanity
+g.39[3]x[3]_w:	Realizzare che è finita  la carta igienica quando ormai è troppo tardi  vw Cards Against Humanity
+g.39[0]x[4]_w:	Hanno appena trovato un  nei rifiuti dell'ospedale di Napoli.  U_| CIO I
+g.39[1]x[4]_w:	Adoro l'odore di la mattina.  V_) CIONI UU
+g.39[2]x[4]_w:	Quale sarà la nostra ultima speranza quando un nuovo Demone-Robot invaderà il mondo?  V|) Cards Against Humanity
+g.39[3]x[4]_w:	Quando ho visto tua madre nuda, mi ha ricordato  U | Cards Against Humanity
+g.40[0]x[0]_w:	Una tana di tigri del bengala affamate.
+g.40[1]x[0]_w:	Macchie non identificabili sulla punta del pene.  w Cards Against Humanity
+g.40[2]x[0]_w:	Capelli nello scarico della doccia.  @aH  vw Cards Against Humanity
+g.40[3]x[0]_w:	*Nome@Scelta*  GARTA SPEGIALE : Nominare un nome proprio  a scelta tra quello di amici, conoscenti o personaggi famosi. (A giudizio dei presenti)  vw Gards Against Humanity
+g.40[0]x[1]_w:	Botulino  vw Cards Against Humanity
+g.40[1]x[1]_w:	Anoressia  w Cards Against Humanity
+g.40[2]x[1]_w:	Lupus  vw Cards Against Humanity
+g.40[3]x[1]_w:	Doctor House  @aH)  qÙ Cards Against Humanity
+g.40[0]x[2]_w:	Schiavitù  Call  vw Cards Against Humanity
+g.40[1]x[2]_w:	Spada Laser  WP O cares against Humanity
+g.40[2]x[2]_w:	Allergia ai preservativi  Can  v Cards Against Humanity
+g.40[3]x[2]_w:	Pirati inesperti  MP cards Against Humanity
+g.40[0]x[3]_w:	Feci spalmate sulla parete del bagno  w Cards Against Humanity
+g.40[1]x[3]_w:	Guardare un porno in pubblico sull'iPad© a tutto volume  w Cards Against Humanity
+g.40[2]x[3]_w:	Facebook©  vw Cards Against Humanity
+g.40[3]x[3]_w:	Una pellicola in Super-8 della prima GangBang della nonna  w Cards Against Humanity
+g.40[0]x[4]_w:	La felicità è  @aH la Cards Against Humanity
+g.40[1]x[4]_w:	Che ore sono? E' l'ora di dl  U_] COLI II
+g.40[2]x[4]_w:	(Te Mi c=v= Vie 00 deci = a tao] *]e=MLiU organizzato da  U |} Cards Against Humanity
+g.40[3]x[4]_w:	Il Sacro Graal descritto nella Bibbia in realtà non è un calice ma è  UU} (COSTUI
+g.41[0]x[0]_w:	@àH)  vw Cards Against Humanity
+g.41[1]x[0]_w:	Test di gravidanza  vw Cards Against Humanity
+g.41[2]x[0]_w:	La mamma di Bambi.  ...è morta!  @aH  UA Gards Against Humanity
+g.41[3]x[0]_w:	*Nome@Scelta*  GARTA SPEGIALE : Nominare un nome proprio  a scelta tra quello di amici, conoscenti o personaggi famosi. (A giudizio dei presenti)  vw Cards Against Humanity
+g.41[0]x[1]_w:	Kim Jong Un  MP cards against Humanity
+g.41[1]x[1]_w:	Anime Hentai  vw Cards Against Humanity
+g.41[2]x[1]_w:	NP cards Against Humanity
+g.41[3]x[1]_w:	Un negro di origine asiatica     €3H  vw Cards Against Humanity
+g.41[0]x[2]_w:	Dolore da emorroidi  _ €09  w Cards Against Humanity
+g.41[1]x[2]_w:	Necromanzia  vw Cards Against Humanity
+g.41[2]x[2]_w:	Riportare in vita i morti  vw Cards Against Humanity
+g.41[3]x[2]_w:	Massaggiatrici cinesi molto esperte  w Cards Against Humanity
+g.41[0]x[3]_w:	Lavoro sottopagato  w Cards Against Humanity
+g.41[1]x[3]_w:	Traffico d'organi  w Cards Against Humanity
+g.41[2]x[3]_w:	Vendere organi umani a basso costo e con scarse garanzie igieniche  vw Gards Against Humanity
+g.41[3]x[3]_w:	Epatite C contratta mangiando cozze crude  vw Gards Against Humanity
+g.41[0]x[4]_w:	Il dottore mi ha comunicato con faccia severa che il mio era un grave caso di  |] Gards Against Humanity
+g.41[1]x[4]_w:	Mi prodigherei in un ricco pompino [Yo]|e-la| (o el:i o  la Cards Against Humanity
+g.41[2]x[4]_w:	La nonna mi diceva sempre che A mi avrebbe reso cieco!  W_/ IONI I
+g.41[3]x[4]_w:	è l'ottavo peccato capitale!  U_] Cards Against Humanity
+g.42[0]x[0]_w:	Lenti a contatto  a raggi X      vw Cards Against Humanity
+g.42[1]x[0]_w:	Ridere a crepapelle per nascondere una sonora puzza  MP cards against Humanity
+g.42[2]x[0]_w:	Palpatina furtiva  vw Cards Against Humanity
+g.42[3]x[0]_w:	Orsi polari che ballano il dadaumpa  WR cards against Humanity
+g.42[0]x[1]_w:	Un pappagallo che dice cose sconce  w Cards Against Humanity
+g.42[1]x[1]_w:	Animali domestici guardoni  w Cards Against Humanity
+g.42[2]x[1]_w:	Gattini ninja  vw Cards Against Humanity
+g.42[3]x[1]_w:	Crisi di mezza età  _ €  w 7 cards Ageinst Humanity
+g.42[0]x[2]_w:	Un superdotato  ‘w Cards Against Humanity
+g.42[1]x[2]_w:	L'uomo tigre  w Cards Against Humanity
+g.42[2]x[2]_w:	Uno spinello
+g.42[3]x[2]_w:	Primo bacio con l'alito di aglio  w Cards Against Humanity
+g.42[0]x[3]_w:	Un palestrato con micropene  wr Cards Against Humanity
+g.42[1]x[3]_w:	Un hippie che si è appena fatto di LSD  | EaH  w Cards Against Humanity
+g.42[2]x[3]_w:	Bicicletta senza sellino  wr Cards Against Humanity
+g.42[3]x[3]_w:	Pensare di stare per saltare su un bel tronco e finire in una merda di vacca  wr Cards Against Humanity
+g.42[0]x[4]_w:	Obama ha un tatuaggio nascosto che raffigura  UU} (COSI III
+g.42[1]x[4]_w:	Baci il rospo ma, Ta\VA=te=2ol] trasformarsi in un principe, diventa  U_] Gards Against Humanity
+g.42[2]x[4]_w:	La più grande disavventura che può capitare a una donna è  la CISU
+g.42[3]x[4]_w:	"Mamma mamma perchè papà indossa le scarpe col tacco 12?"  W_) CIONI tI
+1e.0[0]x[0]_w:	Genitori morti.
+1e.0[1]x[0]_w:	Una tendenza scrotoclastica
+1e.0[2]x[0]_w:	Un aneurisma cerebrale.        vw Cards Against Humanity
+1e.0[3]x[0]_w:	Dirty Deed Done Dirty Cheap
+1e.0[0]x[1]_w:	Cagare a testa in giù sul soffitto
+1e.0[1]x[1]_w:	Monella
+1e.0[2]x[1]_w:	Tua madre.  vw 7 Cards Against Humanity Ga H
+1e.0[3]x[1]_w:	Ascoltare Gigi D'Alessio  CaH  vw Cards Against Humanity
+1e.0[0]x[2]_w:	Porno Asiatico
+1e.0[1]x[2]_w:	La vagina depilata  vi U) cards Against Humanity -—@4H)  XPAN
+1e.0[2]x[2]_w:	Ho una banana  ve
+1e.0[3]x[2]_w:	Darsi fuoco ai tarzanelli
+1e.0[0]x[3]_w:	1 Kg di Vagina
+1e.0[1]x[3]_w:	Un piercing sul capezzolo
+1e.0[2]x[3]_w:	Il Nemesis  vi 1) Cards Against Humanity €aH
+1e.0[3]x[3]_w:	Fammi vedere la patata
+1e.0[0]x[4]_w:	Cannibalismo
+1e.0[1]x[4]_w:	Topi morti
+1e.0[2]x[4]_w:	Si allena privatamente con Rocco Siffredi  €aH vi Ù Cards Against Humanity @aà H } 0 2-19]
+1e.0[3]x[4]_w:	Si e fatto la regina Elisabetta
+1e.1[0]x[0]_w:	Sto cazzo
+1e.1[1]x[0]_w:	Un'’eiaculazione nascosta dall' impermeabile dell' ispettore Gadget
+1e.1[2]x[0]_w:	Elargire succulenti pompini
+1e.1[3]x[0]_w:	Buono, bravo, bello, potente, ricco e famoso.
+1e.1[0]x[1]_w:	Autodistruzione
+1e.1[1]x[1]_w:	Mangiare pane e merda
+1e.1[2]x[1]_w:	Ballare la macarena con il ghiaccio nelle mutande
+1e.1[3]x[1]_w:	Bere dell'olio da frittura usato scambiandolo  roject
+1e.1[0]x[2]_w:	Fistola anale  vw o Cards Against Humanity ES H 206 DI Z7:ANKOINE
+1e.1[1]x[2]_w:	Orinare in una bottiglia e spacciarla per limonata  VW Ù Cards Against Humanity C@a H } >” 2 X PA NSITON 1
+1e.1[2]x[2]_w:	Fare sesso come due ricci in calore  EH  Y cards Against Humanity €aH =" -XPANSITON 1
+1e.1[3]x[2]_w:	Colpirsi i testicoli con un martello  vw 7 Cards Against Humanity @aAH ) >" - X PA NSTONI 1
+1e.1[0]x[3]_w:	Ascesso inguinale  vi 0) Cards Against Humanity —‘((@à H 0 DI 7ANINI/OINA
+1e.1[1]x[3]_w:	Ballare la polka nudi in mezzo  alla neve in una piazza piena di persone @a     w DI cards Against Humanity G@aH) =" -XPANSION 1
+1e.1[2]x[3]_w:	Aprire un portale dimensionale  W o Cards Against Humanity @àH =" -2XPANSION 1
+1e.1[3]x[3]_w:	Usare un martello pneumatico come vibratore  dv Ù Cards Against Humanity @àH ge" Xx PANSION 1
+1e.1[0]x[4]_w:	Michele Misseri        Ca sH
+1e.1[1]x[4]_w:	Uno scarafaggio radioattivo
+1e.1[2]x[4]_w:	Ezio Auditore
+1e.1[3]x[4]_w:	Defecare il proprio peso corporeo
+1e.2[0]x[0]_w:	Cagarsi nelle mutande
+1e.2[1]x[0]_w:	Un turista ha una paresi al lato sinistro del corpo
+1e.2[2]x[0]_w:	Peppino  Ea H  vw Cards Against Humanity
+1e.2[3]x[0]_w:	Annusare il culo di un cane
+1e.2[0]x[1]_w:	Usare i propri peti come propellente per lanciafiamme
+1e.2[1]x[1]_w:	Una pisciata eterna
+1e.2[2]x[1]_w:	Un cazzo di dalmata nell" inquadratura
+1e.2[3]x[1]_w:	Eccessiva negligenza nell  ‘uso dei derivati del Petro
+1e.2[0]x[2]_w:	Dobermann inferociti
+1e.2[1]x[2]_w:	Mi hanno infilato il cane di Heidi nel culo
+1e.2[2]x[2]_w:	Palle di cammello
+1e.2[3]x[2]_w:	Stupro e incendio doloso
+1e.2[0]x[3]_w:	Una scimmia che imita Miley Cyrus
+1e.2[1]x[3]_w:	Un calcio rotante di Chuck Norris in pieno volto
+1e.2[2]x[3]_w:	Allenare i propri figli al fisting
+1e.2[3]x[3]_w:	Elicottero con il pene
+1e.2[0]x[4]_w:	Mostri che escono dalle fottute pareti
+1e.2[1]x[4]_w:	Biancaneve sotto i nani
+1e.2[2]x[4]_w:	Il culo da oscar di Pippa Middleton
+1e.2[3]x[4]_w:	Una corsa di nerd verso il GameStop
+1e.3[0]x[0]_w:	Uso i soldi del Monopoli
+1e.3[1]x[0]_w:	Operazione per la sudorazione eccessiva delle ascelle
+1e.3[2]x[0]_w:	Minorenni.
+1e.3[3]x[0]_w:	Mucchio selvaggio
+1e.3[0]x[1]_w:	Guardare tuo nonno in doccia mentre pratica  autoerotismo
+1e.3[1]x[1]_w:	80 Voglia Disco Party. (da leggere rapidamente)
+1e.3[2]x[1]_w:	Zoo-necrofilia
+1e.3[3]x[1]_w:	Il batacchio del campanile della cattedrale di  Notre Dame.
+1e.3[0]x[2]_w:	Un video di Aphex Twin  €aH  vi ) Cards Against Humanity
+1e.3[1]x[2]_w:	Federica la mano amica
+1e.3[2]x[2]_w:	Pane, vino e Sasha Grey.  €aH  vw Cards Against Humanity Ea)       XPAN
+1e.3[3]x[2]_w:	Ti sputo in faccia!
+1e.3[0]x[3]_w:	Una busta di piscio caldo !
+1e.3[1]x[3]_w:	Sacrificare un pollo a SATANA!  project
+1e.3[2]x[3]_w:	Un barile di merda!
+1e.3[3]x[3]_w:	HEADSHOT!
+1e.3[0]x[4]_w:	Un peto di Chuck Norris !        Ca
+1e.3[1]x[4]_w:	Cazzi in culo !
+1e.3[2]x[4]_w:	Della fava di un negro
+1e.3[3]x[4]_w:	Perché fa cagare !
+1e.4[0]x[0]_w:	Peni cibernetici incendiari  €ah  EH ge 2 XPANSTONI T     w Cards Against Humanity
+1e.4[1]x[0]_w:	Neil di Art Attack  vw 0) cards Against Humaniy —‘@4H ge 1 \PANISTONI T
+1e.4[2]x[0]_w:	Ballare la cucaracia  Ò 7 Cards Against Humanity @aà H) = 2-2 XPANSITONI T
+1e.4[3]x[0]_w:	Pippo il Distruttore di Universi  vi 7 Cards Against Humanity @a H ) ge 1 PA NSTONI T
+1e.4[0]x[1]_w:	Il culo di un macaco  v 0) cards Against Humanity —‘@A4H) = -XPANSITON T
+1e.4[1]x[1]_w:	La Morte Nera  vi 0) Cards Against Humanity Ea H =" -XPANSITON T
+1e.4[2]x[1]_w:	Peni volanti  ww 7 Cards Against Humanity @a H) =" -XPANSION T
+1e.4[3]x[1]_w:	Le ciuffole del mago Merlino  ww n Cards Against Humanity @a H) =" -XPANSITON T
+1e.4[0]x[2]_w:	Una foca loca selvaggia che urla a  squarciagola  vw z Cards Against Humanity @aH ge - \XPANSIO NI T
+1e.4[1]x[2]_w:	Simona Ventura con il pene     vw 7 Cards Against Humanity Ea H ge PA NISITO NI T
+1e.4[2]x[2]_w:	Un professore stronzo  EH  v I cards Against Humanity Gal) ge 1 XPANSIO NI 1
+1e.4[3]x[2]_w:	Geronimo Stilton mentre si fa sua sorella Tea  v 1) Cards against Humanity —‘@4H ge PA NISIO NI T
+1e.4[0]x[3]_w:	Una bella grigliata  w 7 Cards Against Humanity @4H = -XPANSTON T
+1e.4[1]x[3]_w:	Quando scorreggi e un pò esce fuori.      vw 7 Cards Against Humanity @a H) = :-XPANSTON T
+1e.4[2]x[3]_w:	Kamikaze ritardati  wr cards Against Humanity Ea H = -XPANSIONI T
+1e.4[3]x[3]_w:	Il solito coglione  wr UD) Cards Against Humanity Ga H = :-XPANSITON T
+1e.4[0]x[4]_w:	Gargamella  GàH  Vw eaRpro Seta IE  vw 7 Cards Against Humanity GaH ) ge 2-2 XPANSION T
+1e.4[1]x[4]_w:	Bomba al cobalto.  vi 0) Cards Against Humanity €àH,  ge PA NISTONI T
+1e.4[2]x[4]_w:	Un demone grassissimo con un martello  gigante.  €aH  vw I Cards Against Humanity € a ge - XPANSITO NI T
+1e.4[3]x[4]_w:	Pestare la cacca sotto la neve  vi DO corde Against Humanity (C£) H) ge PA NSTONI TT
+1e.5[0]x[0]_w:	Il cadavere di Steve Jobs  @aH vw TY Cards Against Humanity @aH) = -XPANSION 1
+1e.5[1]x[0]_w:	Dare testate al muro  vi U) cards Against Humanty —‘(@aH) = -XPANSION 1
+1e.5[2]x[0]_w:	Rompere la faccia a qualcuno a  caso!       vw TI Cards Against Humanity @aH) i DI 7ANINIOIND
+1e.5[3]x[0]_w:	Jack Black  vw 7 Cards Against Humanity @aH) = -XPANSION 1
+1e.5[0]x[1]_w:	Ci son due coccodrilli ed un'orango tango
+1e.5[1]x[1]_w:	Un gruppo di puffi arrapati cechi
+1e.5[2]x[1]_w:	Tentare di ricevere superpoteri e rimediare solo malattie
+1e.5[3]x[1]_w:	Il capitano Schettino  €aH  w Cards Against Humanity
+1e.5[0]x[2]_w:	Un Geth con un pene al plasma     vw 7 Cards Against Humanity @à H ) =" 2 X PANSITOINI |
+1e.5[1]x[2]_w:	Dei pedoni infuriati  vi DI cards against Humaniy @a4H) =" XxX PANSITONI 1
+1e.5[2]x[2]_w:	Ozzy Osbourne  v © cards against Humanity —‘@&H) 2667 NIN[O]NM
+1e.5[3]x[2]_w:	Sotto effetto di alcol ti stavo facendo  vw U cards Against Humanity @AH =" 2 X PANSITOINI |
+1e.5[0]x[3]_w:	i village people che ballano gangnam style  vw VI Cards Against Humanity -—(@à H >" Xx PA NSITON 1
+1e.5[1]x[3]_w:	Un cane gigante con un tutù molto sensuale  vw ÎI cards Against Humanity @a H > XxX PANSTON 1
+1e.5[2]x[3]_w:	La doccia a un cane impagliato  W o Cards Against Humanity € dà iH) >" Xx PANSITON 1
+1e.5[3]x[3]_w:	perchè delle api mi stavano pungendo il pene  vw 7 Cards Against Humanity @aH ge” 2 X PA NSTON 1
+1e.5[0]x[4]_w:	Giovanni Muciaccia  €SH LI) cards Against Humanity €@a H) >=" -XPANSION 1
+1e.5[1]x[4]_w:	LanciaRatzinger  WD cords againstrumaniy -— AH ZE ZININIO]NE
+1e.5[2]x[4]_w:	Una irritante risata melefica  €aH  vw 7 Cards Against Humanity @aH } =" -XPANSIONI 1
+1e.5[3]x[4]_w:	Sedie malvagie  vw 7 Cards Against Humanity @aH) = -XPANSION 1
+1e.6[0]x[0]_w:	Lo Slenderman  W n Cards Against Humanity @a H ) = -XPANSION 1
+1e.6[1]x[0]_w:	Un cinese nero  ali 7 Cards Against Humanity @3H = -XPANSION 1
+1e.6[2]x[0]_w:	La musica dubstep      vw Cards Against Humanity  = -XPANSION 1
+1e.6[3]x[0]_w:	Chickenburger  w 7 Cards Against Humanity (CH) H ZZZ DOZININIO]NE
+1e.6[0]x[1]_w:	La compagna di classe tettona
+1e.6[1]x[1]_w:	Anguilla gigante del Mar Nero
+1e.6[2]x[1]_w:	Onda Energetica
+1e.6[3]x[1]_w:	Esperimenti con pasta e fagioli       projec
+1e.6[0]x[2]_w:	Spogliarsi e pomiciare con il primo Babbo  Natale per strada (2         VW Ù Cards Against Humanity @ ‘a H } >=" 2 XPANSTON 1
+1e.6[1]x[2]_w:	Testicoli volanti  vw 7 Cards Against Humanity @ab) =" - XxX PANSTONI 1
+1e.6[2]x[2]_w:	Un acrobata affetto dal morbo di Alzehimer.  €aH  wr 7 Cards Against Humanity @a H) =" 2 X PANSIOINI |
+1e.6[3]x[2]_w:	Pechinese imbottito di Uranio  wr DO cards Against Humanity @a H) >=" XxX PANSTONI 1
+1e.6[0]x[3]_w:	Gialappas Band  vw © cards against Humanty —‘(@a4H 2 DI Z7NKNIOINO
+1e.6[1]x[3]_w:	Carta vetrata da leccare  GaH      vw Cards Against Humanity  >" - Xx PANSITON 1
+1e.6[2]x[3]_w:	Cubo di Rubik.  vi 0) Cards Against Humanity Ga H = -XPANSION 1
+1e.6[3]x[3]_w:	Liposuzione in un ospedale del Messico  LI 0) Cards Against Humanity @aH >" -XPANSTON 1
+1e.6[0]x[4]_w:	Un vibratore a pannelli solari  Ea
+1e.6[1]x[4]_w:	Catafratto.
+1e.6[2]x[4]_w:	Una popputa romana in tunica succinta.
+1e.6[3]x[4]_w:	Antonio Banderas armato di flauti Mulino Bianco
+1e.7[0]x[0]_w:	Toccarsi l'ombelico con l'orecchio.  EH v Cards Against Humanity H)  ge i XPANISICONI 7
+1e.7[1]x[0]_w:	Marmotte che ti guardano male.  w 7 Cards Against Humanity @a KH i D'TNLN [RIN
+1e.7[2]x[0]_w:	Una tonificante corsa da nudi.  l €aH  vw Cards Against Humanity  i D'TNINEN[OIN
+1e.7[3]x[0]_w:	Un suicidio in diretta su 4chan.  v Cards Against Humanity @a4H) ge 1 VIDA NISICONI 1
+1e.7[0]x[1]_w:	WD cares against umoniy - @3H! ge i \PDA NISICONI 7
+1e.7[1]x[1]_w:	Fettine Panate  LI) DI corde Against Humanity -“@a4H ge i NPA NISICONI 17
+1e.7[2]x[1]_w:	Uli 7 Cards Against Humanity @àH ge i \XPANSICONI 7
+1e.7[3]x[1]_w:	Una pistola ad acqua a forma di pene.  EH  vw 7 Cards Against Humanity Eà H } ge i \PDA NISICONI 7
+1e.7[0]x[2]_w:	Tritare le unghie dei piedi per poi metterle sulla  pasta n  vw 7 Cards Against Humanity @aà H ) ge -VDANISICO)NI 7
+1e.7[1]x[2]_w:	Cerbero  vw 7 Cards Against Humanity Gà H i D'2TINEI IR INA
+1e.7[2]x[2]_w:	Germano Mosconi.  EH  wr 7 Cards Against Humanity @a H ) "DATI NENRINA
+1e.7[3]x[2]_w:	Eraclito in mutande  W cards against Humeniy -— SH ge i VIRA NISICO)ONI 7
+1e.7[0]x[3]_w:	Un lanciarazzi puntato alla tempia  vi cards Against Humaniy - ((@& H ge i VP A INISICONI 7
+1e.7[1]x[3]_w:	Pustole dolorose            vw ÎO cards Against Humanity ‘@a4H) A DA TAINLIN[OINA
+1e.7[2]x[3]_w:	Una cipolla.  vw Ù Cards Against Humanity @aàH) ge VA INIS TODI 7
+1e.7[3]x[3]_w:	Si suicidavano  vw Ù Cards Against Humanity @AH) ge i VPPA INS ICON 17€
+1e.7[0]x[4]_w:	vw 7 Cards Against Humanity Ea H ) 4 DE TINEN[OINA
+1e.7[1]x[4]_w:	Fare la cacca nel bidè  w 7 Cards Against Humanity E à KH i D'ETINENI[OINA
+1e.7[2]x[4]_w:	Bunga bunga     w Cards Against Humanity  ge i PA NISICONI 17
+1e.7[3]x[4]_w:	Danzare scompostamente con un limone.  dv DI cards Against Humanity @àH) 2 DE TINLNIGIN
+1e.8[0]x[0]_w:	Un ladro dalla giacca colorata     vw DI Cards Against Humanity @àH) >” XxX PANSTON 1
+1e.8[1]x[0]_w:	Un negro gay bruttissimo alto 2 metri che ti invita a casa sua per incularti talmente violentemente da renderti disabile  vw cards Against Humanity @aHW) > 2 X PANSTON 1
+1e.8[2]x[0]_w:	Caccole all ‘Uranio 238  €aH vw UT) Cards Against Humanity @aàH 20 DZ: NIOINE
+1e.8[3]x[0]_w:	Essere assaliti da un gruppo di ninja  vw DO cards Against Humanity Ea H) >" 0 X PANSTON 1
+1e.8[0]x[1]_w:	Questa carta  WE cards against Humanity — @2H) E NZNNIIIO]NE
+1e.8[1]x[1]_w:	Un cuscino imbottito di chiodi  WED) cards against Humanity -—@&H) E NZNNIIIO]NE
+1e.8[2]x[1]_w:	Dar libero sfogo ai tuoi istinti da coprofago  WO carcs against umaniy — @SH 2 DZ: NINIOINE
+1e.8[3]x[1]_w:	Un'’invadente retro-sensazion e  “vue: cahpro Jeez it  w Ù Cards Against Humanity @a H) = -XPANSION 1
+1e.8[0]x[2]_w:	Leccare i pali della luce  EaH  vw 0 cards against Humaniy — (@&H) ge PA NSION 1
+1e.8[1]x[2]_w:	Pizza con cubetti di ghiaccio  WE cards Against tumanity — GA) ge 1 PA NSIC)N 1
+1e.8[2]x[2]_w:	Erezione fuori luogo negli slippini da  piscina        NP cards against Humanity  20 DIN INOINA
+1e.8[3]x[2]_w:	La cacca nel cortile  vw ©) cards against Humanity —(@4H) ge” PA NSICO)N 1
+1e.8[0]x[3]_w:	A Natale,non c'è niente di meglio di (lo  DRAW@  Mir Ga) PIK@  EXPANSION 1
+1e.8[1]x[3]_w:	Salve, sono dl creatore di     EXPANSION 1
+1e.8[2]x[3]_w:	L'eroe accumulò tutto il suo potere grazie a ____,e distrusse il re mal- vagio con la sua arma leggendaria:_  Tip. €aH PICKQ@  EXPANSION 1
+1e.8[3]x[3]_w:	Se ho accanto a ciò significa che  fig. Ga) PIK@  EXPANSION 1
+1e.8[0]x[4]_w:	Vorrei fondare una band heavy metal chiamata  in cui si suona con  lily Ga) Pick @  EXPANSION 1
+1e.8[1]x[4]_w:	è morto/a  di  fly. EaH PIK@  EXPANSION 1
+1e.8[2]x[4]_w:	Ho superato momenti difficili grazie a  My. aH PIK@  EXPANSION 1
+1e.8[3]x[4]_w:	Dopo pranzo passo il mio tempo E]     fig. GaH PIcK@  EXPANSION 1
+1e.9[0]x[0]_w:	La verginità di un nerd quarantenne.     r I Cards Against Humaniy — ‘(@à iH) EXPANSION 1
+1e.9[1]x[0]_w:	Supercazzola con scappellamento a destra.  vw cards Against Humanity @aH) >" Xx PANSITON 1
+1e.9[2]x[0]_w:	Comprare una bara.  EaH  wi I Cards Against Humanity C@à H = -XPANSION 1
+1e.9[3]x[0]_w:	Cadaveri di porcellini d ‘India  vw cards Against Humanity @àH >" XxX PANSTON 1
+1e.9[0]x[1]_w:	Preti alieni a quattro mani.
+1e.9[1]x[1]_w:	Una cagata a spruzzo di tre ore.
+1e.9[2]x[1]_w:	Tartarughe giganti delle Galapagos.
+1e.9[3]x[1]_w:	Piranha affamati  €aH  vw Gards Against Humanity
+1e.9[0]x[2]_w:	Una scimmia con una motosega.  EaH  vw |) Cards Against Humanity Ea) =" 2 X PANSTONI 1
+1e.9[1]x[2]_w:	Grattare lo scroto di un gatto.  LI) 1) Cards Against Humanity @àH ) 20267: NIN[O]N
+1e.9[2]x[2]_w:	Frammenti di insalata tra i denti  Ea  vi © cards against Humanity -—‘(@4H) =" 2 X PANSIOINI |
+1e.9[3]x[2]_w:	L'ultimo ritrovato per | ‘epilazione pubica.  vw 7 Cards Against Humanity @AH) ge Xx PANSITOINI 1
+1e.9[0]x[3]_w:	(a Vate E: altamente sibaritica, il mio primo pensiero sarebbe  VU} can (@4H)  EXPANSION 1
+1e.9[1]x[3]_w:	Ho acquisito il [ele] (SIe=Mel|  dopo essere stato morso da  fly. EsH PICK@  EXPANSION 1
+1e.9[2]x[3]_w:	Ha iniziato a studiare come  Ty: ah PIKQ  EXPANSION 1
+1e.9[3]x[3]_w:	Anch'io una volta  PL N eIe) LL sono buscato  nel ginocchio!  ly Ga PIK@  EXPANSION 1
+1e.9[0]x[4]_w:	Nell'antica Grecia andava di moda Ser ll agEtt=  con  lity. Ga” PIK@  EXPANSION 1
+1e.9[1]x[4]_w:	Gli alieni ci stanno attaccando! Rispondiamo con  UU] CAH (C£) Ia)  EXPANSION 1
+1e.9[2]x[4]_w:	Perché un pollo attraversa la i ie-lo Fid  la CAH (CE) H  EXPANSION 1
+1e.9[3]x[4]_w:	*toc toc* Chi é?  lo can @aH  EXPANSION 1
+1e.10[0]x[0]_w:	Gerry Scotti.
+1e.10[1]x[0]_w:	Un secchio di sterco.
+1e.10[2]x[0]_w:	Jeeg Robot d ‘acciaio.
+1e.10[3]x[0]_w:	Femministe convinte
+1e.10[0]x[1]_w:	STOCAZZO!
+1e.10[1]x[1]_w:	Cinesi
+1e.10[2]x[1]_w:	Palpazione delle tette
+1e.10[3]x[1]_w:	Mentadent
+1e.10[0]x[2]_w:	In politica.
+1e.10[1]x[2]_w:	Battezzare un ornitorinco.
+1e.10[2]x[2]_w:	Cannuccia rigida
+1e.10[3]x[2]_w:	Perchè mi piacciono i pony
+1e.10[0]x[3]_w:	Frugando nel cassetto della mamma di un mio amico ho trovato  la can (@aH)  EXPANSION 1
+1e.10[1]x[3]_w:	Un giorno caddi a LElae RC  W_) can (@a4H)  EXPANSION 1
+1e.10[2]x[3]_w:	Recenti studi hanno dimostrato che  previene la formazione del cancro.  EMI)  EXPANSION 1
+1e.10[3]x[3]_w:	Ho scoperto che illla mio/a compagno/a ama  Disgustoso!  U_] CAH @aH  EXPANSION 1
+1e.10[0]x[4]_w:	Gli alieni invaderanno la Terra per colpa di  U | CAH @à H)  EXPANSION 1
+1e.10[1]x[4]_w:	Da grandi poteri derivano grandi  UU} CAH (CE) (n)  EXPANSION 1
+1e.10[2]x[4]_w:	Siamo tutti qui riuniti per celebrare  U_] can @aàH)  EXPANSION 1
+1e.10[3]x[4]_w:	Chi si è mangiato i miei bambini?  UU} CAH (CL) (H)  EXPANSION 1
+1e.11[0]x[0]_w:	Femore
+1e.11[1]x[0]_w:	Essere brutti come la morte
+1e.11[2]x[0]_w:	Traffico di droga sulla A4.  €aH  dv 7 Cards Against Humanity @a4H
+1e.11[3]x[0]_w:	La nonna nera di Giuliano Ferrara.
+1e.11[0]x[1]_w:	Ingoiare chiodi
+1e.11[1]x[1]_w:	Rocco Papaleo
+1e.11[2]x[1]_w:	Il vicino
+1e.11[3]x[1]_w:	Annusarsi lo scroto  ve
+1e.11[0]x[2]_w:	Genoicidio
+1e.11[1]x[2]_w:	Fisting
+1e.11[2]x[2]_w:	L'invisibile unicorno rosa
+1e.11[3]x[2]_w:	Infilare una sbarra di ferro su per il naso
+1e.11[0]x[3]_w:	Il mio gatto ha bisogno di  V_) CORRENTI  EXPANSION 1
+1e.11[1]x[3]_w:	Fissai alata tenete EMaizte]l) occhi e mi sentii     Mir. ah) PIK @  EXPANSION 1
+1e.11[2]x[3]_w:	Mi faccio di acidi solo per  |] can @àH)  EXPANSION 1
+1e.11[3]x[3]_w:	Mi sento come quando  W_) can (@à4H  ESTASI]
+1e.11[0]x[4]_w:	Quale emozioni provi davanti ad un discosrso politico attuale?  la cau (@aH)  SANSONE]
+1e.11[1]x[4]_w:	Devo trovare un modo per copiare il compito... Devo usare  U_] CAH @aH  SANSONE]
+1e.11[2]x[4]_w:	AI fine di guadagnare molto denaro ho deciso di investire in  |] CAH @aW)  EXPANSION 1
+1e.11[3]x[4]_w:	A volte sogno di  Ty Ga} PICK  EXPANSION 1
+1e.12[0]x[0]_w:	Mascherare il rumore di una scoreggia spostando una sedia  w Cards Against Humanity
+1e.12[1]x[0]_w:	Trovare un video porno gay di Gary Coleman
+1e.12[2]x[0]_w:	Un sogno erotico
+1e.12[3]x[0]_w:	Una scorreggia umida
+1e.12[0]x[1]_w:	
+1e.12[1]x[1]_w:	Preti pedofili
+1e.12[2]x[1]_w:	Urlare a squarciagola
+1e.12[3]x[1]_w:	Perdere la propria verginità
+1e.12[0]x[2]_w:	Accoppare il Nyan Cat
+1e.12[1]x[2]_w:	Cagare arcobaleni
+1e.12[2]x[2]_w:	Soreggiare mentre si è a letto e annu- sarne la puzza  sotto le CORE
+1e.12[3]x[2]_w:	Ricavare energia dalle scorreggie
+1e.12[0]x[3]_w:	af: la=1IAVZo) Sa lStEta sesso con  U_] can (@4H)  EXPANSION 1
+1e.12[1]x[3]_w:	Mai fidarsi di un MRS] rischia di  Ty Eat) PIKQ@  EXPANSION 1
+1e.12[2]x[3]_w:	| miei genitori mi minacciano avvertendomi che se verrò bocciato dovranno  V_) caa @aH  EXPANSION 1
+1e.12[3]x[3]_w:	La prima cosa che farò dopo essermi sposato sarà  U_] ca (@aH)  SIZANSIONE]
+1e.12[0]x[4]_w:	Mi piace l’idea (el) , ma non posso perchè sono  ULT @aH) PICK@Q  EXPANSION 1
+1e.12[1]x[4]_w:	Secondo ricerche approfondite, è sicuro che una delle cause della fine del mondo CET:  U | CAH @à H  EXPANSION 1
+1e.12[2]x[4]_w:	Era una giornata noiosa come tante altre, quando all'improvviso  UU} PORCI] a|  EXPANSION 1
+1e.12[3]x[4]_w:	L'Italia è uno Stato rinomato per  U_] can @a4H)  SINNI]
+1e.13[0]x[0]_w:	Una vita sociale
+1e.13[1]x[0]_w:	Il risotto con le erbette.
+1e.13[2]x[0]_w:	Embolo polmonare.
+1e.13[3]x[0]_w:	Comprare un Dildo a tua sorella  vw 1) Cards Against Humanity €aH)
+1e.13[0]x[1]_w:	Un leone vegano
+1e.13[1]x[1]_w:	Giocare al veterinario
+1e.13[2]x[1]_w:	Alzare le mani per aiutare Goku con l'energia sferica
+1e.13[3]x[1]_w:	Guybrush Threepwood, un temibile pirata!  vw Cards Against Humanity
+1e.13[0]x[2]_w:	Prendersi del tempo per riflettere  US) è LT     w DI corde Against Humanity = (@aH) ON  XPAN
+1e.13[1]x[2]_w:	Leggere il diario di un adolescente depressa
+1e.13[2]x[2]_w:	Briciole nel letto
+1e.13[3]x[2]_w:	Sudoku erotico
+1e.13[0]x[3]_w:	Se tornassi indietro nel tempo  Hip EH)  EXPANSION 1
+1e.13[1]x[3]_w:	Comprai Fiel(egetà  U_DT @aH) PICK@Q  EXPANSION 1
+1e.13[2]x[3]_w:	La morte del fu uno shock per  U_] can (@4H) PICK 12)  EXPANSION 1
+1e.13[3]x[3]_w:	Ordina subito (ala  ricevere in regalo Î  lo can (a H PICK (2)  EXPANSION 1
+1e.13[0]x[4]_w:	Il giorno del mio compleanno vorrei  UU} CAH @a @aH)  SIINO]
+1e.13[1]x[4]_w:	Che mondo sarebbe senza  V|) CAH (C£) GaH  EXPANSION 1
+1e.13[2]x[4]_w:	Potresti decidere (el] per combattere     lily. Eat) PIK@  BNS]
+1e.13[3]x[4]_w:	Ho deciso che  perchè ormai  ly. Ea PIK@  SANSONE]
+1e.14[0]x[0]_w:	Nazisti che cavalcano dinosauri
+1e.14[1]x[0]_w:	Usare un wurstel come giocattolo sessuale
+1e.14[2]x[0]_w:	Massoneria  €aH  qÙ Cards Against Humanity GS H
+1e.14[3]x[0]_w:	Succhiarsi il pene da solo
+1e.14[0]x[1]_w:	Usare la vibrazione del proprio cellulare come un vibratore
+1e.14[1]x[1]_w:	Un autistico con una paralisi facciale
+1e.14[2]x[1]_w:	Dilatazione anale
+1e.14[3]x[1]_w:	Spaco botilia, amazo familia
+1e.14[0]x[2]_w:	Pedobear
+1e.14[1]x[2]_w:	Cocaina tagliata male
+1e.14[2]x[2]_w:	Ragazze senza gambe che ti  fanno i footjob coi moncherini
+1e.14[3]x[2]_w:	Un carico di spirali difettose
+1e.14[0]x[3]_w:	Ho rubato un bombardiere. Ho intenzione di bombardare  |] can (@àH  EXPANSION 1
+1e.14[1]x[3]_w:	(alette Ta rA(o]eE: 105 un abbiamo bisogno (el]  fly E5H PICK@  EXPANSION 1
+1e.14[2]x[3]_w:	Gli antichi romani usavano prima di  My: GaH PIKQ@  EXPANSION 1
+1e.14[3]x[3]_w:	La piaga del sarà sconfitta grazie al  fly GaH) PIK@  EXPANSION 1
+1e.14[0]x[4]_w:	Oltre ai soldi, quello che ti rende più felice è  U_] CAH (CE) Ta)  EXPANSION 1
+1e.14[1]x[4]_w:	STEM tofintialo Rat in bocca, oggi non è proprio giornata!  U_] CAH (C£) H  SSN]
+1e.14[2]x[4]_w:	(TRI EESSEIIE] Ele] sigarette  la CAH (CE) H  EXPANSION 1
+1e.14[3]x[4]_w:	SE evolvendo. Congratulazioni, si è evoluto in  fig. EaH PIK@  EXPANSION 1
+1e.15[0]x[0]_w:	Limoni nell’ano
+1e.15[1]x[0]_w:	Barili rossi esplosivi.
+1e.15[2]x[0]_w:	Bambino pakistano  EH  vw 7 Cards Against Humanity @aH)
+1e.15[3]x[0]_w:	Il neo di Napolitano
+1e.15[0]x[1]_w:	Una scimmia ammaestrata che lancia banane
+1e.15[1]x[1]_w:	Boku no Pico
+1e.15[2]x[1]_w:	I Minion
+1e.15[3]x[1]_w:	Peppa Pig  EaH  LU n Cards Against Humanity @a H Ì
+1e.15[0]x[2]_w:	Giocare a paintball con la merda  Ca
+1e.15[1]x[2]_w:	Un tizio con un aspirapolvere nel retto.
+1e.15[2]x[2]_w:	Una liposuzione al lobo delle orecchie  EaH  ww (7 carss ageinst Humenity —‘@4H)
+1e.15[3]x[2]_w:	Feti umani in barattoli di cetrioli
+1e.15[0]x[3]_w:	Ho un pò di tempo UTET COMU EEC LIE mi dedicherò a  L_ESIICANR  EXPANSION 1
+1e.15[1]x[3]_w:	Se dovessi sterilizzare un cane userei  U_] CUMCI-la))  EXPANSION 1
+1e.15[2]x[3]_w:	Cosa puoi  costruire con Id  Un  fly Ga) PIKQ@  EXPANSION 1
+1e.15[3]x[3]_w:	non vende A ma solide realtà!  |] can (@a4H) PICK (2)  EXPANSION 1
+1e.15[0]x[4]_w:	Il nome del tuo nuovo gruppo ()     (= la  CPT]  EXPANSION 1
+1e.15[1]x[4]_w:	La colazione ideale:pane, latte e     U_] UVE ln)  EXPANSION 1
+1e.15[2]x[4]_w:	La malattia  si prende con  Ty -- GaH PIKQ@  EXPANSION 1
+1e.15[3]x[4]_w:	La canzone principale del nuovo album di Justin Bieber fiale] (Ste)  ULT @àH)  EXPANSION 1
+1e.16[0]x[0]_b:	Per distinguermi, compro artigianali.  la Gards Against Humanity —(@4H)  EXPANSION 1
+1e.16[1]x[0]_b:	Il senso della vita è  la Cards Against Humanity @aH)  EXPANSION 1
+1e.16[2]x[0]_b:	La distruzione del regno magico fu portata da  lo Cards Against Humanity —((@2H)  EXPANSION 1
+1e.16[3]x[0]_b:	Quel film parla di  n Cards Against Humanity @aH  EXPANSION 1
+1e.16[0]x[1]_b:	La nuova moda giapponese prevede  la Cards Against Humaniy —(@4H)  EXPANSION 1
+1e.16[1]x[1]_b:	Appena vidi , non riuscii a  fly. GaH PIK@  EXPANSION 1
+1e.16[2]x[1]_b:	Cosa compreresti come regalo di Natale?  la Cards Against Humanity —‘(@24H)  EXPANSION 1
+1e.16[3]x[1]_b:	Il sogno americano è  lo Cards Against Humanity @aH  EXPANSION 1
+1e.16[0]x[2]_b:	Attenzione: !     GaH  la Cards Against Humanity @aH)  EXPANSION 1
+1e.16[1]x[2]_b:	Cosa fai a scuola mentre sei a mensa?  la Cards Against Humanity Gai  EXPANSION 1
+1e.16[2]x[2]_b:	Cosa potrebbe diventare famoso grazie al web?  la Cards Against Humanity @a H )  EXPANSION 1
+1e.16[3]x[2]_b:	Pillola azzura fine della storia, pillola rossa resti  la Cards Against Humanity @aH)  EXPANSION 1
+1e.16[0]x[3]_b:	Si sa, ormai, che la vita è inutile senza  la Cards Against Humanity @aà H)  EXPANSION 1
+1e.16[1]x[3]_b:	Sono così fascinoso da sembrare  lo Cards Against Humanity @àH)  EXPANSION 1
+1e.16[2]x[3]_b:	Per la festa annuale dedicata a vegani si organizza ___  lo Cards Against Humanity @a H)  EXPANSION 1
+1e.16[3]x[3]_b:	Nel mondo dei  ly Gards Against Humanity @aH)  EXPANSION 1
+1e.16[0]x[4]_b:	Toglietemi tutto, ma non il mio  ESH lo Cards Against Humanity Ga H)  EXPANSION 1
+1e.16[1]x[4]_b:	Mangerei un  , piuttosto che mangiare da tua mamma  lo Cards Against Humanity —‘(@24H)  EXPANSION 1
+1e.16[2]x[4]_b:	Natale con i tuoi, Pasqua con  €aH ny Cards Against Humanity Ca H  EXPANSION 1
+1e.16[3]x[4]_b:	007 Operazione  ly Cards Against Humanity @aH  EXPANSION 1
+1e.17[0]x[0]_b:	Stava urlando di piacere, quando sul più bello  la Cards Against Humanity (Ch) H)  EXPANSION 1
+1e.17[1]x[0]_b:	Sei sbronzo marcio e ti viene una gran voglia di  la Cards Against Humanity @ aH \  EXPANSION 1
+1e.17[2]x[0]_b:	Nei miei sogni ricorre sempre | ‘immagine  di  la Cards Against Humanity @aH)  EXPANSION 1
+1e.17[3]x[0]_b:	La parola  è stata decretata dalla legge una parolaccia.  la Cards Against Humanity @aàH  EXPANSION 1
+1e.17[0]x[1]_b:	Chi ha ordinato ?  la Cards Against Humanity @aH)  EXPANSION 1
+1e.17[1]x[1]_b:	Cosa vedi quando ti guardi allo specchio?  lo Cards Against Humanity @aH)  EXPANSION 1
+1e.17[2]x[1]_b:	È stato appena annunciato un nuovo Pokemon: ____  lo Cards Against Humanity @aàH)  EXPANSION 1
+1e.17[3]x[1]_b:	Attento! Hai  alle spalle!  la Cards Against Humanity @aH  EXPANSION 1
+1e.17[0]x[2]_b:	Che cosa dici per rimorchiare?  la Cards Against Humanity @3H)  EXPANSION 1
+1e.17[1]x[2]_b:	Per vivere più a lungo ed in salute hai deciso di  lt Cards Against Humanity Ea H)  EXPANSION 1
+1e.17[2]x[2]_b:	Ho allontanato i testimoni di Geova con  ll Cards Against Humanity @aH  EXPANSION 1
+1e.17[3]x[2]_b:	Stasera mi annoio così ho deciso di  ly Cards Against Humanity @aH)  EXPANSION 1
+1e.17[0]x[3]_b:	è stato crocifisso per stupidità molesta  la Cards Against Humaniy _—‘(@4H)  EXPANSION 1
+1e.17[1]x[3]_b:	Non si può morire prima di  la Cards Against Humanity @aH  EXPANSION 1
+1e.17[2]x[3]_b:	Per un ottimo cocktail ci vuole  lo Cards Against Humanity @aH  EXPANSION 1
+1e.17[3]x[3]_b:	Parto per un lungo viaggio insieme a  la Cards Against Humanity @aH  EXPANSION 1
+1e.17[0]x[4]_b:	Salve, sono Troy McClure. Sicuramente mi ricorderete per  la Cards Against Humanity Ga  EXPANSION 1
+1e.17[1]x[4]_b:	Il vicino di casa ti rincorre chiedendo  la Cards Against Humanity @a H )  EXPANSION 1
+1e.17[2]x[4]_b:	Mentre senti scopare vigorosamente dall ‘altra parte del muro la tua mente ritorna a  la Cards Against Humanity @aàH)  EXPANSION 1
+1e.17[3]x[4]_b:	Il Papa dichiara di essere  G4H  la Cards Against Humanity @àH)  EXPANSION 1
+1e.18[0]x[0]_b:	Quanto è bello da Trieste in giù!  lo Cards Against Humanity @aH )  EXPANSION 1
+1e.18[1]x[0]_b:	Ho scoperto questo gioco di carte grazie a     lo Cards Against Humanity @aH  EXPANSION 1
+1e.18[2]x[0]_b:	dominerà il mondo.  U_] Cards Against Humanity @à H )  EXPANSION 1
+1e.18[3]x[0]_b:	Cosa fare in caso di difficoltà?  la Cards Against Humanity @aH)  EXPANSION 1
+1e.18[0]x[1]_b:	Ho una gran fame di  lo Cards Against Humanity @aH)  EXPANSION 1
+1e.18[1]x[1]_b:	Come hai conquistato il tuo partner?  lo Cards Against Humanity @aH  EXPANSION 1
+1e.18[2]x[1]_b:	Urlo  la Cards Against Humanity  EXPANSION 1
+1e.18[3]x[1]_b:	Ero in coda alle Poste, quando all'improvviso vidi  lt Cards Against Humanity @aH)  EXPANSION 1
+1e.18[0]x[2]_b:	Qual'è la risposta alla domanda fondamentale?  ll Cards Against Humanity @aH  EXPANSION 1
+1e.18[1]x[2]_b:	Ingoio tanti/e per la pace nel mondo.  lt Cards Against Humanity @aH)  EXPANSION 1
+1e.18[2]x[2]_b:	Spartani! Qual è il vostro mestiere?  la Cards Against Humanity Ga H  EXPANSION 1
+1e.18[3]x[2]_b:	Qual è la soluzione migliore per smettere di fumare?  la Cards Against Humanity @aH  EXPANSION 1
+1e.18[0]x[3]_b:	Dove stanno i ladri che nessuno può prendere?  la cards Against Humanity —‘((@4H)  EXPANSION 1
+1e.18[1]x[3]_b:	A —rrrr__l donato non si guarda in bocca  lo Cards Against Humanity @aH)  EXPANSION 1
+1e.18[2]x[3]_b:	Inaugurato ieri il nuovo edificio ad opera di  MY ciccione -— EH  EXPANSION 1
+1e.18[3]x[3]_b:	Il regalo perfetto per Batman?  la Cards Against Humanity —‘@4H)  EXPANSION 1
+1e.18[0]x[4]_b:	Una mucca marziana venuta da Venere voleva uccidermi con  la Cards Against Humanity «@aH )  EXPANSION 1
+1e.18[1]x[4]_b:	Stai passeggiando per strada, quando senti qualcuno che ti tocca la spalla. Chi è?  lo Cards Against Humanity @aH  EXPANSION 1
+1e.18[2]x[4]_b:	Quando il petrolio finirà, cosa useremo come combustibile?  la Cards Against Humanity @aà H )  EXPANSION 1
+1e.18[3]x[4]_b:	Come definiresti lo stato esistenziale di un Bimbominkia?     la Cards Against Humanity @aH)  EXPANSION 1
+1e.19[0]x[0]_b:	Trovo che sia un gran risultato.  la Cards Against Humanity @aH \  EXPANSION 1
+1e.19[1]x[0]_b:	Nelle notti di luna piena mi trasformo in  lo Cards Against Humanity @aàH  EXPANSION 1
+1e.19[2]x[0]_b:	Dov'è finito il panetto di butto nel frigorifero? L'ho usato per     la Cards Against Humanity @aH)  EXPANSION 1
+1e.19[3]x[0]_b:	Adoro il profumo del  la Cards Against Humanity € A H)  EXPANSION 1
+1e.19[0]x[1]_b:	Alza la cornetta, ti aspetta!  lo Cards Against Humanity — ((@4H)  EXPANSION 1
+1e.19[1]x[1]_b:	Ho un disperato bisogno di  la Cards Against Humanity @aàH)  EXPANSION 1
+1e.19[2]x[1]_b:	Sin da piccolo sono stato educato a  la Cards Against Humanity @àH)  EXPANSION 1
+1e.19[3]x[1]_b:	, ecco come potrei punire mio figlio!  lo Cards Against Humanity @aH  EXPANSION 1
+1e.19[0]x[2]_b:	Non esiste rimedio al mondo per  la Cards Against Humanity @aH  EXPANSION 1
+1e.19[1]x[2]_b:	Sai cosa ha fatto ieri Berlusconi?  ly Cards Against Humanity @aW)  EXPANSION 1
+1e.19[2]x[2]_b:	Cosa fa Federica Pellegrini quando non nuota?  la Cards Against Humanity G@aàH  EXPANSION 1
+1e.19[3]x[2]_b:	? No, questa è Sparta!  la Cards Against Humanity @AH)  EXPANSION 1
+1e.19[0]x[3]_b:	ecco perchè ora sono felice  lo cards Against Humanity _—‘((@4H)  EXPANSION 1
+1e.19[1]x[3]_b:	Cosa non dire ad un appuntamento:  la Cards Against Humanity @aàH)  EXPANSION 1
+1e.19[2]x[3]_b:	Cosa guardi per primo in una donna?  la Cards Against Humaniy _—‘@4H)  EXPANSION 1
+1e.19[3]x[3]_b:	Toglietemi tutto tranne  la Cards Against Humanity @aH)  EXPANSION 1
+1e.19[0]x[4]_b:	In questo momento riesco solamente a pensare a  lo Cards Against Humanity @aH Ì  EXPANSION 1
+1e.19[1]x[4]_b:	Ho giocato talmente tanto a League of Legends che ho visto  nel gioco!  la Cards Against Humanity @34H)  EXPANSION 1
+1e.19[2]x[4]_b:	Il figlio di dio vaga di nuovo sulla terra sotto forma di  la Cards Against Humanity @aà H)  EXPANSION 1
+1e.19[3]x[4]_b:	Mi sento realizzato perché     la Cards Against Humanity Ga  EXPANSION 1
+1e.20[0]x[0]_b:	Ho perso il lavoro perché in ufficio ho portato _____  la Cards Against Humanity @aH )  EXPANSION 1
+1e.20[1]x[0]_b:	L'ultima impresa di Ercole è stata cavalcare  la Cards Against Humanity @aH  EXPANSION 1
+1e.20[2]x[0]_b:	Non caprai il significato della vita finché non  la Cards Against Humaniy — (@4H)  EXPANSION 1
+1e.20[3]x[0]_b:	Nel mio quaderno delle elementari ho trovato  la Cards Against Humanity (CH) H)  EXPANSION 1
+1e.20[0]x[1]_b:	Ho venduto il rene del mio amico per  lo Cards Against Humanity —((@4H)  EXPANSION 1
+1e.20[1]x[1]_b:	Con cosa combatteresti un’orda di zombie?  la Cards Against Humanity @aW)  EXPANSION 1
+1e.20[2]x[1]_b:	Nel mio cibo cinese da asporto ho trovato  la Cards Against Humanity @aàH)  EXPANSION 1
+1e.20[3]x[1]_b:	La caramella che tutti i bambini vogliono?  lt Cards Against Humanity @àH)  EXPANSION 1
+1e.20[0]x[2]_b:	Non andrei a letto con una top model perchè  lt Cards Against Humanity @aH  EXPANSION 1
+1e.20[1]x[2]_b:	Ho un certo languorino, ho proprio voglia di  lo Cards Against Humanity @aàH)  EXPANSION 1
+1e.20[2]x[2]_b:	Cosa pensi sia importante in una relazione a tre?  la Cards Against Humanity G@aàH  EXPANSION 1
+1e.20[3]x[2]_b:	In caso di emergenza,  la Cards Against Humanity @aH  EXPANSION 1
+1e.20[0]x[3]_b:	Quando sei sul cesso ti viene spesso in mente  la cards Against Humanity —‘((@4H)  EXPANSION 1
+1e.20[1]x[3]_b:	Di notte ho paura che da sotto il letto sbuchi  la Cards Against Humanity @aH)  EXPANSION 1
+1e.20[2]x[3]_b:	Il mio volo per il Giappone è stato annullato per colpa di  la Cards Against Humanity @aH)  EXPANSION 1
+1e.20[3]x[3]_b:	Per fare colpo sul mio capo, mi presenterò con un  la Cards Against Humanity @aH)  EXPANSION 1
+1e.20[0]x[4]_b:	Qualche giorno fa, mi mangiai un  per la rabbia.  la Cards Against Humanity @aH }  EXPANSION 1
+1e.20[1]x[4]_b:	è il titolo del prossimo speciale di Studio Aperto  lo Cards Against Humanity @aH)  EXPANSION 1
+1e.20[2]x[4]_b:	Dopo una faticosa giornata di lavoro, niente è meglio di  la Cards Against Humanity @aà H)  EXPANSION 1
+1e.20[3]x[4]_b:	Ho finito il cibo per il gatto e non ho voglia di ricomprarlo. Potrei dargli  la Cards Against Humanity @aH  EXPANSION 1
+1e.21[0]x[0]_b:	Ucciderò tutti gli zingari con ___  lo Cards Against Humanity @aH )  EXPANSION 1
+1e.21[1]x[0]_b:	Federica Pellegrini, quando non si allena  la Cards Against Humanity @aH  EXPANSION 1
+1e.21[2]x[0]_b:	Sarò I’ uomo più felice del mondo quando  la Cards Against Humanity E à H \  EXPANSION 1
+1e.21[3]x[0]_b:	Cosa potrebbe succedere se chiudessero tutti i siti porno?  la Cards Against Humanity @ A H)  EXPANSION 1
+1e.21[0]x[1]_b:	Per il nuovo anno ho deciso di smettere di  lt Cards Against Humanity —((@4H)  EXPANSION 1
+1e.21[1]x[1]_b:	Hai una bomba fra le mani, tenti di disinnescarla con  la Cards Against Humanity @aàH)  EXPANSION 1
+1e.21[2]x[1]_b:	| vegetariani mangiano anche  quando nes- suno li guarda  la Cards Against Humanity @àH)  EXPANSION 1
+1e.21[3]x[1]_b:	Fatti mandare dallamamma a  la Cards Against Humanity Ga)  EXPANSION 1
+1e.21[0]x[2]_b:	Mi tremano le gambe perché ho  lo Cards Against Humanity @aH  EXPANSION 1
+1e.21[1]x[2]_b:	Per resuscitare Gesù ci vuole  lo Cards Against Humanity @aH)  EXPANSION 1
+1e.21[2]x[2]_b:	Quando vincerò il Nobel per la Pace, ringrazierò__  la Cards Against Humanity G@aàH  EXPANSION 1
+1e.21[3]x[2]_b:	Solo un dura per sempre  lo Cards Against Humanity @aH  EXPANSION 1
+1e.21[0]x[3]_b:	Un non si nega a nessuno  la cards Against Humanity _—((@4H)  EXPANSION 1
+1e.21[1]x[3]_b:	Oggi ho voglia di fare un salto su     la Cards Against Humanity @aH)  EXPANSION 1
+1e.21[2]x[3]_b:	Per il suo novantesimo compleanno, ho regalato a mia nonna  la Cards Against Humanity @aH)  EXPANSION 1
+1e.21[3]x[3]_b:	Non sono mai stato capace di  la Cards Against Humanity @a)  EXPANSION 1
+1e.21[0]x[4]_b:	Come tutti sanno, | ‘unico modo per uccidere Dracula è  la Cards Against Humanity @aH }  EXPANSION 1
+1e.21[1]x[4]_b:	Fra tutte le cose che so fare, di sicuro, quella che mi riesce meglio è  la Cards Against Humanity @aH)  EXPANSION 1
+1e.21[2]x[4]_b:	E' stato trovato vicino alla ex centrale nucleare di Chernobyl, con grande stupore-dì tutti, un  la Cards Against Humanity @aà H)  EXPANSION 1
+1e.21[3]x[4]_b:	Di sicuro, fra tutte le brutte esperienze che ho avuto a lavoro, la più brutta è stata quando     la Cards Against Humanity @aH)  EXPANSION 1
+1e.22[0]x[0]_b:	lo sono invincibile, ma purtroppo ho un punto debole il  lo Cards Against Humanity @aH  EXPANSION 1
+1e.22[1]x[0]_b:	La mia prima parola è stata  la Cards Against Humanity @aH )  EXPANSION 1
+1e.22[2]x[0]_b:	I coltelli Miracle Blade tagliano anche  la Cards Against Humanity @ A H)  EXPANSION 1
+1e.22[3]x[0]_b:	Mi sono messo un nella narice destra  la Cards Against Humanity € A H  EXPANSION 1
+1e.22[0]x[1]_b:	Gli effetti collaterali della colla sono  lt Cards Against Humanity — ((@4H)  EXPANSION 1
+1e.22[1]x[1]_b:	La caccia alle streghe ha  portato a  la Gards Against Humanity EXPANSION 1  Cab
+1e.22[2]x[1]_b:	Ho vomitato  la Cards Against Humanity @aH)  EXPANSION 1
+1e.22[3]x[1]_b:	La miglior soluzione alla cecità:  lo Cards Against Humanity @aH  EXPANSION 1
+1e.22[0]x[2]_b:	Come contraccettivo niente è meglio di  lo Cards Against Humanity @aH  EXPANSION 1
+1e.22[1]x[2]_b:	Prima regola del fight club:  lo Cards Against Humanity @3H  EXPANSION 1
+1e.22[2]x[2]_b:	Ho scaricato un video di  la Cards Against Humanity @aH  EXPANSION 1
+1e.22[3]x[2]_b:	La cintura dei gadget di batman può fare tutto, tranne     lt Cards Against Humanity @aH)  EXPANSION 1
+1e.22[0]x[3]_b:	Dopo aver starnutito è buona norma     la Cards Against Humanity @aH  EXPANSION 1
+1e.22[1]x[3]_b:	La nuova bolla papale invita tutti i credenti a     la Cards Against Humanity Ea)  EXPANSION 1
+1e.22[2]x[3]_b:	ti servono almeno 500 euro per  la Cards Against Humanity —‘(@4H)  EXPANSION 1
+1e.22[3]x[3]_b:	Venderei la mia dignità in cambio di  la Cards Against Humaniy —‘@a4H  EXPANSION 1
+1e.22[0]x[4]_b:	Quando manca internet mi consolo con  la cards Against Humanity —((@4H)  EXPANSION 1
+1e.22[1]x[4]_b:	Sei in casa da solo , fai  la Cards Against Humanity @aH  EXPANSION 1
+1e.22[2]x[4]_b:	Una festa non può essere chiamata tale senza  la Cards Against Humanity @aH)  EXPANSION 1
+1e.22[3]x[4]_b:	Gentili telespettatori, Benvenuti all'Andrea Diprè per il Sociale, oggi qui con me c'è___  la Cards Against Humanity Ea KH  EXPANSION 1
+1e.23[0]x[0]_b:	Oh cavolo, non ho più un Euro, adesso  lo Cards Against Humanity @aA4H  EXPANSION 1
+1e.23[1]x[0]_b:	Il vero significato del Natale è  la Cards Against Humanity € a H )  EXPANSION 1
+1e.23[2]x[0]_b:	Qual è il tuo pomeriggio ideale?  lo Cards Against Humanity  EXPANSION 1  €sH
+1e.23[3]x[0]_b:	Cosa mi hai portato dall' America ?  lt Cards Against Humanity @a H \  EXPANSION 1
+1e.23[0]x[1]_b:	Lo sanno tutti, Hitler ha perso la guerra a causa di  ly Cards Against Humanity @a4H)  EXPANSION 1
+1e.23[1]x[1]_b:	Cosa vuoi per cena ?  lo Cards Against Humaniy — ((@3H)  EXPANSION 1
+1e.23[2]x[1]_b:	Il nostro slogan è  lo Cards Against Humanity @aH)  EXPANSION 1
+1e.23[3]x[1]_b:	Grazie, mi sei stato utile quanto un  lt Cards Against Humanity @aàH)  EXPANSION 1
+1e.23[0]x[2]_b:	Goduria è:  GaH  la Cards Against Humanty - ‘(@a&H)  EXPANSION 1
+1e.23[1]x[2]_b:	Il trauma che bloccò la mia crescita fu  la Cards Against Humanity -—(@a4H)  EXPANSION 1
+1e.23[2]x[2]_b:	Il mio prossimo obiettivo sarà:  la Cards Against Humanity —‘(@2H)  EXPANSION 1
+1e.23[3]x[2]_b:	Mentre sgozzo i maiali, penso a  la Cards Against Humanity @aH  EXPANSION 1
+1e.23[0]x[3]_b:	Nulla è più pericoloso di:  lo Gards Against Humanity @aH  EXPANSION 1
+1e.23[1]x[3]_b:	Gli illuminati hanno deciso di conquistare il mondo con  VARY c2css against tumanty = AH)  EXPANSION 1
+1e.23[2]x[3]_b:	Serata su YouPorn: ti serve necessariament e  la Cards Against Humanity @aH  EXPANSION 1
+1e.23[3]x[3]_b:	AI nuovo papa è stato regalata,  dai fedeli, una manciata di  la Cards Against Humanity  EXPANSION 1  €aH
+1e.23[0]x[4]_b:	Nel magico mondo di Teletabbilandia, i teletubbies giocano con  lo Cards Against Humanity @aH)  EXPANSION 1
+1e.23[1]x[4]_b:	Il cadavere di Mike Bongiorno è stato trovato in una posizione parti- colare, probabil- mente stava __.  la Cards Against Humanity Cà H  EXPANSION 1
+1e.23[2]x[4]_b:	Allora siamo d'accordo, per il compleanno di Giovanna il regalo sarà  lt Cards Against Humanity @3H  EXPANSION 1
+1e.23[3]x[4]_b:	Usando la tua macchina del  tempo, incontri il  te stesso del  passato. Cosa fai?  lo Cards Against Humanity  EXPANSION 1  €3H
+1_5e.0[0]x[0]_w:	Fare gli sgambetti ai pellegrinaggi.  4 Cards Against Humanity
+1_5e.0[1]x[0]_w:	aaaaaaa  4 Cards Against Humanity
+1_5e.0[2]x[0]_w:	A matriosca.  %& Cards Against Humanity
+1_5e.0[3]x[0]_w:	Cozze.  4% Cards Against Humanity
+1_5e.0[0]x[1]_w:	Tratto da una storia vera.  A Gards Against Humanity
+1_5e.0[1]x[1]_w:	I topi non avevano nipoti.     4 Cards Against Humanity
+1_5e.0[2]x[1]_w:	Tre tigri contro tre tigri.     4 Cards Against Humanity
+1_5e.0[3]x[1]_w:	Dai del pane al cane pazzo, dai del pane al pazzo cane.     % Gards Against Humanity
+1_5e.0[0]x[2]_w:	Imprevisti e probabilità.  ID Gards Against Humanity
+1_5e.0[1]x[2]_w:	Attacco la Kamchatka dal Giappone con 1.     4 Cards Against Humanity
+1_5e.0[2]x[2]_w:	Il pene da latte.     4 Cards Against Humanity
+1_5e.0[3]x[2]_w:	Gioco una carta trappola.     (% Cards Against Humanity
+1_5e.0[0]x[3]_w:	Brillantini.  % Cards Against Humanity
+1_5e.0[1]x[3]_w:	Armadildo.  4 Cards Against Humanity
+1_5e.0[2]x[3]_w:	Parcheggiatori abusivi.  4 Cards Against Humanity
+1_5e.0[3]x[3]_w:	I tipi delle rose.  7 Cards Against Humanity
+1_5e.0[0]x[4]_w:	Alla fine muore.  % Gards Against Humanity
+1_5e.0[1]x[4]_w:	Cinegro.  4% Cards Against Humanity
+1_5e.0[2]x[4]_w:	Il nero che muore sempre nei film.  4 Cards Against Humanity
+1_5e.0[3]x[4]_w:	Non ci sono più le mezze stagioni.  % Cards Against Humanity
+1_5e.1[0]x[0]_b:	Col trattore in tangenziale,  andiamo a  %& Cards Against Humanity
+1_5e.1[1]x[0]_b:	Cammini beato ma sbatti il dito in uno spigolo e gridi  4 Cards Against Humanity
+1_5e.1[2]x[0]_b:	Una figa al mare ti chiede se vuoi spalmarle la crema sulla schiena.  Le rispondi  %& Cards Against Humanity
+1_5e.1[3]x[0]_b:	Camminando per strada trovi 100€ e urli !  4% Cards Against Humanity
+1_5e.1[0]x[1]_b:	La polizia ti ferma. “Patente e libretto, grazie” e tu rispondi     % Gards Against Humanity
+1_5e.1[1]x[1]_b:	Guardi il cielo e, vedendo una stella cadente esprimi un desiderio.  “Vorrei     % Cards Against Humanity
+1_5e.1[2]x[1]_b:	a) Pronto?  b)  a) Guardi ha sbagliato numero.     4 Cards Against Humanity
+1_5e.1[3]x[1]_b:	Vedi i ciclisti in mezzo alla strada e     % Cards Against Humanity
+1_5e.1[0]x[2]_b:	Stai guardano un video porno ma  ID Cards Against Humanity
+1_5e.1[1]x[2]_b:	alle spalle degli altri.  4% Cards Against Humanity
+1_5e.1[2]x[2]_b:	sarà una nuova disciplina olimpica.  4% Cards Against Humanity
+1_5e.1[3]x[2]_b:	Il lupo perde il pelo ma non il  % Cards Against Humanity
+1_5e.1[0]x[3]_b:	Chi dorme non piglia  & Cards Against Humanity
+1_5e.1[1]x[3]_b:	Nuova fiaba per bambini: “C’era una volta  ”  4% Cards Against Humanity
+1_5e.1[2]x[3]_b:	Quando ti rigano la macchina e ti sale il  4% Cards Against Humanity
+1_5e.1[3]x[3]_b:	Le code fuori dagli apple store non sono nulla in confronto alle code fuori  a  7 Cards Against Humanity
+1_5e.1[0]x[4]_b:	Non trovi parcheggio quindi esci dalla macchina e  ID Cards Against Humanity
+1_5e.1[1]x[4]_b:	Qual’è stata la prima cosa che pensato nella tua vita?  4% Cards Against Humanity
+1_5e.1[2]x[4]_b:	Per addormentarti a letto pensi a  4% Cards Against Humanity
+1_5e.1[3]x[4]_b:	Mi manca un po di pratica ma  è proprio ciò che fa per me.  % Cards Against Humanity
+1_5e.2[0]x[0]_b:	Ma perchè non ci ho pensato prima?!  %& Cards Against Humanity
+1_5e.2[1]x[0]_b:	Credo a poche cose nella vita, ma non rinuncio mai a  4 Cards Against Humanity
+1_5e.2[2]x[0]_b:	Sarebbe bello  E invece lavoro da McDonald's.  %& Cards Against Humanity
+1_5e.2[3]x[0]_b:	AI fantacalcio quest'anno ho comprato  4% Cards Against Humanity
+1_5e.2[0]x[1]_b:	Tua mamma ti chiede: “Tesoro, pasta in bianco o minestrina?”  Tu ribadisci  che     % Gards Against Humanity
+1_5e.2[1]x[1]_b:	“Vincitore della categoria, becchi. Come ci si sente?”     % Cards Against Humanity
+1_5e.2[2]x[1]_b:	solo su Mediaset Premium!     4 Cards Against Humanity
+1_5e.2[3]x[1]_b:	Stai facendo il video?     % Cards Against Humanity
+1_5e.2[0]x[2]_b:	Gli italiani? Pizza, spaghetti e  ID Cards Against Humanity
+1_5e.2[1]x[2]_b:	Fatta l’Italia ora bisogna fare  4% Cards Against Humanity
+1_5e.2[2]x[2]_b:	L’erba del vicino è sempre più  4% Cards Against Humanity
+1_5e.2[3]x[2]_b:	Barrichiamoci dietro  % Cards Against Humanity
+1_5e.2[0]x[3]_b:	Sei proprio un  poeta!  & Cards Against Humanity
+1_5e.2[1]x[3]_b:	Verso l’infinto e  4% Cards Against Humanity
+1_5e.2[2]x[3]_b:	Uno, due, tre...  4% Cards Against Humanity
+1_5e.2[3]x[3]_b:	Quando ti manca la carta igienica ti pulisci il culo con  7 Cards Against Humanity
+1_5e.2[0]x[4]_b:	Ciao sono Mario. Ho 42 anni e soffro di  ID Cards Against Humanity
+1_5e.2[1]x[4]_b:	Prima di Cards Against Humanity giocavo a  4% Cards Against Humanity
+1_5e.2[2]x[4]_b:	Ogni volta che penso a mi viene in mente  4% Cards Against Humanity
+1_5e.2[3]x[4]_b:	Topolino si fa le topoline. Paperino si fa le paperine. Pippo invece si  fa le  % Cards Against Humanity

@@ -174,6 +174,7 @@ def random_white_cards_test(number_of_cards):
 
 @api.route('/randomWhiteCards/<string:my_room_id>/<int:number_of_cards>')
 def random_white_cards(number_of_cards, my_room_id):
+     # Updates user's hand, used card list and returns the picked cards in a json format
      user_cookie = get_cookie()
      my_user_id = users_collection.find_one({"cookie": user_cookie, "room": ObjectId(my_room_id)})["_id"]
      list_of_used_cards = rooms_collection.find_one({"_id": ObjectId(my_room_id)})["used_cards"]
@@ -228,6 +229,7 @@ def random_black_card(my_room_id):
 
 @api.route('/play_cards/<string:my_room_id>', methods=['GET', 'POST'])
 def play_cards(my_room_id):
+    # Takes a list of card Ids and move the cards from the player's hand to the table
     config = request.get_json()
     list_of_card_ids = config["list"]
     user_cookie = get_cookie()
@@ -253,6 +255,7 @@ def play_cards(my_room_id):
 
 @api.route('/user_wins/<string:my_room_id>')
 def user_wins(my_room_id):
+    # Grants a point to the winner and deletes all the cards from the table
     user_cookie = get_cookie()
     my_user_id = users_collection.find_one({"cookie": user_cookie, "room": ObjectId(my_room_id)})
     if my_user_id is None:  # Make sure that the user exists with this cookie
@@ -269,6 +272,7 @@ def user_wins(my_room_id):
 
 @api.route('/current_black/<string:my_room_id>')
 def current_black(my_room_id):
+    # Returns everything about the current black card on the table as a json
     black_id = rooms_collection.find_one({"_id": ObjectId(my_room_id)},
                                          {"black": 1})
     black = cards_collection.find_one({"_id": black_id["black"]})

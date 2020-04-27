@@ -269,5 +269,7 @@ def user_wins(my_room_id):
 
 @api.route('/current_black/<string:my_room_id>')
 def current_black(my_room_id):
-    black = rooms_collection.find_one({"_id": ObjectId(my_room_id)}, {"black": 1})
+    black_id = rooms_collection.find_one({"_id": ObjectId(my_room_id)},
+                                         {"black": 1})
+    black = cards_collection.find_one({"_id": black_id["black"]})
     return jsonify(black)

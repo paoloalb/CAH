@@ -45,7 +45,7 @@ class User:
         self.session.get(url + "/user_wins/" + str(room_id))
 
     def current_black(self, room_id):
-        black_card = self.session.get(url + "/current_black/" + room_id).json()["black"]
+        black_card = self.session.get(url + "/current_black/" + room_id).json()
         return black_card
 
 

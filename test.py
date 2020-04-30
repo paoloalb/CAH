@@ -5,6 +5,7 @@ import requests
 url = "http://127.0.0.1:5000"
 N_OF_CARDS = 5
 
+
 class User:
     def __init__(self):
         self.session = requests.Session()
@@ -23,10 +24,10 @@ class User:
 
     def join_room(self, room_id, username):
         r = self.session.get(url + "/join_room/" + room_id + "/" + username)
-        assert r.status_code == 200 and r.text == "OK"
+        assert r.status_code == 200 and r.url == url + "/room/" + room_id
 
     def my_rooms(self):
-        rooms = self.session.get(url + "/my_rooms").json()
+        rooms = self.session.get(url + "/my_rooms_info").json()
         assert "rooms" in rooms and type(rooms["rooms"]) is list
         return rooms
 
@@ -55,6 +56,7 @@ class User:
     def user_list(self, room_id):
         users = self.session.get(url + "/user_list/" + room_id).json()
         return users
+
 
 player_a = User()
 player_b = User()

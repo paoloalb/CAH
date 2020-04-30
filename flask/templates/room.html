@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}{{ room.name }}{% endblock %}
+
+{% block head %}
+{{ super() }}
+{% endblock %}
+
+{% block content %}
+
+<div>
+    u're in.<br>
+    {{ room.room }}
+</div>
+
+{% endblock %}

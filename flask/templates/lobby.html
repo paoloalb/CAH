@@ -1,0 +1,21 @@
+<div>
+    {% for room in joined_rooms %}
+    <div class="card m-1">
+        <div class="card-header">
+            <h2>{{ room.name }}</h2>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+                <h5>Giocatori:</h5>
+            </li>
+            {% for player in room.players %}
+            <li class="list-group-item text-center">
+                {{ player.name }}
+            </li>
+            {% endfor %}
+            <a href="/room/{{ room._id }}" class="list-group-item list-group-item-action active">Entra</a>
+            <a href="/leave_room/{{ room._id }}" class="list-group-item list-group-item-action active">Esci</a>
+        </ul>
+    </div>
+    {% endfor %}
+</div>

@@ -23,3 +23,7 @@ function jform(selector) {
         }, {});
     return j;
 }
+
+function redirect(url) {
+    window.location.href = url;
+}

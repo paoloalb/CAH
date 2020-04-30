@@ -1,26 +1,35 @@
+from pymongo import MongoClient
+
+client = MongoClient("mongodb+srv://paoloa:123stella@mflix-3d6kd.mongodb.net/test")
+#client = MongoClient("mongodb://localhost:27017/")
+db = client["cah"]
+cards_collection = db["cards"]
+rooms_collection = db["rooms"]
+users_collection = db["users"]
+
 # DB SCHEMA
 db = {
     "room": [
         {
             "_id": 0,
-            "room_name": "",
-            "black": "<cards._id>", # ID della carta che si trova sul tavolo
-            "caesar": "<user._id>",
-            "n_of_users": 0,
+            "name": "",
             "users": [
                 "<user._id>",
             ],
-            "used_cards": [
-                "<cards._id>",
-            ],
-            "round": 0,
             "admins": [
                 "<user._id>",
             ],
+            "round": 0,
+            "black": "<cards._id>",  # ID della carta che si trova sul tavolo
+            "caesar": "<user._id>",
+            "used_cards": [
+                "<cards._id>",
+            ],
+            "user_count": 0,
+            "user_count_max": 5,
             "password": None,
-            "max_n_of_players": 5
         },
-    ]
+    ],
 
     "users": [
         {
@@ -46,29 +55,3 @@ db = {
         },
     ],
 }
-
-
-# ACTIONS
-
-
-
-def use_card(room_id, user_cookie, card_id):
-    pass
-
-
-def choose_winner(room_id, card_token):
-    pass
-
-# PUSH
-
-
-def you_are_caesar():
-    pass
-
-
-def card_used():
-    pass
-
-
-def card_uncover():
-    pass

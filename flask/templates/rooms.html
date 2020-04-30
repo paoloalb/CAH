@@ -1,0 +1,72 @@
+<ul class="list-group w-100">
+    {% for room in rooms %}
+    <li class="list-group-item">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>
+                        {{ room.name }}
+                    </h2>
+                </div>
+                <div class="col-md-auto align-middle p-0">
+                    {% if room.password is not none %}
+                    <div class="card text-white bg-secondary p-1 m-3">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    {% endif %}
+                </div>
+                <div class="col-md-auto align-middle p-0">
+                    <!-- <a href="/join_room/{{ room._id }}/" class="list-group-item list-group-item-action active">Unisciti</a> -->
+                    <button type="button" class="list-group-item list-group-item-action active" data-toggle="modal" data-target="#UsernameSelection" data-room_id="{{ room._id }}">
+                        Unisciti
+                    </button>
+                </div>
+            </div>
+        </div>
+    </li>
+    {% endfor %}
+</ul>
+
+<script>
+    $('#UsernameSelection').on('show.bs.modal', function(event) {
+        let room_id = $(event.relatedTarget).data('room_id')
+        $(this).find('#RoomId').val(room_id)
+        $(this).find('#CreateRoom').val(room_id)
+    });
+
+    // "/join_room/"+room._id +"/"+username
+</script>
+
+<div class="modal fade" id="UsernameSelection" tabindex="-1" role="dialog" aria-labelledby="UsernameSelectionTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="UsernameSelectionTitle">Scegli come ti chiami</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form id="CreateRoom" action="">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="Username">Tuo nome</label>
+                        <input type="name" name="name" class="form-control" id="Username" placeholder="anon">
+                    </div>
+                    <div class="form-group invisible">
+                        <label for="RoomId">Id stanza</label>
+                        <input type="name" name="name" class="form-control" id="RoomId" placeholder="Id stanza">
+                    </div>
+                    <div class="form-group">
+                        <label for="RoomPassword">Password stanza</label>
+                        <input type="password" name="password" class="form-control" id="RoomPassword" placeholder="Password">
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Crea</button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Annulla</button>
+                    <button type="submit" class="btn btn-primary">Crea</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

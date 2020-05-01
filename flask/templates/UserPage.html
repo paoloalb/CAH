@@ -49,23 +49,34 @@
                 </div>
 
                 <div class="p-2 bd-highlight d-flex ">
-
                     <div class="WhiteCardContainer d-flex flex-row">
-                        {% for wCard in userRoom.white_cards %}
+                    {% if  userRoom.white_cards | length > 5 %}
+                    {% set step = 5 %}
+                    {% else %}
+                    {% set step = userRoom.white_cards | length %}
+                    {% endif %}
+
+                        {% for i in range(step) %}
                             <div class="card">
-                                <h3 class="titleWhiteCard"> {{ wCard.text }}</h3>
+                                <h3 class="titleWhiteCard"> {{ userRoom.white_cards[i].text }}</h3>
                             </div>
                         {% endfor %}
                     </div>
                 </div>
 
                 {% if userRoom.white_cards|length  > 5 %}
+                      {% if  userRoom.white_cards | length > 10 %}
+                    {% set step = 10 %}
+                    {% else %}
+                    {% set step = userRoom.white_cards | length %}
+                    {% endif %}
+
                       <div class="p-2 bd-highlight d-flex ">
 
                     <div class="WhiteCardContainer d-flex flex-row">
-                        {% for wCard in userRoom.white_cards %}
+                        {% for i in range(5, step) %}
                             <div class="card">
-                                <h3 class="titleWhiteCard"> {{ wCard.text }}</h3>
+                                <h3 class="titleWhiteCard"> {{userRoom.white_cards[i].text }}</h3>
                             </div>
                         {% endfor %}
                     </div>
@@ -77,9 +88,10 @@
                       <div class="p-2 bd-highlight d-flex ">
 
                     <div class="WhiteCardContainer d-flex flex-row">
-                        {% for wCard in userRoom.white_cards %}
+                        {% for i in range(10, userRoom.white_cards| length) %}
                             <div class="card">
-                                <h3 class="titleWhiteCard"> {{ wCard.text }}</h3>
+                                <h3 class="titleWhiteCard"> {{ userRoom.white_cards[i].text }}</h3>
+
                             </div>
                         {% endfor %}
                     </div>

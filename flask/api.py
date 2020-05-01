@@ -163,7 +163,7 @@ def user_list(my_room_id):
 # create a class with all user date for start the game
 def init_user_page(my_room_id):
     users = user_list(my_room_id)
-    white_cards = random_white_cards_test(12)
+    white_cards = random_white_cards_test(14)
     black_cards = random_black_card(my_room_id)
     dict_to_print = dict({'users': users, 'white_cards': white_cards, 'black_cards': black_cards})
 

@@ -161,6 +161,7 @@ def user_list(my_room_id):
 
 @api.route('/init_user_page/<string:my_room_id>')
 # create a class with all user date for start the game
+# TODO missing info about who is the ceaser
 def init_user_page(my_room_id):
     users = user_list(my_room_id)
     white_cards = random_white_cards_test(14)
@@ -168,3 +169,14 @@ def init_user_page(my_room_id):
     dict_to_print = dict({'users': users, 'white_cards': white_cards, 'black_cards': black_cards})
 
     return dict_to_print
+
+
+@api.route('/get_room/<string:my_room_id>')
+# not even tested yet
+def get_room(my_room_id):
+    rooms = rooms_collection.find_one(
+        {
+            "room": ObjectId(my_room_id),
+        }
+    )
+    return jsonify(rooms)

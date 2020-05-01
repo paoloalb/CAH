@@ -18,7 +18,7 @@
         <ul>
 
               {% for user in userRoom.users %}
-                      <li><i class="fas fa-home"></i>{{user.name}}</li>
+                      <li><i class="fas fa-user"></i>{{user.name}}</li>
               {% endfor %}
 
         </ul>
@@ -106,11 +106,14 @@
     <script>
      setHtmlCircle();
      startTimer(50);
+     $(document).ready(function(){
+      $(".card").dblclick(function(event){
+           let target = $( event.target );
+          target.children();
+          alert("card was double-clicked." + target.children('h3').first().text());
+      });
+    });
 
-    {#document.addEventListener('DOMContentLoaded', function(){#}
-    {#    console.log('Loaded page');#}
-    {#    startTimer(50);#}
-    {#});#}
     </script>
 
 {% endblock %}

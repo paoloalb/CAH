@@ -48,12 +48,12 @@ def random_white_cards(number_of_cards, my_room_id):
 
     rooms_collection.update_one({"_id": ObjectId(my_room_id)},
                                 {"$push":
-                                 {"used_cards": {"$each": [c["_id"] for c in cards]}}
+                                     {"used_cards": {"$each": [c["_id"] for c in cards]}}
                                  })
 
     users_collection.update_one({"_id": ObjectId(my_user_id)},
                                 {"$push":
-                                 {"cards_in_hand": {"$each": [c["_id"] for c in cards]}}
+                                     {"cards_in_hand": {"$each": [c["_id"] for c in cards]}}
                                  })
 
     return jsonify(cards)  # if i want only text : return jsonify({"cards": [c["text"] for c in cards]})
@@ -83,7 +83,7 @@ def random_black_card(my_room_id):
     rooms_collection.update_one(
         {"_id": ObjectId(my_room_id)},
         {"$push": {"used_cards": card["_id"]},
-         "$set": {"black":  card["_id"]}}
+         "$set": {"black": card["_id"]}}
     )
 
     return card
@@ -109,8 +109,8 @@ def play_cards(my_room_id):
         # remove card from player's hand and put it on the table
         users_collection.update_one({"_id": my_user_id},
                                     {
-                                    "$pull": {"cards_in_hand": ObjectId(card)},
-                                    "$push": {"cards_on_table": ObjectId(card)}})
+                                        "$pull": {"cards_in_hand": ObjectId(card)},
+                                        "$push": {"cards_on_table": ObjectId(card)}})
     return make_response("OK", 200)
 
 
@@ -156,4 +156,15 @@ def current_black(my_room_id):
 # Returns a list with all the informations about users in the room
 def user_list(my_room_id):
     users = list(users_collection.find({"room": ObjectId(my_room_id)}))
-    return jsonify(users)
+    return users
+
+
+@api.route('/init_user_page/<string:my_room_id>')
+# create a class with all user date for start the game
+def init_user_page(my_room_id):
+    users = user_list(my_room_id)
+    white_cards = random_white_cards_test(12)
+    black_cards = random_black_card(my_room_id)
+    dict_to_print = dict({'users': users, 'white_cards': white_cards, 'black_cards': black_cards})
+
+    return dict_to_print

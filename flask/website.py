@@ -15,8 +15,6 @@ def room(room_id):
     return render_template('room.html', room=room_info(room_id), state=joined_room_state(room_id))
 
 
-@website.route('/UserPage')
-def UserPage():
-    card = random_black_card_test()
-    print(type(card))
-    return render_template('UserPage.html', whiteCards=random_white_cards_test(3), blackCard=card)
+@website.route('/UserPage/<string:room_id>')
+def UserPage(room_id):
+    return render_template('UserPage.html', userRoom=  init_user_page(room_id))

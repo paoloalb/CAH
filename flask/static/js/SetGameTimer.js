@@ -79,6 +79,7 @@ function formatTimeLeft(time) {
 
   // The output in MM:SS format
   return `${minutes}:${seconds}`;
+
 }
 
 //when call start the timer

@@ -1,34 +1,36 @@
 <div class="card m-1 w-100">
     <div class="card-body">
+
         <script>
             function create_room() {
                 let j = jform('#CreateRoom');
                 let username = j.username;
                 delete j.username;
-                $.ajax({
-                    url: '/new_room',
-                    type: "POST",
-                    dataType: "json",
-                    data: JSON.stringify(j),
-                    contentType: 'application/json;charset=UTF-8',
-                    success: (r) => {
-                        redirect("/join_room/" + r.room_id + "/" + username);
-                    },
-                });
+                post('/new_room', j)
+                    .done((r) => {
+                        let room_id = r.room_id;
+                        post("/join_room/" + room_id + "/" + username, {
+                                password: j.password
+                            })
+                            .done(() => {
+                                redirect("/room/" + room_id);
+                            });
+                    });
             }
         </script>
+
         <form id="CreateRoom" action="javascript:create_room()">
             <div class="form-group">
-                <label for="RoomName">Nome stanza</label>
-                <input type="name" name="name" class="form-control" id="RoomName" placeholder="Nome stanza">
+                <label for="CreateRoomName">Nome stanza</label>
+                <input type="name" name="name" class="form-control" id="CreateRoomName" placeholder="Nome stanza">
             </div>
             <div class="form-group">
-                <label for="RoomUsername">Nome utente</label>
-                <input type="username" name="username" class="form-control" id="RoomUsername" placeholder="Username">
+                <label for="CreateRoomUsername">Nome utente</label>
+                <input type="username" name="username" class="form-control" id="CreateRoomUsername" placeholder="Username">
             </div>
             <div class="form-group">
-                <label for="RoomPassword">Password stanza</label>
-                <input type="password" name="password" class="form-control" id="RoomPassword" placeholder="Password">
+                <label for="CreateRoomPassword">Password stanza</label>
+                <input type="password" name="password" class="form-control" id="CreateRoomPassword" placeholder="Password">
             </div>
             <button type="submit" class="btn btn-primary w-100">Crea</button>
         </form>

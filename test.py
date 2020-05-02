@@ -13,26 +13,34 @@ class User:
         r = self.session.get(url + "/biscottini")
         assert r.status_code == 200 and r.text == "OK"
         cookies = requests.utils.dict_from_cookiejar(self.session.cookies)
-        assert "id_card" in cookies and len(cookies["id_card"]) > 0
+        assert "id_card" in cookies
+        assert len(cookies["id_card"]) > 0
         return cookies["id_card"]
 
     def create_room(self, room_name):
-        room_id = self.session.post(url + "/new_room", json={"name": "test_room"}).json()["room_id"]
-        assert type(room_id) is str and len(room_id) > 0
-        return room_id
+        r = self.session.post(url + "/new_room", json={"name": "test_room"})
+        assert r.status_code == 200
+        j = r.json()
+        assert "room_id" in j
+        return j["room_id"]
 
     def join_room(self, room_id, username):
         r = self.session.get(url + "/join_room/" + room_id + "/" + username)
-        assert r.status_code == 200 and r.url == url + "/room/" + room_id
+        assert r.status_code == 200
+        assert r.text == "OK"
 
     def leave_room(self, room_id):
         r = self.session.get(url + "/leave_room/" + room_id)
-        assert r.status_code == 200 and r.url == url + "/"
+        assert r.status_code == 200
+        assert r.text == "OK"
 
     def my_rooms(self):
-        rooms = self.session.get(url + "/my_rooms_info").json()
-        assert "rooms" in rooms and type(rooms["rooms"]) is list
-        return rooms
+        r = self.session.get(url + "/my_rooms_info")
+        assert r.status_code == 200
+        j = r.json()
+        assert "rooms" in j
+        assert type(j["rooms"]) is list
+        return j["rooms"]
 
     def pick_white_cards(self, n, room_id):
         card_list = self.session.get(url + "/randomWhiteCards/" + room_id + "/" + str(n)).json()

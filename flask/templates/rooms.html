@@ -1,3 +1,10 @@
+<script>
+    $('#JoinDialog').on('show.bs.modal', function(event) {
+        let room_id = $(event.relatedTarget).data('room_id');
+        $(this).find('#RoomId').val(room_id);
+    });
+</script>
+
 <ul class="list-group w-100">
     {% for room in rooms %}
     <li class="list-group-item">
@@ -16,8 +23,7 @@
                     {% endif %}
                 </div>
                 <div class="col-md-auto align-middle p-0">
-                    <!-- <a href="/join_room/{{ room._id }}/" class="list-group-item list-group-item-action active">Unisciti</a> -->
-                    <button type="button" class="list-group-item list-group-item-action active" data-toggle="modal" data-target="#UsernameSelection" data-room_id="{{ room._id }}">
+                    <button type="button" class="list-group-item list-group-item-action active" data-toggle="modal" data-target="#JoinDialog" data-room_id="{{ room._id }}">
                         Unisciti
                     </button>
                 </div>
@@ -27,44 +33,54 @@
     {% endfor %}
 </ul>
 
-<script>
-    $('#UsernameSelection').on('show.bs.modal', function(event) {
-        let room_id = $(event.relatedTarget).data('room_id')
-        $(this).find('#RoomId').val(room_id)
-        $(this).find('#CreateRoom').val(room_id)
-    });
-
-    // "/join_room/"+room._id +"/"+username
-</script>
-
-<div class="modal fade" id="UsernameSelection" tabindex="-1" role="dialog" aria-labelledby="UsernameSelectionTitle" aria-hidden="true">
+<div class="modal fade" id="JoinDialog" tabindex="-1" role="dialog" aria-labelledby="JoinDialogTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="UsernameSelectionTitle">Scegli come ti chiami</h5>
+                <h5 class="modal-title" id="JoinDialogTitle">Scegli come chiamarti</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form id="CreateRoom" action="">
+
+            <script>
+                $('#JoinDialog').on('show.bs.modal', function(event) {
+                    $('#JoinDialog').trigger('focus');
+                    let room_id = $(event.relatedTarget).data('room_id');
+                    $(this).find('#JoinRoomId').val(room_id);
+                });
+
+                function join_room() {
+                    let j = jform('#JoinRoom');
+                    let username = j.username;
+                    let room_id = j.roomid;
+                    delete j.username;
+                    delete j.roomid;
+                    post('/join_room/' + room_id + '/' + username, j)
+                        .done(() => {
+                            redirect("/room/" + room_id);
+                        });
+                }
+            </script>
+
+            <form id="JoinRoom" action="javascript:join_room()">
                 <div class="modal-body">
                     <div class="form-group">
-                        <label for="Username">Tuo nome</label>
-                        <input type="name" name="name" class="form-control" id="Username" placeholder="anon">
+                        <label for="JoinRoomUsername">Tuo nome</label>
+                        <input type="name" name="name" class="form-control" id="JoinRoomUsername" placeholder="anon">
                     </div>
-                    <div class="form-group invisible">
-                        <label for="RoomId">Id stanza</label>
-                        <input type="name" name="name" class="form-control" id="RoomId" placeholder="Id stanza">
+                    <div class="form-group d-none">
+                        <label for="JoinRoomId">Id stanza</label>
+                        <input type="roomid" name="roomid" class="form-control" id="JoinRoomId" placeholder="Id stanza">
                     </div>
                     <div class="form-group">
-                        <label for="RoomPassword">Password stanza</label>
-                        <input type="password" name="password" class="form-control" id="RoomPassword" placeholder="Password">
+                        <label for="JoinRoomPassword">Password stanza</label>
+                        <input type="password" name="password" class="form-control" id="JoinRoomPassword" placeholder="Password">
                     </div>
-                    <button type="submit" class="btn btn-primary w-100">Crea</button>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Annulla</button>
-                    <button type="submit" class="btn btn-primary">Crea</button>
+                    <button type="submit" class="btn btn-primary">Unisciti</button>
                 </div>
             </form>
         </div>

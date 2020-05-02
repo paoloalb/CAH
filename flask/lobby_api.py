@@ -19,7 +19,7 @@ def joined_room_state(room_id):
     # only accessible to joined users
     user_cookie = get_cookie()
     state = users_collection.find_one({"room": ObjectId(room_id), "cookie": user_cookie})
-    if request.path.startswith("/my_room_status/"):
+    if request.path.startswith("/my_room_info/"):
         if state is None:  # check if user joined
             abort(403)
         return jsonify(state)
@@ -44,7 +44,7 @@ def room_info(room_id):
             "user_count_max": 1,
         }
     )
-    if request.path.startswith("/my_room_status/"):
+    if request.path.startswith("/room_info/"):
         return jsonify(room)
     else:
         return room
@@ -66,7 +66,7 @@ def rooms_info():
             "user_count_max": 1,
         }
     ))
-    if request.path == "/rooms":
+    if request.path == "/rooms_info":
         return jsonify({"rooms": rooms})
     else:
         return rooms
@@ -84,7 +84,6 @@ def joined_rooms_info():
             "_id": 1,
         }
     ))
-    print(states, flush=True)
     rooms = list(rooms_collection.find(  # get all rooms' info of the user's joined rooms
         {
             "users": {
@@ -100,7 +99,6 @@ def joined_rooms_info():
             "user_count_max": 1,
         }
     ))
-    print(rooms, flush=True)
     if request.path == "/my_rooms_info":
         return jsonify({"rooms": rooms})
     else:
@@ -135,7 +133,7 @@ def create_room():
             "password": password,
         }
     )
-    return jsonify({"room_id": str(room.inserted_id)})
+    return jsonify({"room_id": room.inserted_id})
 
 
 @lobby_api.route('/join_room/<string:room_id>/<string:username>', methods=['GET', 'POST'])
@@ -150,15 +148,15 @@ def join_room(room_id, username):
             abort(400)
         if room["user_count"] >= room["user_count_max"]:  # check if room is full
             abort(403)
-        print(room, flush=True)
         if room["password"] is not None:  # check if room passworded
             j = request.get_json()
-            if "password" not in j or len(j["password"]) == 0:  # check password was sent
+            if j is None or "password" not in j or len(j["password"]) == 0:  # check password was sent
                 abort(403)
             hash = room["password"]["hash"]
             salt = room["password"]["salt"]
             password = j["password"]
-            if hash != hash_password(password, salt):  # check password
+            hashed, _ = hash_password(password, salt)
+            if hashed != hash:  # check password
                 abort(403)
         user_cookie = get_cookie()
         if username is None or len(username) == 0:
@@ -202,7 +200,7 @@ def join_room(room_id, username):
                     },
                 }
             )
-    return redirect(url_for("website.room", room_id=room_id), 307)
+    return "OK", 200
 
 
 @lobby_api.route('/leave_room/<string:room_id>')
@@ -231,4 +229,4 @@ def leave_room(room_id):
                 },
             }
         )
-    return redirect(url_for("website.root"), 307)
+    return "OK", 200

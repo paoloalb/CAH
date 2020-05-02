@@ -1,3 +1,11 @@
+function redirect(url) {
+    window.location.href = url;
+}
+
+function replace(html) {
+    $("html").html(html);
+}
+
 function get(url) {
     return $.ajax({
         url: url,
@@ -5,12 +13,11 @@ function get(url) {
     });
 }
 
-function post(utl, obj) {
+function post(url, obj) {
     return $.ajax({
         url: url,
         type: "POST",
-        dataType: "json",
-        data: JSON.stringify(j),
+        data: JSON.stringify(obj),
         contentType: 'application/json;charset=UTF-8',
     });
 }
@@ -22,8 +29,4 @@ function jform(selector) {
             return obj;
         }, {});
     return j;
-}
-
-function redirect(url) {
-    window.location.href = url;
 }

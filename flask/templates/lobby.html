@@ -1,4 +1,14 @@
 <div>
+
+    <script>
+        function leave_room(room_id) {
+            get('/leave_room/' + room_id)
+                .done(() => {
+                    redirect("/");
+                });
+        }
+    </script>
+
     {% for room in joined_rooms %}
     <div class="card m-1">
         <div class="card-header">
@@ -14,7 +24,7 @@
             </li>
             {% endfor %}
             <a href="/room/{{ room._id }}" class="list-group-item list-group-item-action active">Entra</a>
-            <a href="/leave_room/{{ room._id }}" class="list-group-item list-group-item-action active">Esci</a>
+            <button onclick="javascript:leave_room('{{ room._id }}')" class="list-group-item list-group-item-action active">Esci</button>
         </ul>
     </div>
     {% endfor %}

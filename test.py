@@ -3,7 +3,6 @@ import json
 import requests
 
 url = "http://127.0.0.1:5000"
-N_OF_CARDS = 5
 
 
 class User:
@@ -25,6 +24,10 @@ class User:
     def join_room(self, room_id, username):
         r = self.session.get(url + "/join_room/" + room_id + "/" + username)
         assert r.status_code == 200 and r.url == url + "/room/" + room_id
+
+    def leave_room(self, room_id):
+        r = self.session.get(url + "/leave_room/" + room_id)
+        assert r.status_code == 200 and r.url == url + "/"
 
     def my_rooms(self):
         rooms = self.session.get(url + "/my_rooms_info").json()
@@ -61,54 +64,53 @@ class User:
 player_a = User()
 player_b = User()
 
+# CREATE USER A
 cookie_a = player_a.get_cookie()
 print("a", "cookie:", cookie_a, sep="\t")
-
+# CREATE USER B
 cookie_b = player_b.get_cookie()
 print("b", "cookie:", cookie_b, sep="\t")
-
+# A CREATE ROOM
 room = player_a.create_room("test_room")
 print("a", "room:", room, sep="\t")
-
+# A JOIN ROOM
 username_a = "test_player_a"
 player_a.join_room(room, username_a)
 print("a", "joined:", room, "username:", username_a, sep="\t")
-
+# B JOIN ROOM
 username_b = "test_player_b"
 player_b.join_room(room, username_b)
 print("b", "joined:", room, "username:", username_b, sep="\t")
-
+# A LIST ROOMS
 rooms_a = player_a.my_rooms()
 print("a", "rooms:", json.dumps(rooms_a, indent="\t"), sep="\t")
-
+# B LIST ROOMS
 rooms_b = player_b.my_rooms()
 print("b", "rooms:", json.dumps(rooms_b, indent="\t"), sep="\t")
-
-cards_a = player_a.pick_white_cards(N_OF_CARDS, room)
-print("\na picked these cards: \n",  json.dumps(cards_a, indent="\t"))
-
-cards_b = player_b.pick_white_cards(N_OF_CARDS, room)
-print("\nb picked these cards: \n",  json.dumps(cards_b, indent="\t"))
-
-black_card = player_a.pick_black(room)
-print("\nblack card was picked:\n" + black_card["text"] + "\nPick " + str(black_card["pick"]))
-
-input_string = input("\nInserisci la posizione delle carte da giocare per il player a separate da uno spazio (x es: 0 2 3):\n")
-list_of_ids = [c["_id"] for i, c in enumerate(cards_a) if i in [int(u) for u in input_string.split()]]
-player_a.play_cards(room, list_of_ids)
-print("\nplayer_a ha giocato le seguenti carte:\n" + str([c["text"] for i, c in enumerate(cards_a) if i in [int(u) for u in input_string.split()]]))
-
-input_string = input("Inserisci la posizione delle carte da giocare per il player b separate da uno spazio (x es: 0 2 3):\n")
-list_of_ids = [c["_id"] for i, c in enumerate(cards_b) if i in [int(u) for u in input_string.split()]]
-player_b.play_cards(room, list_of_ids)
-print("\nplayer_b ha giocato le seguenti carte:\n" + str([c["text"] for i, c in enumerate(cards_b) if i in [int(u) for u in input_string.split()]]))
-
-
-print("select a winner (a/b):\n")
-winner = input()
-if winner == "a":
-    player_a.user_wins(room)
-    print("player a was granted 1 point!")
-elif winner == "b":
-    player_b.user_wins(room)
-    print("player b was granted 1 point!")
+# A PICK CARDS
+cards_a = player_a.pick_white_cards(5, room)
+print("a", "cards:",  json.dumps(cards_a, indent="\t"), sep="\t")
+# B PICK CARDS
+cards_b = player_b.pick_white_cards(5, room)
+print("b", "cards:",  json.dumps(cards_b, indent="\t"), sep="\t")
+# A PICK BLACK
+black = player_a.pick_black(room)
+pick = black["pick"]
+print("a", "black:", black["text"], "pick:", pick, sep="\t")
+# A PLAY CARDS
+play_ids_a = list(range(pick))
+player_a.play_cards(room, play_ids_a)
+print("a", "play:", [cards_a[i]["text"] for i in play_ids_a], sep="\t")
+# B PLAY CARDS
+play_ids_b = list(range(pick))
+player_b.play_cards(room, play_ids_b)
+print("a", "play:", [cards_a[i]["text"] for i in play_ids_b], sep="\t")
+# A WINS
+player_a.user_wins(room)
+print("a", "win", sep="\t")
+# B LEAVE
+player_a.leave_room(room)
+print("a", "leave:", room, sep="\t")
+# B LIST ROOMS
+rooms_b = player_a.my_rooms()
+print("a", "rooms:", json.dumps(rooms_b, indent="\t"), sep="\t")

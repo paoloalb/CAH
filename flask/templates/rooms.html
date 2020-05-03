@@ -8,7 +8,7 @@
     </script>
 
     {% for room in rooms %}
-    <li class="list-group-item m-0">
+    <li class="list-group-item m-0 py-1">
         <div class="row align-items-center">
             <div class="col">
                 <div class="row">
@@ -63,7 +63,7 @@
 
                 function join_room() {
                     let j = jform("#JoinRoom");
-                    let username = j.username;
+                    let username = j.username || "anon";
                     let room_id = j.roomid;
                     delete j.username;
                     delete j.roomid;
@@ -83,7 +83,7 @@
                 <div class="modal-body">
                     <div class="form-group">
                         <label for="JoinRoomUsername">Tuo nome</label>
-                        <input type="name" name="name" class="form-control" id="JoinRoomUsername" placeholder="anon">
+                        <input type="username" name="username" class="form-control" id="JoinRoomUsername" placeholder="anon">
                     </div>
                     <div class="form-group d-none">
                         <label for="JoinRoomId">Id stanza</label>

@@ -1,7 +1,7 @@
 <script>
-    $('#JoinDialog').on('show.bs.modal', function(event) {
-        let room_id = $(event.relatedTarget).data('room_id');
-        $(this).find('#RoomId').val(room_id);
+    $("#JoinDialog").on("show.bs.modal", function(event) {
+        let room_id = $(event.relatedTarget).data("room_id");
+        $(this).find("#RoomId").val(room_id);
     });
 </script>
 
@@ -44,21 +44,27 @@
             </div>
 
             <script>
-                $('#JoinDialog').on('show.bs.modal', function(event) {
-                    $('#JoinDialog').trigger('focus');
-                    let room_id = $(event.relatedTarget).data('room_id');
-                    $(this).find('#JoinRoomId').val(room_id);
+                $("#JoinDialog").on("show.bs.modal", function(event) {
+                    $("#JoinRoomPassword").parent().removeClass("alert alert-danger");
+                    $("#JoinDialog").trigger("focus");
+                    let room_id = $(event.relatedTarget).data("room_id");
+                    $(this).find("#JoinRoomId").val(room_id);
                 });
 
                 function join_room() {
-                    let j = jform('#JoinRoom');
+                    let j = jform("#JoinRoom");
                     let username = j.username;
                     let room_id = j.roomid;
                     delete j.username;
                     delete j.roomid;
-                    post('/join_room/' + room_id + '/' + username, j)
+                    post("/join_room/" + room_id + "/" + username, j)
                         .done(() => {
                             redirect("/room/" + room_id);
+                        })
+                        .fail((r) => {
+                            if (r.status === 403) {
+                                $("#JoinRoomPassword").parent().addClass("alert alert-danger");
+                            }
                         });
                 }
             </script>

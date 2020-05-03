@@ -2,7 +2,7 @@
 
     <script>
         function leave_room(room_id) {
-            get('/leave_room/' + room_id)
+            get("/leave_room/" + room_id)
                 .done(() => {
                     redirect("/");
                 });

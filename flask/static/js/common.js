@@ -18,7 +18,7 @@ function post(url, obj) {
         url: url,
         type: "POST",
         data: JSON.stringify(obj),
-        contentType: 'application/json;charset=UTF-8',
+        contentType: "application/json;charset=UTF-8",
     });
 }
 

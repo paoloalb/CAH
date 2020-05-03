@@ -22,11 +22,11 @@ app.register_blueprint(lobby_api)
 app.register_blueprint(website)
 
 
-@app.route('/favicon.ico')
+@app.route("/favicon.ico")
 def favicon():
-    return send_file('static/images/favicon.ico')
+    return send_file("static/images/favicon.ico")
 
 
-@app.route('/teapot')
+@app.route("/teapot")
 def teapot():
     abort(418)

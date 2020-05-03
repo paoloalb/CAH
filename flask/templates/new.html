@@ -3,10 +3,10 @@
 
         <script>
             function create_room() {
-                let j = jform('#CreateRoom');
+                let j = jform("#CreateRoom");
                 let username = j.username;
                 delete j.username;
-                post('/new_room', j)
+                post("/new_room", j)
                     .done((r) => {
                         let room_id = r.room_id;
                         post("/join_room/" + room_id + "/" + username, {

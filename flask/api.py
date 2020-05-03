@@ -7,10 +7,10 @@ from cookies import get_cookie
 from db import *
 from flask import Blueprint, abort, jsonify, make_response, request
 
-api = Blueprint('api', __name__, )
+api = Blueprint("api", __name__, )
 
 
-@api.route('/my_room_status/<string:room_id>')
+@api.route("/my_room_status/<string:room_id>")
 def user_room_state(room_id):
     # given cookie and room id, return all info about user
     user_cookie = get_cookie()
@@ -24,7 +24,7 @@ def user_room_state(room_id):
 
 
 # just for test it should be add user cookie and room id
-@api.route('/randomWhiteCards/<int:number_of_cards>')
+@api.route("/randomWhiteCards/<int:number_of_cards>")
 def random_white_cards_test(number_of_cards):
     pipeline = [
         {"$match": {"pick": 0}},
@@ -34,7 +34,7 @@ def random_white_cards_test(number_of_cards):
     return cards
 
 
-@api.route('/randomWhiteCards/<string:my_room_id>/<int:number_of_cards>')
+@api.route("/randomWhiteCards/<string:my_room_id>/<int:number_of_cards>")
 def random_white_cards(number_of_cards, my_room_id):
     # Updates user's hand, used card list and returns the picked cards in a json format
     user_cookie = get_cookie()
@@ -60,7 +60,7 @@ def random_white_cards(number_of_cards, my_room_id):
 
 
 # just for test it should be add user cookie and room id
-@api.route('/randomBlackCardTest')
+@api.route("/randomBlackCardTest")
 def random_black_card_test():
     pipeline = [
         {"$match": {"pick": {"$gt": 0}}},
@@ -71,7 +71,7 @@ def random_black_card_test():
     return card
 
 
-@api.route('/randomBlackCard/<string:my_room_id>')
+@api.route("/randomBlackCard/<string:my_room_id>")
 def random_black_card(my_room_id):
     pipeline = [
         {"$match": {"pick": {"$gt": 0}}},
@@ -89,7 +89,7 @@ def random_black_card(my_room_id):
     return card
 
 
-@api.route('/play_cards/<string:my_room_id>', methods=['GET', 'POST'])
+@api.route("/play_cards/<string:my_room_id>", methods=["GET", "POST"])
 def play_cards(my_room_id):
     # Takes a list of card Ids and move the cards from the player's hand to the table
     config = request.get_json()
@@ -114,7 +114,7 @@ def play_cards(my_room_id):
     return make_response("OK", 200)
 
 
-@api.route('/user_wins/<string:my_room_id>')
+@api.route("/user_wins/<string:my_room_id>")
 def user_wins(my_room_id):
     # Grants a point to the winner and deletes all the cards from the table
     user_cookie = get_cookie()
@@ -131,7 +131,7 @@ def user_wins(my_room_id):
     return make_response("OK", 200)
 
 
-@api.route('/current_white/<string:my_room_id>')
+@api.route("/current_white/<string:my_room_id>")
 def current_white(my_room_id):
     # Returns current white card Ids and text in the user hand
     user_cookie = get_cookie()
@@ -143,7 +143,7 @@ def current_white(my_room_id):
     return jsonify(my_cards)
 
 
-@api.route('/current_black/<string:my_room_id>')
+@api.route("/current_black/<string:my_room_id>")
 def current_black(my_room_id):
     # Returns everything about the current black card on the table as a json
     black_id = rooms_collection.find_one({"_id": ObjectId(my_room_id)},
@@ -152,26 +152,26 @@ def current_black(my_room_id):
     return jsonify(black)
 
 
-@api.route('/user_list/<string:my_room_id>')
+@api.route("/user_list/<string:my_room_id>")
 # Returns a list with all the informations about users in the room
 def user_list(my_room_id):
     users = list(users_collection.find({"room": ObjectId(my_room_id)}))
     return users
 
 
-@api.route('/init_user_page/<string:my_room_id>')
+@api.route("/init_user_page/<string:my_room_id>")
 # create a class with all user date for start the game
 # TODO missing info about who is the ceaser
 def init_user_page(my_room_id):
     users = user_list(my_room_id)
     white_cards = random_white_cards_test(14)
     black_cards = random_black_card(my_room_id)
-    dict_to_print = dict({'users': users, 'white_cards': white_cards, 'black_cards': black_cards})
+    dict_to_print = dict({"users": users, "white_cards": white_cards, "black_cards": black_cards})
 
     return dict_to_print
 
 
-@api.route('/get_room/<string:my_room_id>')
+@api.route("/get_room/<string:my_room_id>")
 # not even tested yet
 def get_room(my_room_id):
     rooms = rooms_collection.find_one(

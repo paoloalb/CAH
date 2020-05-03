@@ -10,10 +10,10 @@ from flask import (Blueprint, abort, jsonify, make_response, redirect,
                    render_template, request, url_for)
 from hasher import *
 
-lobby_api = Blueprint('lobby_api', __name__, )
+lobby_api = Blueprint("lobby_api", __name__, )
 
 
-@lobby_api.route('/my_room_info/<string:room_id>')
+@lobby_api.route("/my_room_info/<string:room_id>")
 def joined_room_state(room_id):
     # return user's room info
     # only accessible to joined users
@@ -27,7 +27,7 @@ def joined_room_state(room_id):
         return state
 
 
-@lobby_api.route('/room_info/<string:room_id>')
+@lobby_api.route("/room_info/<string:room_id>")
 def room_info(room_id):
     # return room's info
     # accessible by anyone
@@ -50,7 +50,7 @@ def room_info(room_id):
         return room
 
 
-@lobby_api.route('/rooms_info')
+@lobby_api.route("/rooms_info")
 def rooms_info():
     # return rooms
     # accessible by anyone
@@ -72,7 +72,7 @@ def rooms_info():
         return rooms
 
 
-@lobby_api.route('/my_rooms_info')
+@lobby_api.route("/my_rooms_info")
 def joined_rooms_info():
     # return user's joined rooms
     user_cookie = get_cookie()
@@ -105,7 +105,7 @@ def joined_rooms_info():
         return rooms
 
 
-@lobby_api.route('/new_room', methods=['GET', 'POST'])
+@lobby_api.route("/new_room", methods=["GET", "POST"])
 def create_room():
     # create new room
     # TODO: given parameters
@@ -136,7 +136,7 @@ def create_room():
     return jsonify({"room_id": room.inserted_id})
 
 
-@lobby_api.route('/join_room/<string:room_id>/<string:username>', methods=['GET', 'POST'])
+@lobby_api.route("/join_room/<string:room_id>/<string:username>", methods=["GET", "POST"])
 def join_room(room_id, username):
     # join a room
     # success: go to room
@@ -203,7 +203,7 @@ def join_room(room_id, username):
     return "OK", 200
 
 
-@lobby_api.route('/leave_room/<string:room_id>')
+@lobby_api.route("/leave_room/<string:room_id>")
 def leave_room(room_id):
     # leave room
     # success: go to /

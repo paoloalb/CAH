@@ -14,7 +14,6 @@
                     {% else %}
                     {% set step = userRoom.white_cards | length %}
                     {% endif %}
-
                     {% for i in range(step) %}
                     <div class="WhiteCard">
                         <h3 class="titleWhiteCard"> {{ userRoom.white_cards[i].text }}</h3>

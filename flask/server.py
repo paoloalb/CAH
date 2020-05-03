@@ -1,5 +1,5 @@
 from api import *
-from cookies import *
+from auth import *
 from flask import Flask, abort, send_file
 from lobby_api import *
 from website import *
@@ -16,7 +16,7 @@ class JSONEncoder(json.JSONEncoder):
 
 app.json_encoder = JSONEncoder
 
-app.register_blueprint(cookies)
+app.register_blueprint(auth)
 app.register_blueprint(api)
 app.register_blueprint(lobby_api)
 app.register_blueprint(website)

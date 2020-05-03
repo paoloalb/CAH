@@ -2,7 +2,7 @@ from api import *
 from flask import Blueprint, render_template
 from lobby_api import *
 
-website = Blueprint("website", __name__, )
+website = Blueprint("website", __name__)
 
 
 @website.route("/")
@@ -17,4 +17,4 @@ def room(room_id):
 
 @website.route("/UserPage/<string:room_id>")
 def UserPage(room_id):
-    return render_template("UserPage.html", userRoom=  init_user_page(room_id))
+    return render_template("UserPage.html", userRoom=init_user_page(room_id))

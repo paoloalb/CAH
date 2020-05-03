@@ -3,11 +3,25 @@ import sys
 
 from bson.objectid import ObjectId
 
-from cookies import get_cookie
+from auth import *
 from db import *
 from flask import Blueprint, abort, jsonify, make_response, request
 
-api = Blueprint("api", __name__, )
+api = Blueprint("api", __name__)
+
+
+@api.route("/my_room_info/<string:room_id>")
+def joined_room_state(room_id):
+    # return user's room info
+    # only accessible to joined users
+    user_cookie = get_cookie()
+    state = users_collection.find_one({"room": ObjectId(room_id), "cookie": user_cookie})
+    if request.path.startswith("/my_room_info/"):
+        if state is None:  # check if user joined
+            abort(403)
+        return jsonify(state)
+    else:
+        return state
 
 
 @api.route("/my_room_status/<string:room_id>")
@@ -48,12 +62,12 @@ def random_white_cards(number_of_cards, my_room_id):
 
     rooms_collection.update_one({"_id": ObjectId(my_room_id)},
                                 {"$push":
-                                     {"used_cards": {"$each": [c["_id"] for c in cards]}}
+                                 {"used_cards": {"$each": [c["_id"] for c in cards]}}
                                  })
 
     users_collection.update_one({"_id": ObjectId(my_user_id)},
                                 {"$push":
-                                     {"cards_in_hand": {"$each": [c["_id"] for c in cards]}}
+                                 {"cards_in_hand": {"$each": [c["_id"] for c in cards]}}
                                  })
 
     return jsonify(cards)  # if i want only text : return jsonify({"cards": [c["text"] for c in cards]})

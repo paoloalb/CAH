@@ -4,27 +4,21 @@ import sys
 from bson.objectid import ObjectId
 
 from api import *
-from cookies import get_cookie
+from auth import *
 from db import *
 from flask import (Blueprint, abort, jsonify, make_response, redirect,
                    render_template, request, url_for)
-from hasher import *
 
-lobby_api = Blueprint("lobby_api", __name__, )
+lobby_api = Blueprint("lobby_api", __name__)
 
-
-@lobby_api.route("/my_room_info/<string:room_id>")
-def joined_room_state(room_id):
-    # return user's room info
-    # only accessible to joined users
-    user_cookie = get_cookie()
-    state = users_collection.find_one({"room": ObjectId(room_id), "cookie": user_cookie})
-    if request.path.startswith("/my_room_info/"):
-        if state is None:  # check if user joined
-            abort(403)
-        return jsonify(state)
-    else:
-        return state
+unjoined_room_projection = {
+    "_id": 1,
+    "name": 1,
+    "round": 1,
+    "user_count": 1,
+    "user_count_max": 1,
+    "password": 1,
+}
 
 
 @lobby_api.route("/room_info/<string:room_id>")
@@ -35,14 +29,7 @@ def room_info(room_id):
         {
             "room": ObjectId(room_id)
         },
-        {
-            "_id": 1,
-            "name": 1,
-            "user_count": 1,
-            "round": 1,
-            "password": 1,
-            "user_count_max": 1,
-        }
+        unjoined_room_projection
     )
     if request.path.startswith("/room_info/"):
         return jsonify(room)
@@ -57,14 +44,7 @@ def rooms_info():
     user_cookie = get_cookie()
     rooms = list(rooms_collection.find(  # get all rooms
         {},
-        {
-            "_id": 1,
-            "name": 1,
-            "user_count": 1,
-            "round": 1,
-            "password": 1,
-            "user_count_max": 1,
-        }
+        unjoined_room_projection
     ))
     if request.path == "/rooms_info":
         return jsonify({"rooms": rooms})
@@ -90,14 +70,7 @@ def joined_rooms_info():
                 "$in": [state["_id"] for state in states],
             },
         },
-        {
-            "_id": 1,
-            "name": 1,
-            "user_count": 1,
-            "round": 1,
-            "password": 1,
-            "user_count_max": 1,
-        }
+        unjoined_room_projection
     ))
     if request.path == "/my_rooms_info":
         return jsonify({"rooms": rooms})

@@ -14,28 +14,26 @@
         <div class="card-header">
             <h2>{{ room.name }}</h2>
         </div>
-        <div class="container">
-            <div class="row border-bottom">
-                <div class="col-auto">
-                    {% if room.password is not none %}
-                    <div class="card text-white bg-secondary p-1">
-                        <i class="fas fa-lock"></i>
-                    </div>
-                    {% endif %}
+        <div class="row border-bottom">
+            <div class="col-auto">
+                {% if room.password is not none %}
+                <div class="card text-white bg-secondary p-1">
+                    <i class="fas fa-lock"></i>
                 </div>
-                <div class="col">
-                    <h2>
-                        {{ room.user_count }}/{{ room.user_count_max }}
-                    </h2>
-                </div>
+                {% endif %}
             </div>
-            <div class="row">
-                <div class="col p-1">
-                    <a href="/room/{{ room._id }}" class="btn btn-primary w-100">Entra</a>
-                </div>
-                <div class="col p-1">
-                    <button onclick="javascript:leave_room('{{ room._id }}')" class="btn btn-primary w-100">Esci</button>
-                </div>
+            <div class="col">
+                <h2>
+                    {{ room.user_count }}/{{ room.user_count_max }}
+                </h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col p-1">
+                <a href="/room/{{ room._id }}" class="btn btn-primary w-100">Entra</a>
+            </div>
+            <div class="col p-1">
+                <button onclick="javascript:leave_room('{{ room._id }}')" class="btn btn-primary w-100">Esci</button>
             </div>
         </div>
     </div>

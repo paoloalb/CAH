@@ -1,0 +1,82 @@
+<div class="timer-div">
+
+    <style>
+        :root {
+            --size: 75px;
+        }
+
+        .timer-div {
+            width: var(--size);
+            height: var(--size);
+        }
+
+        /* remove background to make it transparent */
+        .timer-g {
+            fill: none;
+            stroke: none;
+        }
+
+
+        .timer-path {
+            stroke: currentColor;
+            stroke-width: 5;
+            stroke-linecap: round;
+            stroke-dasharray: 282.74;
+        }
+
+
+        @keyframes countdown {
+            to {
+                stroke-dashoffset: 282.74;
+            }
+        }
+
+        .timer-circle {
+            stroke: currentColor;
+            opacity: 0.5;
+            stroke-width: 1;
+        }
+
+        .timer-label {
+            font-size: calc(var(--size) * 0.3);
+            width: var(--size);
+            height: var(--size);
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            display: flex;
+            top: 0;
+        }
+    </style>
+    <script>
+        function set_timer(selector, duration) {
+            let t = parseInt(duration);
+            $(selector + " > .timer-div").css({
+                "animation": "countdown " + t.toString() + "s 1 forwards linear"
+            });
+            $(".timer-label").text(t);
+            let timer_id = setInterval(() => {
+                t -= 1;
+                if (t <= 0) {
+                    clearInterval(timer_id)
+                }
+                $(".timer-label").text(t);
+            }, 1000);
+        }
+    </script>
+
+    <svg viewBox="0 0 100 100">
+        <g class="timer-g">
+            <path class="timer-path" d="
+          M 50, 50
+          m 0,-45
+          a 45,45 0 0,1 0,90
+          a 45,45 0 0,1 0,-90
+        "></path>
+            <circle r="45" cx="50" cy="50" class="timer-circle">
+                <circle>
+        </g>
+    </svg>
+    <span class="timer-label">
+    </span>
+</div>

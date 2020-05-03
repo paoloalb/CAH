@@ -12,9 +12,14 @@ def root():
 
 @website.route("/room/<string:room_id>")
 def room(room_id):
-    return render_template("room.html", room=room_info(room_id), state=joined_room_state(room_id))
+    return render_template("room.html",
+                           room=room_info(room_id),
+                           players=joined_room_players(room_id),
+                           state=joined_room_state(room_id),
+                           userRoom=init_user_page(room_id)
+                           )
 
 
-@website.route("/UserPage/<string:room_id>")
-def UserPage(room_id):
-    return render_template("UserPage.html", userRoom=init_user_page(room_id))
+@website.route("/timer")
+def timer():
+    return render_template("timer.html")

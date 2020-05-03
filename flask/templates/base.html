@@ -13,10 +13,13 @@
     <script src="/static/js/common.js"></script>
     {% endblock %}
 </head>
-<!-- container remove because gives problems with css when exetend base.html -->
+
 <body class="bg-dark">
     <div>
         {% block content %}{% endblock %}
+    </div>
+    <div>
+        {% include "footer.html" %}
     </div>
 </body>
 

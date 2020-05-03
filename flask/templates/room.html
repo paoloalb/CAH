@@ -8,9 +8,75 @@
 
 {% block content %}
 
-<div>
-    u're in.<br>
-    {{ room.room }}
+<div class="card p-3">
+    <div class="row align-items-center">
+        <div class="col pb-3">
+            <h1 class="display-2">{{ room.name }}</h1>
+        </div>
+        <div class="col-auto">
+            {% if room.password is not none %}
+            <div class="card text-white bg-secondary p-1">
+                <i class="fas fa-lock"></i>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-auto border p-0">
+            <div class="row align-items-center border-bottom p-3">
+                <div class="col">
+                    <h2>
+                        Round: {{ room.round }}
+                    </h2>
+                </div>
+                <div id="RoundTimer" class="col-auto text-primary">
+                    {% include "timer.html" %}
+                    <script>
+                        $("document").ready(() => {
+                            set_timer("#RoundTimer", "{{ 5 }}");
+                        })
+                    </script>
+                </div>
+            </div>
+            <div class="row" style="height: 200px;">
+
+            </div>
+            <div class="row-auto">
+                <ul class="list-group list-group-flush border-top">
+                    <li class="list-group-item h2">
+                        <div class="row">
+                            <div class="col">
+                                Players:
+                            </div>
+                            <div class="col-auto">
+                                {{ room.user_count }}/{{ room.user_count_max }}
+                            </div>
+                        </div>
+                    </li>
+                    {% for player in players %}
+                    <li class="list-group-item">
+                        <div class="row h3 align-items-center">
+                            <div class="col-auto text-primary pl-4">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="col">
+                                {{ player.name }}
+                            </div>
+                            <div class="col-auto">
+                                <span class="badge badge-primary badge-pill">
+                                    {{ player.points }}<sub>&nbsp;punti</sub>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <div class="col bg-dark">
+            {% include "table.html" %}
+        </div>
+    </div>
 </div>
 
 {% endblock %}

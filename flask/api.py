@@ -10,20 +10,6 @@ from flask import Blueprint, abort, jsonify, make_response, request
 api = Blueprint("api", __name__)
 
 
-@api.route("/my_room_info/<string:room_id>")
-def joined_room_state(room_id):
-    # return user's room info
-    # only accessible to joined users
-    user_cookie = get_cookie()
-    state = users_collection.find_one({"room": ObjectId(room_id), "cookie": user_cookie})
-    if request.path.startswith("/my_room_info/"):
-        if state is None:  # check if user joined
-            abort(403)
-        return jsonify(state)
-    else:
-        return state
-
-
 @api.route("/my_room_status/<string:room_id>")
 def user_room_state(room_id):
     # given cookie and room id, return all info about user

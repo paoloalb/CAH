@@ -27,13 +27,14 @@ def room_info(room_id):
     # accessible by anyone
     room = rooms_collection.find_one(  # get room's info
         {
-            "room": ObjectId(room_id)
+            "_id": ObjectId(room_id)
         },
         unjoined_room_projection
     )
     if request.path.startswith("/room_info/"):
         return jsonify(room)
     else:
+        print(room, flush=True)
         return room
 
 
@@ -50,6 +51,42 @@ def rooms_info():
         return jsonify({"rooms": rooms})
     else:
         return rooms
+
+
+@lobby_api.route("/my_room_info/<string:room_id>")
+def joined_room_state(room_id):
+    # return user's room info
+    # only accessible to joined users
+    user_cookie = get_cookie()
+    state = users_collection.find_one({"room": ObjectId(room_id), "cookie": user_cookie})
+    if state is None:  # check if user joined
+        abort(403)
+    if request.path.startswith("/my_room_info/"):
+        return jsonify(state)
+    else:
+        return state
+
+
+@lobby_api.route("/my_room_players/<string:room_id>")
+def joined_room_players(room_id):
+    # return user's room info
+    # only accessible to joined users
+    user_cookie = get_cookie()
+    state = users_collection.find_one({"room": ObjectId(room_id), "cookie": user_cookie})
+    if state is None:  # check if user joined
+        abort(403)
+    states = list(users_collection.find(
+        {"room": ObjectId(room_id)},
+        {
+            "_id": 0,
+            "name": 1,
+            "points": 1,
+        }
+    ))
+    if request.path.startswith("/my_room_info/"):
+        return jsonify(states)
+    else:
+        return states
 
 
 @lobby_api.route("/my_rooms_info")

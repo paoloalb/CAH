@@ -34,7 +34,6 @@ def room_info(room_id):
     if request.path.startswith("/room_info/"):
         return jsonify(room)
     else:
-        print(room, flush=True)
         return room
 
 
@@ -59,9 +58,9 @@ def joined_room_state(room_id):
     # only accessible to joined users
     user_cookie = get_cookie()
     state = users_collection.find_one({"room": ObjectId(room_id), "cookie": user_cookie})
-    if state is None:  # check if user joined
-        abort(403)
     if request.path.startswith("/my_room_info/"):
+        if state is None:  # check if user joined
+            abort(403)
         return jsonify(state)
     else:
         return state

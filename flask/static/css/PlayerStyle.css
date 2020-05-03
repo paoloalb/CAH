@@ -1,7 +1,6 @@
 .wrapper {
     font-family: 'Open Sans', sans-serif;
-    display: flex;
-    position: relative;
+
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -14,8 +13,7 @@
     width: 200px;
     height: 100%;
     background: dodgerblue;
-    padding: 30px 0px;
-    position: fixed;
+
 }
 
 .wrapper .sidebar h2 {

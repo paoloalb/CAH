@@ -19,7 +19,3 @@ def room(room_id):
                            userRoom=init_user_page(room_id)
                            )
 
-
-@website.route("/timer")
-def timer():
-    return render_template("timer.html")

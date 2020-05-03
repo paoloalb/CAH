@@ -16,11 +16,11 @@
         </div>
         <div class="card-body align-items-center d-flex justify-content-end p-1">
             {% if room.password is not none %}
-            <div class="card text-white bg-secondary m-0 p-1">
+            <div class="card text-white bg-secondary p-1">
                 <i class="fas fa-lock"></i>
             </div>
             {% endif %}
-            <div class="h2 m-0 px-1">
+            <div class="h2 px-1">
                 {{ room.user_count }}/{{ room.user_count_max }}
             </div>
         </div>

@@ -8,26 +8,26 @@
 
 {% block content %}
 
-<div class="container bg-dark">
-    <div class="row">
-        <div class="col p-3 m-3">
-            <div class="row text-white">
-                <h1> Stanze <h1>
+<div class="container bg-dark d-flex flex-column">
+    <div class="d-flex flex-wrap">
+        <div class="flex-grow-1 d-flex flex-column m-3">
+            <div class="text-white h1">
+                Stanze
             </div>
-            <div class="row">
+            <div>
                 {% include "rooms.html" %}
             </div>
         </div>
-        <div class="col p-3 m-3">
-            <div class="row text-white">
-                <h1> Le tue stanze <h1>
+        <div class="flex-grow-1 d-flex flex-column m-3">
+            <div class="text-white h1">
+                Le tue stanze
             </div>
-            <div class="row">
+            <div>
                 {% include "lobby.html" %}
             </div>
         </div>
     </div>
-    <div class="row">
+    <div class="m-3">
         {% include "new.html" %}
     </div>
 </div>

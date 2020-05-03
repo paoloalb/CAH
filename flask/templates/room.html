@@ -4,32 +4,27 @@
 
 {% block head %}
 {{ super() }}
-
- <link rel="stylesheet" type="text/css" href="/static/css/PlayerStyle.css">
+<link rel="stylesheet" type="text/css" href="/static/css/PlayerStyle.css">
 {% endblock %}
 
 {% block content %}
 
-<div class="card p-3">
-    <div class="row align-items-center">
-        <div class="col pb-3">
-            <h1 class="display-2">{{ room.name }}</h1>
+<div class="card d-flex flex-column">
+    <div class="d-flex align-items-center mx-4">
+        <div class="display-1 flex-grow-1 pb-3">
+            {{ room.name }}
         </div>
-        <div class="col-auto">
-            {% if room.password is not none %}
-            <div class="card text-white bg-secondary p-1">
-                <i class="fas fa-lock"></i>
-            </div>
-            {% endif %}
+        {% if room.password is not none %}
+        <div class="card text-white bg-secondary p-1">
+            <i class="fas fa-lock"></i>
         </div>
+        {% endif %}
     </div>
-    <div class="row">
-        <div class="col-auto border d-flex flex-column p-0">
-            <div class="row align-items-center">
-                <div class="col">
-                    <h2>
-                        Round: {{ room.round }}
-                    </h2>
+    <div class="d-flex">
+        <div class="d-flex flex-column">
+            <div class="border align-items-center mb-auto d-flex p-2">
+                <div class="h2 flex-grow-1">
+                    Round: {{ room.round }}
                 </div>
                 <div id="RoundTimer" class="col-auto text-primary">
                     {% include "timer.html" %}
@@ -40,39 +35,31 @@
                     </script>
                 </div>
             </div>
-            <div class="row">
-                <ul class="list-group list-group-flush w-100">
-                    <li class="list-group-item h2">
-                        <div class="row">
-                            <div class="col">
-                                Players:
-                            </div>
-                            <div class="col-auto">
-                                {{ room.user_count }}/{{ room.user_count_max }}
-                            </div>
-                        </div>
-                    </li>
-                    {% for player in players %}
-                    <li class="list-group-item">
-                        <div class="row h3 align-items-center">
-                            <div class="col-auto text-primary pl-4">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <div class="col">
-                                {{ player.name }}
-                            </div>
-                            <div class="col-auto">
-                                <span class="badge badge-primary badge-pill">
-                                    {{ player.points }}<sub>&nbsp;punti</sub>
-                                </span>
-                            </div>
-                        </div>
-                    </li>
-                    {% endfor %}
-                </ul>
+            <div class="border d-flex flex-column">
+                <div class="h2 align-items-center d-flex p-2">
+                    <div class="flex-grow-1">
+                        Players:&nbsp;
+                    </div>
+                    <div>
+                        {{ room.user_count }}/{{ room.user_count_max }}
+                    </div>
+                </div>
+                {% for player in players %}
+                <div class="h3 border-top align-items-center d-flex px-1 py-2">
+                    <div class="text-primary mx-1">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="flex-grow-1 mx-1">
+                        {{ player.name }}
+                    </div>
+                    <div class="badge badge-primary badge-pill mx-1">
+                        {{ player.points }}<sub>&nbsp;punti</sub>
+                    </div>
+                </div>
+                {% endfor %}
             </div>
         </div>
-        <div class="col bg-dark">
+        <div class="bg-dark flex-grow-1 px-5 py-3">
             {% include "table.html" %}
         </div>
     </div>

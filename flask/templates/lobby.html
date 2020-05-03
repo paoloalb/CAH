@@ -11,32 +11,22 @@
 
     {% for room in joined_rooms %}
     <div class="card">
-        <div class="card-header pb-1">
-            <h2>{{ room.name }}</h2>
+        <div class="card-header h2 p-1">
+            {{ room.name }}
         </div>
-        <div class="card-body pb-1">
-            <div class="row border-bottom">
-                <div class="col-auto">
-                    {% if room.password is not none %}
-                    <div class="card text-white bg-secondary p-1">
-                        <i class="fas fa-lock"></i>
-                    </div>
-                    {% endif %}
-                </div>
-                <div class="col">
-                    <h2>
-                        {{ room.user_count }}/{{ room.user_count_max }}
-                    </h2>
-                </div>
+        <div class="card-body align-items-center d-flex justify-content-end p-1">
+            {% if room.password is not none %}
+            <div class="card text-white bg-secondary m-0 p-1">
+                <i class="fas fa-lock"></i>
             </div>
-            <div class="row">
-                <div class="col p-1">
-                    <a href="/room/{{ room._id }}" class="btn btn-primary w-100">Entra</a>
-                </div>
-                <div class="col p-1">
-                    <button onclick="javascript:leave_room('{{ room._id }}')" class="btn btn-primary w-100">Esci</button>
-                </div>
+            {% endif %}
+            <div class="h2 m-0 px-1">
+                {{ room.user_count }}/{{ room.user_count_max }}
             </div>
+        </div>
+        <div class="card-footer d-flex p-1">
+            <a href="/room/{{ room._id }}" class="btn btn-primary m-1">Entra</a>
+            <a href="javascript:leave_room('{{ room._id }}')" class="btn btn-primary m-1">Esci</a>
         </div>
     </div>
     {% endfor %}

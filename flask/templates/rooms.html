@@ -1,4 +1,4 @@
-<ul class="list-group w-100">
+<div class="d-flex flex-column w-100">
 
     <script>
         $("#JoinDialog").on("show.bs.modal", function(event) {
@@ -8,40 +8,26 @@
     </script>
 
     {% for room in rooms %}
-    <li class="list-group-item m-0 py-1">
-        <div class="row align-items-center">
-            <div class="col">
-                <div class="row">
-                    <h2>
-                        {{ room.name }}
-                    </h2>
-                </div>
+    <div class="card my-1">
+        <div class="card-body align-items-center d-flex py-1 px-0">
+            <div class="h2 flex-grow-1 mx-2 px-1">
+                {{ room.name }}
             </div>
-            <div class="col-auto p-0">
-                <div class="row align-items-center">
-                    <div class="col">
-                        {% if room.password is not none %}
-                        <div class="card text-white bg-secondary p-1">
-                            <i class="fas fa-lock"></i>
-                        </div>
-                        {% endif %}
-                    </div>
-                    <div class="col">
-                        <h2>
-                            {{ room.user_count }}/{{ room.user_count_max }}
-                        </h2>
-                    </div>
-                    <div class="col">
-                        <button type="button" class="list-group-item list-group-item-action active" data-toggle="modal" data-target="#JoinDialog" data-room_id="{{ room._id }}">
-                            Unisciti
-                        </button>
-                    </div>
-                </div>
+            {% if room.password is not none %}
+            <div class="card text-white bg-secondary mx-2 p-1">
+                <i class="fas fa-lock"></i>
+            </div>
+            {% endif %}
+            <div class="h2 mx-2 px-1">
+                {{ room.user_count }}/{{ room.user_count_max }}
+            </div>
+            <div type="button" class="btn btn-primary mx-2 px-1" data-toggle="modal" data-target="#JoinDialog" data-room_id="{{ room._id }}">
+                Unisciti
             </div>
         </div>
-    </li>
+    </div>
     {% endfor %}
-</ul>
+</div>
 
 <div class="modal fade" id="JoinDialog" tabindex="-1" role="dialog" aria-labelledby="JoinDialogTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">

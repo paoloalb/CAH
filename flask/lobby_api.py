@@ -140,7 +140,7 @@ def create_room():
             "caesar": None,
             "used_cards": [],
             "user_count": 0,
-            "user_count_max": 5,
+            "user_count_max": config["user_count_max"],
             "password": password,
         }
     )
@@ -157,7 +157,7 @@ def join_room(room_id, username):
         room = rooms_collection.find_one({"_id": ObjectId(room_id)})
         if room is None:  # check room exists
             abort(400)
-        if room["user_count"] >= room["user_count_max"]:  # check if room is full
+        if room["user_count"] >= int(room["user_count_max"]):  # check if room is full
             abort(403)
         if room["password"] is not None:  # check if room passworded
             j = request.get_json()

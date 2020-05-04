@@ -27,7 +27,7 @@ def user_room_state(room_id):
 @api.route("/randomWhiteCards/<int:number_of_cards>")
 def random_white_cards_test(number_of_cards):
     pipeline = [
-        {"$match": {"pick": 0}},
+        {"$match": {"pick": "0"}},
         {"$sample": {"size": number_of_cards}}
     ]
     cards = list(cards_collection.aggregate(pipeline))
@@ -41,7 +41,7 @@ def random_white_cards(number_of_cards, my_room_id):
     my_user_id = users_collection.find_one({"cookie": user_cookie, "room": ObjectId(my_room_id)})["_id"]
     list_of_used_cards = rooms_collection.find_one({"_id": ObjectId(my_room_id)})["used_cards"]
     pipeline = [
-        {"$match": {"pick": 0, "_id": {"$nin": list_of_used_cards}}},
+        {"$match": {"pick": "0", "_id": {"$nin": list_of_used_cards}}},
         {"$sample": {"size": number_of_cards}}
     ]
     cards = list(cards_collection.aggregate(pipeline))

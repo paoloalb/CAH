@@ -3,7 +3,7 @@ from pymongo import MongoClient
 client = MongoClient("mongodb+srv://paoloa:123stella@mflix-3d6kd.mongodb.net/test")
 #client = MongoClient("mongodb://localhost:27017/")
 db = client["cah"]
-cards_collection = db["cards"]
+cards_collection = db["card_ita"]
 rooms_collection = db["rooms"]
 users_collection = db["users"]
 

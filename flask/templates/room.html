@@ -30,7 +30,7 @@
                     {% include "timer.html" %}
                     <script>
                         $("document").ready(() => {
-                            set_timer("#RoundTimer", "{{ 5 }}");
+                            set_timer("#RoundTimer", "{{ room.time }}");
                         })
                     </script>
                 </div>

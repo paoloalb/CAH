@@ -132,6 +132,8 @@
     left: 0px;
 }
 
+
+
 .wrapper .BlackCard {
     display: flex;
     height: 300px;
@@ -141,9 +143,9 @@
     /*   margin-left: -50px; */
     transition: 0.2s ease-out;
     position: relative;
-    left: 16px;
     top: 8px;
     background-color: black;
+    margin-bottom : 24px;
 }
 
 .wrapper .WhiteCard:not(:first-child) {
@@ -184,4 +186,9 @@
 .wrapper .WhiteCard:hover .stroke {
     stroke-dashoffset: 100;
     transition: 0.6s ease-out;
+}
+
+.BlackCardContainer .WhiteCard {
+    margin-left: 100px !important;
+    top: 9px!important;
 }

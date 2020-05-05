@@ -16,6 +16,6 @@ def room(room_id):
                            room=room_info(room_id),
                            players=joined_room_players(room_id),
                            state=joined_room_state(room_id),
-                           userRoom=init_user_page(room_id)
+                           userRoom=init_user_page(room_id),
+                           caesar = False
                            )
-

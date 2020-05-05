@@ -57,7 +57,11 @@
             </div>
         </div>
         <div class="bg-dark flex-grow-1 px-5 py-3">
+            {% if caesar%}
+            {% include "caesar_table.html" %}
+            {%else%}
             {% include "table.html" %}
+            {% endif %}
         </div>
     </div>
 </div>

@@ -27,6 +27,8 @@ app.register_blueprint(website)
 @babel.localeselector
 def get_locale():
     return 'it'
+    #return request.accept_languages.best_match(['it', 'en'])
+
 
 
 @app.route("/favicon.ico")

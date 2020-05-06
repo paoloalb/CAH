@@ -1,21 +1,46 @@
 <head>
     <style type="text/css">
-        .footer {
-            text-align: right;
-            bottom: 5px;
-            width: 100%;
+              #parent {
+            position:relative;
+            padding:0;
         }
+        p {
+            position:absolute;
+            margin:0;
+            padding:5px;
+        }
+
+        p:nth-child(1) {
+        border-color:green;
+        top:0;
+        left:0;
+        }
+        p:nth-child(2) {
+            border-color:red;
+            top:0;
+            right:0;
+        }
+        p:nth-child(3) {
+            border-color:yellow;
+            bottom:0;
+            left:0;
+        }
+        p:nth-child(4) {
+            border-color:pink;
+            bottom:0;
+            right:0;
+        }
+
     </style>
 </head>
 
 <body>
-    <div class="footer" , style="color:white;">
-        <h1><a href="http://facebook.com"><i class="fab fa-instagram"></i></a>
-            <a href="https://github.com/paoloalb/CAH"> <i class="fab fa-github"></i></a></h1>
-        {{_("Project based on")}}
-        <a href="http://cardsagainsthumanity.com/" target="_blank">Cards Against Humanity.</a>
-        {{_("Released with license ")}}
-        <a href="https://creativecommons.org/licenses/by-nc-sa/2.0/" target="_blank">Creative Commons</a>
+    <div id="parent", style = "color:white">
+            <p><h1><a href="http://facebook.com"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/paoloalb/CAH"> <i class="fab fa-github"></i></a></h1></p>
+            <p>{{_("Project based on")}}
+            <a href="http://cardsagainsthumanity.com/" target="_blank">Cards Against Humanity.</a>
+            {{_("Released with license ")}}
+            <a href="https://creativecommons.org/licenses/by-nc-sa/2.0/" target="_blank">Creative Commons</a></p>
     </div>
-
 </body>

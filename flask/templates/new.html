@@ -22,19 +22,19 @@
 
         <form id="CreateRoom" action="javascript:create_room()">
             <div class="form-group">
-                <label for="CreateRoomName">Nome stanza</label>
-                <input type="name" name="name" class="form-control" id="CreateRoomName" placeholder="Nome stanza">
+                <label for="CreateRoomName">{{_("Room name")}}</label>
+                <input type="name" name="name" class="form-control" id="CreateRoomName" placeholder="Room name">
             </div>
             <div class="form-group">
-                <label for="CreateRoomUsername">Nome utente</label>
+                <label for="CreateRoomUsername">{{_("Username")}}</label>
                 <input type="username" name="username" class="form-control" id="CreateRoomUsername" placeholder="Username">
             </div>
             <div class="form-group">
-                <label for="CreateRoomPassword">Password stanza</label>
+                <label for="CreateRoomPassword">{{_("Room password")}}</label>
                 <input type="password" name="password" class="form-control" id="CreateRoomPassword" placeholder="Password">
             </div>
             <div class="form-group">
-                Tempo<br>
+                {{_("Time")}}<br>
                 <select id = "time"  name="time" required>
                      <option value = "30">30 sec</option>
                      <option value = "45">45 sec</option>
@@ -43,11 +43,11 @@
                 </select>
             </div>
             <div class="form-group">
-                Massimo numero di giocatori<br>
+                {{_("Max players")}}<br>
                 <input type="number" id="user_count_max" name="user_count_max" min="2" max="10" value="5" size = "4">
             </div>
 
-            <button type="submit" class="btn btn-primary w-100">Crea</button>
+            <button type="submit" class="btn btn-primary w-100">{{_("Create room")}}</button>
         </form>
     </div>
 </div>

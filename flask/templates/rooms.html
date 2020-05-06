@@ -22,7 +22,7 @@
                 {{ room.user_count }}/{{ room.user_count_max }}
             </div>
             <div type="button" class="btn btn-primary mx-2 px-1" data-toggle="modal" data-target="#JoinDialog" data-room_id="{{ room._id }}">
-                Unisciti
+                {{_("Join")}}
             </div>
         </div>
     </div>
@@ -33,7 +33,7 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="JoinDialogTitle">Scegli come chiamarti</h5>
+                <h5 class="modal-title" id="JoinDialogTitle">{{_("Choose your name")}}</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -68,7 +68,7 @@
             <form id="JoinRoom" action="javascript:join_room()">
                 <div class="modal-body">
                     <div class="form-group">
-                        <label for="JoinRoomUsername">Tuo nome</label>
+                        <label for="JoinRoomUsername">{{_("Your name")}}</label>
                         <input type="username" name="username" class="form-control" id="JoinRoomUsername" placeholder="anon">
                     </div>
                     <div class="form-group d-none">
@@ -76,13 +76,13 @@
                         <input type="roomid" name="roomid" class="form-control" id="JoinRoomId" placeholder="Id stanza">
                     </div>
                     <div class="form-group">
-                        <label for="JoinRoomPassword">Password stanza</label>
+                        <label for="JoinRoomPassword">{{_("Room password")}}</label>
                         <input type="password" name="password" class="form-control" id="JoinRoomPassword" placeholder="Password">
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Annulla</button>
-                    <button type="submit" class="btn btn-primary">Unisciti</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">{{_("Cancel")}}</button>
+                    <button type="submit" class="btn btn-primary">{{_("Join")}}</button>
                 </div>
             </form>
         </div>

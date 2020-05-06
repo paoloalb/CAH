@@ -38,7 +38,7 @@
             <div class="border d-flex flex-column">
                 <div class="h2 align-items-center d-flex flex-wrap p-2">
                     <div class="flex-grow-1">
-                        Players:&nbsp;
+                         {{_("Players")}}:&nbsp;
                     </div>
                     <div>
                         {{ room.user_count }}/{{ room.user_count_max }}
@@ -50,7 +50,7 @@
                         <i class="fas fa-user text-primary mx-1"></i>{{ player.name }}
                     </div>
                     <div class="badge badge-primary badge-pill mx-1">
-                        {{ player.points }}<sub>&nbsp;punti</sub>
+                        {{ player.points }}<sub>&nbsp; {{_("Points")}}</sub>
                     </div>
                 </div>
                 {% endfor %}

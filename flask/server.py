@@ -9,6 +9,11 @@ app = Flask(__name__)
 app.config['BABEL_DEFAULT_LOCALE'] = 'en'
 babel = Babel(app)
 
+LANGUAGES = {
+    'en': 'English',
+    'it': 'Italiano'
+}
+
 class JSONEncoder(json.JSONEncoder):
     def default(self, o):
         if isinstance(o, ObjectId):
@@ -26,9 +31,13 @@ app.register_blueprint(website)
 
 @babel.localeselector
 def get_locale():
-    return 'it'
-    #return request.accept_languages.best_match(['it', 'en'])
+    return request.accept_languages.best_match(LANGUAGES.keys())
+    #return 'it'
 
+@app.route("/en")
+def get_locale():
+    #return request.url.split('/', 2)[1]
+    return 'en'
 
 
 @app.route("/favicon.ico")

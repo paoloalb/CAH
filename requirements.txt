@@ -1,4 +1,4 @@
 dnspython
 Flask
-pymongo
 Flask-Babel
+pymongo

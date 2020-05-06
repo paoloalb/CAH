@@ -1,6 +1,5 @@
 .wrapper {
     font-family: 'Open Sans', sans-serif;
-
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -13,7 +12,6 @@
     width: 200px;
     height: 100%;
     background: dodgerblue;
-
 }
 
 .wrapper .sidebar h2 {
@@ -132,8 +130,6 @@
     left: 0px;
 }
 
-
-
 .wrapper .BlackCard {
     display: flex;
     height: 300px;
@@ -145,7 +141,7 @@
     position: relative;
     top: 8px;
     background-color: black;
-    margin-bottom : 24px;
+    margin-bottom: 24px;
 }
 
 .wrapper .WhiteCard:not(:first-child) {
@@ -190,5 +186,5 @@
 
 .BlackCardContainer .WhiteCard {
     margin-left: 100px !important;
-    top: 9px!important;
+    top: 9px !important;
 }

@@ -1,11 +1,8 @@
 from api import *
-from flask import Blueprint, render_template
-from lobby_api import *
-from flask import Flask, abort, send_file, render_template
+from flask import Blueprint, Flask, abort, render_template, send_file
+from flask_babel import Babel, gettext
 from lobby_api import *
 from website import *
-from flask_babel import Babel, gettext
-
 
 website = Blueprint("website", __name__)
 
@@ -22,5 +19,5 @@ def room(room_id):
                            players=joined_room_players(room_id),
                            state=joined_room_state(room_id),
                            userRoom=init_user_page(room_id),
-                           caesar = False
+                           caesar=False
                            )

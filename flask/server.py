@@ -1,9 +1,9 @@
 from api import *
 from auth import *
 from flask import Flask, abort, send_file, session
+from flask_babel import Babel, format_date, gettext
 from lobby_api import *
 from website import *
-from flask_babel import Babel, format_date, gettext
 import secrets
 
 app = Flask(__name__)
@@ -15,6 +15,7 @@ LANGUAGES = {
     'en': 'English',
     'it': 'Italiano'
 }
+
 
 class JSONEncoder(json.JSONEncoder):
     def default(self, o):

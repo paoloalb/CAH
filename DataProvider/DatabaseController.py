@@ -1,6 +1,7 @@
-import pymongo
 import json
 import random
+
+import pymongo
 from bson.objectid import ObjectId
 
 
@@ -14,9 +15,9 @@ class DatabaseController():
 
     def create_room(self, room_name, max_players):
         room_document = {"room_name": room_name, "black": None, "caesar": None,
-        "n_of_users": 0, "users": [], "used_cards": [], "round": 0, "admins": [],
-        "password": None, "max_n_of_players": max_players
-        }
+                         "n_of_users": 0, "users": [], "used_cards": [], "round": 0, "admins": [],
+                         "password": None, "max_n_of_players": max_players
+                         }
         insert_room = self.rooms_collection.insert_one(room_document)
         room_id = insert_room.inserted_id
         return str(room_id)
@@ -31,7 +32,7 @@ class DatabaseController():
             raise Exception("L'utente risulta essere già registrato in questa stanza con questo cookie!")
 
         user_doc = {"cookie": cookie, "name": username, "admin": False, "room": ObjectId(room_id),
-        "cards_in_hand": [], "cards_on_table": [], "points": 0}
+                    "cards_in_hand": [], "cards_on_table": [], "points": 0}
         insert_user = self.users_collection.insert_one(user_doc)
         self.rooms_collection.update_one({"_id": ObjectId(room_id)}, {"$push": {"users": insert_user.inserted_id}, "$inc": {"n_of_users": 1}})
         return str(insert_user.inserted_id)  # Returns the ID of the user as a string
@@ -43,7 +44,7 @@ class DatabaseController():
 
     def basic_room_info(self):  # basic info about ALL rooms in the database
         all_rooms = list(self.rooms_collection.find({}, {"room_name": 1, "password": 1, "n_of_users": 1,
-        "max_n_of_players": 1, "round": 1}))
+                                                         "max_n_of_players": 1, "round": 1}))
         return all_rooms  # Returns list of basic info
 
     def user_info(self, cookie, room_id):  # given cookie and room id, return all info about user
@@ -81,9 +82,9 @@ class DatabaseController():
         list_of_used_cards = self.rooms_collection.find_one({"_id": ObjectId(room_id)})["used_cards"]  # Find used black cards
         myquery = {"pick": {"$gt": 0}, "_id": {"$nin": list_of_used_cards}}  # Query to select all unused black cards
         myresults = self.cards_collection.find(myquery)
-        result_card = myresults[random.randint(0, myresults.count()-1)]  # Select random document
+        result_card = myresults[random.randint(0, myresults.count() - 1)]  # Select random document
         # Add card to already used list:
-        self.rooms_collection.update_one({"_id": ObjectId(room_id)}, {"$push": {"used_cards": result_card["_id"]}, "$set": { "black":  result_card["_id"]} })
+        self.rooms_collection.update_one({"_id": ObjectId(room_id)}, {"$push": {"used_cards": result_card["_id"]}, "$set": {"black":  result_card["_id"]}})
         return result_card["text"], result_card["pick"]
 
     def current_black(self, room_id):  # Takes room id as a string

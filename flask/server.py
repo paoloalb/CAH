@@ -1,9 +1,9 @@
 from api import *
 from auth import *
 from flask import Flask, abort, send_file
+from flask_babel import Babel, format_date, gettext
 from lobby_api import *
 from website import *
-from flask_babel import Babel, format_date, gettext
 
 app = Flask(__name__)
 app.config['BABEL_DEFAULT_LOCALE'] = 'en'
@@ -13,6 +13,7 @@ LANGUAGES = {
     'en': 'English',
     'it': 'Italiano'
 }
+
 
 class JSONEncoder(json.JSONEncoder):
     def default(self, o):
@@ -32,11 +33,12 @@ app.register_blueprint(website)
 @babel.localeselector
 def get_locale():
     return request.accept_languages.best_match(LANGUAGES.keys())
-    #return 'it'
+    # return 'it'
+
 
 @app.route("/en")
 def get_locale():
-    #return request.url.split('/', 2)[1]
+    # return request.url.split('/', 2)[1]
     return 'en'
 
 

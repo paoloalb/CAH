@@ -1,18 +1,16 @@
 <div class="wrapper">
 
     <div class="info">
-        <div class="d-flex align-items-start flex-column bd-highlight mb-3" >
-              <div class="p-2 bd-highlight d-flex ">
+        <div class="d-flex align-items-start flex-column bd-highlight mb-3">
+            <div class="p-2 bd-highlight d-flex ">
                 {% for player in players %}
-
                 <div class="WhiteCardContainer d-flex flex-row">
                     <div class="PlayedWhiteCard">
                         <h3 class="titleWhiteCard"> Carte giocate da {{ player.name }}</h3>
                     </div>
                 </div>
                 {% endfor %}
-
-              </div>
+            </div>
         </div>
     </div>
 

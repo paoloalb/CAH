@@ -1,10 +1,10 @@
 __pycache__/
 *.log
 *.pyc
-/venv
+/.idea/.gitignore
 /.idea/CAH.iml
+/.idea/inspectionProfiles/profiles_settings.xml
 /.idea/misc.xml
 /.idea/modules.xml
-/.idea/inspectionProfiles/profiles_settings.xml
 /.idea/vcs.xml
-/.idea/.gitignore
+/venv

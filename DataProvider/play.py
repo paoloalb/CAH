@@ -27,4 +27,3 @@ for name, u_id in users.items():
     cards_in_hand[u_id] = pesca[0]
     carte = pesca
     print(str(name) + " ha pescato: \n" + str(carte))
-

@@ -10,22 +10,10 @@
 
 <div class="container bg-dark d-flex flex-column">
     <div class="d-flex flex-wrap">
-        <div class="flex-grow-1 d-flex flex-column m-3">
-            <div class="text-white h1">
-                {{_("Rooms")}}
-            </div>
-            <div>
                 {% include "rooms.html" %}
-            </div>
-        </div>
-        <div class="flex-grow-1 d-flex flex-column m-3">
-            <div class="text-white h1">
-                {{_("Your rooms")}}
-            </div>
-            <div>
+
+
                 {% include "lobby.html" %}
-            </div>
-        </div>
     </div>
     <div class="m-3">
         {% include "new.html" %}

@@ -2,22 +2,30 @@
     position: absolute;
     bottom: 0;
     left: 0;
+    z-index: 1000;
+    /* = $zindex-dropdown di bootstrap */
 }
 
 .bottom-right {
     position: absolute;
     bottom: 0;
     right: 0;
+    z-index: 1000;
+    /* = $zindex-dropdown di bootstrap */
 }
 
 .top-left {
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 1000;
+    /* = $zindex-dropdown di bootstrap */
 }
 
 .top-right {
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 1000;
+    /* = $zindex-dropdown di bootstrap */
 }

@@ -4,7 +4,7 @@
         <script>
             function create_room() {
                 let j = jform("#CreateRoom");
-                let username = j.username;
+                let username = j.username || "anon";
                 delete j.username;
                 post("/new_room", j)
                     .done((r) => {

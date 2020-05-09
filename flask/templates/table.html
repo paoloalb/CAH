@@ -8,6 +8,8 @@
                         <h3 class="titleBlackCard"> {{userRoom.black_cards.text}} </h3>
                     </div>
                 </div>
+
+
             </div>
             <div class="whiteCardContainerRow">
                 <div class="p-2 bd-highlight d-flex ">
@@ -55,6 +57,7 @@
         </div>
     </div>
 
+{% block script %}
     <script>
         $(document).ready(function() {
             $(".WhiteCard").dblclick(function(event) {
@@ -69,6 +72,58 @@
                 referenceNode.parentNode.insertBefore(useArray ? cardNode[0] : cardNode, referenceNode.nextSibling);
             });
         });
+
+        function submit_cards(){
+
+            //creare una lista con le carte
+            let cardsIdToPass = getCardIds();
+            console.log(cardsIdToPass);
+
+            //passare le carte
+            //play_cards
+            let urlPlayCards = window.origin +'/play_cards';
+            console.log(urlPlayCards);
+            fetch(urlPlayCards, {
+                method : "POST",
+                credentials : "include",
+                body: JSON.stringify(cardsIdToPass),
+                headers: new Headers({
+                    "content-type" : "application/json"
+                })
+            }).then(function (response) {
+                console.log(response);
+
+            }) ;
+
+            //then handle errors
+
+        }
+
+        function getCardIds()
+        {
+            let referenceNode = document.querySelector('.BlackCardContainer');
+            let whiteCardsSelected = referenceNode.querySelectorAll('.WhiteCard');
+            let cards = JSON.parse('{{ userRoom.white_cards| tojson | safe }}');
+
+            let idCards = [];
+            for ( let i = 0, l = whiteCardsSelected.length; i < l; i++ )
+            {
+                let cardSelector = whiteCardsSelected[i].querySelector('h3').innerHTML;
+
+                $.each( cards, function( index, value ){
+                    if(value.text.trim() == cardSelector.trim()){
+                        idCards.push(value._id);
+                    }
+                });
+            }
+
+            return idCards;
+
+        }
+
+
     </script>
+{% endblock %}
+
 
 </div>

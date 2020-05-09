@@ -33,7 +33,12 @@
                             set_timer("#RoundTimer", "{{ room.time }}");
                         })
                     </script>
+
+                    <div>
+                        <button type="submit" onclick="submit_cards();" class="btn btn-primary w-100">{{_("Confirm")}}</button>
+                    </div>
                 </div>
+
             </div>
             <div class="border d-flex flex-column">
                 <div class="h2 align-items-center d-flex flex-wrap p-2">
@@ -52,6 +57,7 @@
                     <div class="badge badge-primary badge-pill mx-1">
                         {{ player.points }}<sub>&nbsp; {{_("Points")}}</sub>
                     </div>
+
                 </div>
                 {% endfor %}
             </div>
@@ -64,6 +70,8 @@
             {% endif %}
         </div>
     </div>
+
+
 </div>
 
 {% endblock %}

@@ -48,6 +48,7 @@
     </style>
     <script>
         function set_timer(selector, duration) {
+
             let t = parseInt(duration);
             $(selector + " > .timer-div").css({
                 "animation": "countdown " + t.toString() + "s 1 forwards linear"

@@ -1,5 +1,6 @@
 import json
 import sys
+import logging
 
 from bson.objectid import ObjectId
 
@@ -8,6 +9,7 @@ from db import *
 from flask import Blueprint, abort, jsonify, make_response, request
 
 api = Blueprint("api", __name__)
+logging.basicConfig(level=logging.DEBUG)
 
 
 @api.route("/my_room_status/<string:room_id>")
@@ -92,29 +94,25 @@ def random_black_card(my_room_id):
 @api.route("/play_cards", methods=["POST"])
 def play_cards():
     # Takes a list of card Ids and move the cards from the player's hand to the table
-    print('request for method play_cards')
-    print(request.get_json())
-    print(request.cookies)
 
-    # config = request.get_json()
-    # list_of_card_ids = config["list"]
-    # user_cookie = get_cookie()
-    # my_user_id = users_collection.find_one({"cookie": user_cookie, "room": ObjectId(my_room_id)})["_id"]
-    #
-    # for card in list_of_card_ids:
-    #     my_card = users_collection.find_one(
-    #         {"_id": my_user_id,
-    #          "cards_in_hand": ObjectId(card)}
-    #     )
-    #     if my_card is None:  # Make sure that the card is in the hand of the user
-    #         abort(403)  # If not, forbidden error
-    #
-    # for card in list_of_card_ids:
-    #     # remove card from player's hand and put it on the table
-    #     users_collection.update_one({"_id": my_user_id},
-    #                                 {
-    #                                     "$pull": {"cards_in_hand": ObjectId(card)},
-    #                                     "$push": {"cards_on_table": ObjectId(card)}})
+    user_cookie = get_cookie()
+    my_user_id = users_collection.find_one({"cookie": user_cookie, "room": ObjectId(test['room_id'])})["_id"]
+
+
+    for card in test['cards_id']:
+        my_card = users_collection.find_one(
+            {"_id": my_user_id,
+            "cards_in_hand": ObjectId(card)}
+        )
+        if my_card is None:  # Make sure that the card is in the hand of the user
+            abort(403)  # If not, forbidden error
+
+    for card in test['cards_id']:
+         # remove card from player's hand and put it on the table
+        users_collection.update_one({"_id": my_user_id},
+                                    {
+                                        "$pull": {"cards_in_hand": ObjectId(card)},
+                                        "$push": {"cards_on_table": ObjectId(card)}})
     return make_response("OK", 200)
 
 
@@ -170,6 +168,17 @@ def init_user_page(my_room_id):
     users = user_list(my_room_id)
     white_cards = random_white_cards_test(14)
     black_cards = random_black_card(my_room_id)
+
+    #todo resolve bug of inserting more cards on db
+    user_cookie = get_cookie()
+    my_user_id = users_collection.find_one({"cookie": user_cookie, "room": ObjectId(my_room_id)})["_id"]
+
+    for card in white_cards:
+        print(card, flush=True)
+        # remove card from player's hand and put it on the table
+        users_collection.update_one({"_id": my_user_id},
+                                    {"$push": {"cards_in_hand": ObjectId(card["_id"])}})
+
     dict_to_print = dict({"users": users, "white_cards": white_cards, "black_cards": black_cards})
 
     return dict_to_print

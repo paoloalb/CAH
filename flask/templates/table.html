@@ -77,12 +77,11 @@
 
             //creare una lista con le carte
             let cardsIdToPass = getCardIds();
-            console.log(cardsIdToPass);
 
             //passare le carte
             //play_cards
             let urlPlayCards = window.origin +'/play_cards';
-            console.log(urlPlayCards);
+            //console.log(urlPlayCards);
             fetch(urlPlayCards, {
                 method : "POST",
                 credentials : "include",
@@ -105,6 +104,9 @@
             let whiteCardsSelected = referenceNode.querySelectorAll('.WhiteCard');
             let cards = JSON.parse('{{ userRoom.white_cards| tojson | safe }}');
 
+            let roomID = JSON.parse('{{ room._id | tojson | safe }}');
+
+
             let idCards = [];
             for ( let i = 0, l = whiteCardsSelected.length; i < l; i++ )
             {
@@ -117,7 +119,10 @@
                 });
             }
 
-            return idCards;
+            dictToPass = { "room_id" : roomID, "cards_id" : idCards}
+            console.log(dictToPass);
+
+            return dictToPass;
 
         }
 

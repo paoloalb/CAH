@@ -14,12 +14,10 @@ def root():
 
 @website.route("/room/<string:room_id>", methods=["POST", "GET"])
 def room(room_id):
-    if request.method == "GET":
-        return render_template("room.html",
-                               room=room_info(room_id),
-                               players=joined_room_players(room_id),
-                               state=joined_room_state(room_id),
-                               userRoom=init_user_page(room_id),
-                               caesar=False
-                               )
-
+    return render_template("room.html",
+                           room=room_info(room_id),
+                           players=joined_room_players(room_id),
+                           state=joined_room_state(room_id),
+                           userRoom=init_user_page(room_id),
+                           caesar=False
+                           )

@@ -1,13 +1,7 @@
-import json
-import sys
-
+from auth import get_cookie, hash_password
 from bson.objectid import ObjectId
-
-from api import *
-from auth import *
-from db import *
-from flask import (Blueprint, abort, jsonify, make_response, redirect,
-                   render_template, request, url_for)
+from db import rooms_collection, users_collection
+from flask import Blueprint, abort, jsonify, request
 
 lobby_api = Blueprint("lobby_api", __name__)
 
@@ -42,7 +36,6 @@ def room_info(room_id):
 def rooms_info():
     # return rooms
     # accessible by anyone
-    user_cookie = get_cookie()
     rooms = list(rooms_collection.find(  # get all rooms
         {},
         unjoined_room_projection
@@ -123,7 +116,6 @@ def create_room():
     config = request.get_json()
     if config is None:  # check json was posted
         abort(400)
-    user_cookie = get_cookie()
     if "password" in config and len(config["password"]) > 0:  # if passworded room requested
         hashed, salt = hash_password(config["password"])  # hash password
         password = {"hash": hashed, "salt": salt}
@@ -144,6 +136,8 @@ def create_room():
             "password": password,
         }
     )
+    username = config.get("username", "anon")
+    join_room(room.inserted_id, username)
     return jsonify({"room_id": room.inserted_id})
 
 

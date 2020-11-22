@@ -4,17 +4,10 @@
         <script>
             function create_room() {
                 let j = jform("#CreateRoom");
-                let username = j.username || "anon";
-                delete j.username;
                 post("/new_room", j)
                     .done((r) => {
                         let room_id = r.room_id;
-                        post("/join_room/" + room_id + "/" + username, {
-                                password: j.password
-                            })
-                            .done(() => {
-                                redirect("/room/" + room_id);
-                            });
+                        redirect("/room/" + room_id);
                     });
             }
         </script>

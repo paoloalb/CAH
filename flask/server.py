@@ -1,19 +1,26 @@
-from api import *
-from auth import *
-from flask import Flask, abort, send_file, session
-from flask_babel import Babel, format_date, gettext
-from lobby_api import *
-from website import *
+import json
 import secrets
 
+from api import api
+from auth import auth
+from bson.objectid import ObjectId
+from flask import Flask, abort, request, send_file, session
+from flask_babel import Babel
+from flask_socketio import SocketIO
+from lobby_api import lobby_api
+from website import website
+
 app = Flask(__name__)
-app.secret_key = "super secret key"  # aggiunta perché altrimenti non si puo usare session
-app.config['BABEL_DEFAULT_LOCALE'] = 'en'
+app.secret_key = secrets.token_hex(256)  # for session
+app.config["SECRET_KEY"] = secrets.token_hex(256)  # for socketio
+socketio = SocketIO(app)
+socketio.run(app)
+app.config["BABEL_DEFAULT_LOCALE"] = "en"
 babel = Babel(app)
 
 LANGUAGES = {
-    'en': 'English',
-    'it': 'Italiano'
+    "en": "English",
+    "it": "Italiano"
 }
 
 
@@ -34,16 +41,9 @@ app.register_blueprint(website)
 
 @babel.localeselector
 def get_locale():
-    if request.args.get('lang'):
-        session['lang'] = request.args.get('lang')
-    return session.get('lang', 'en')
-    #return request.accept_languages.best_match(LANGUAGES.keys())
-    #return 'it'
-
-@app.route("/en")
-def get_locale():
-    #return request.url.split('/', 2)[1]
-    return 'en'
+    if request.args.get("lang"):
+        session["lang"] = request.args.get("lang")
+    return session.get("lang", "it")
 
 
 @app.route("/favicon.ico")

@@ -1,11 +1,11 @@
 from pymongo import MongoClient
 
 client = MongoClient("mongodb+srv://paoloa:123stella@mflix-3d6kd.mongodb.net/test")
-#client = MongoClient("mongodb://localhost:27017/")
+# client = MongoClient("mongodb://localhost:27017/")
 db = client["cah"]
 cards_collection = db["card_ita"]
 rooms_collection = db["rooms"]
-users_collection = db["users"]
+users_collection = db["user"]
 
 # DB SCHEMA
 db = {
@@ -20,7 +20,7 @@ db = {
                 "<user._id>",
             ],
             "round": 0,
-            "black": "<cards._id>",  # ID della carta che si trova sul tavolo
+            "black": "<cards._id>",
             "caesar": "<user._id>",
             "used_cards": [
                 "<cards._id>",
@@ -31,7 +31,7 @@ db = {
         },
     ],
 
-    "users": [
+    "user": [
         {
             "_id": 0,
             "cookie": "",

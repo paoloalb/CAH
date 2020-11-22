@@ -1,4 +1,5 @@
 dnspython
 Flask
 Flask-Babel
+flask-socketio
 pymongo

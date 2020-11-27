@@ -1,5 +1,7 @@
 dnspython
+eventlet
 Flask
 Flask-Babel
 flask-socketio
 pymongo
+requests

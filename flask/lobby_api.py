@@ -1,120 +1,70 @@
-from auth import get_cookie, hash_password
+from uuid import uuid4 as uuid
+
+from auth import get_user, hash_password
 from bson.objectid import ObjectId
 from db import rooms_collection, users_collection
 from flask import Blueprint, abort, jsonify, request
 
 lobby_api = Blueprint("lobby_api", __name__)
 
-unjoined_room_projection = {
-    "_id": 1,
-    "name": 1,
-    "round": 1,
-    "time": 1,
-    "user_count": 1,
-    "user_count_max": 1,
-    "password": 1,
-}
+
+def unjoined_room_projection():
+    return {
+        "_id": 1,
+        "name": 1,
+        "passworded": 1,
+        "user_count_max": 1,
+        "user_count": {"$size": "$states"},
+    }
 
 
-@lobby_api.route("/room_info/<string:room_id>")
-def room_info(room_id):
-    # return room's info
-    # accessible by anyone
-    room = rooms_collection.find_one(  # get room's info
-        {
-            "_id": ObjectId(room_id)
-        },
-        unjoined_room_projection
-    )
-    if request.path.startswith("/room_info/"):
-        return jsonify(room)
-    else:
-        return room
+def joined_room_projection(user):
+    return {
+        "_id": 1,
+        "name": 1,
+        "play_time": 1,
+        "passworded": 1,
+        "user_count_max": 1,
+        "user_count": {"$size": "$states"},
+        "round": 1,
+    }
 
 
-@lobby_api.route("/rooms_info")
-def rooms_info():
-    # return rooms
-    # accessible by anyone
-    rooms = list(rooms_collection.find(  # get all rooms
-        {},
-        unjoined_room_projection
-    ))
-    if request.path == "/rooms_info":
-        return jsonify({"rooms": rooms})
+@lobby_api.route("/rooms")
+def rooms():
+    # return available rooms
+    rooms = list(rooms_collection.aggregate([  # get all rooms
+        {"$project": unjoined_room_projection()}
+    ]))
+    if request.path == "/rooms":
+        return jsonify(rooms)
     else:
         return rooms
 
 
-@lobby_api.route("/my_room_info/<string:room_id>")
-def joined_room_state(room_id):
-    # return user's room info
-    # only accessible to joined users
-    user_cookie = get_cookie()
-    state = users_collection.find_one({"room": ObjectId(room_id), "cookie": user_cookie})
-    if request.path.startswith("/my_room_info/"):
-        if state is None:  # check if user joined
-            abort(403)
-        return jsonify(state)
-    else:
-        return state
-
-
-@lobby_api.route("/my_room_players/<string:room_id>")
-def joined_room_players(room_id):
-    # return user's room info
-    # only accessible to joined users
-    user_cookie = get_cookie()
-    state = users_collection.find_one({"room": ObjectId(room_id), "cookie": user_cookie})
-    if state is None:  # check if user joined
-        abort(403)
-    states = list(users_collection.find(
-        {"room": ObjectId(room_id)},
-        {
-            "_id": 0,
-            "name": 1,
-            "points": 1,
-        }
-    ))
-    if request.path.startswith("/my_room_info/"):
-        return jsonify(states)
-    else:
-        return states
-
-
-@lobby_api.route("/my_rooms_info")
-def joined_rooms_info():
+@lobby_api.route("/joined_rooms")
+def joined_rooms():
     # return user's joined rooms
-    user_cookie = get_cookie()
-    states = list(users_collection.find(  # get a list of all states._id of the user
-        {
-            "cookie": user_cookie,
-        },
-        {
-            "_id": 1,
-        }
-    ))
-    rooms = list(rooms_collection.find(  # get all rooms' info of the user's joined rooms
-        {
-            "users": {
-                "$in": [state["_id"] for state in states],
-            },
-        },
-        unjoined_room_projection
-    ))
-    if request.path == "/my_rooms_info":
-        return jsonify({"rooms": rooms})
+    user = get_user()
+    rooms = list(rooms_collection.aggregate([  # get a list of all rooms joined by user
+        {"$match": {"_id": {"$in": user["rooms"]}}},
+        {"$project": joined_room_projection(user)}
+    ]))
+    if request.path == "/joined_rooms":
+        return jsonify(rooms)
     else:
         return rooms
 
 
-@lobby_api.route("/new_room", methods=["GET", "POST"])
+@lobby_api.route("/create_room", methods=["GET", "POST"])
 def create_room():
     # create new room
-    # TODO: given parameters
     # return room_id
+    user = get_user()
     config = request.get_json()
     if config is None:  # check json was posted
+        abort(400)
+    if "name" not in config:  # check room name is in json
         abort(400)
     if "password" in config and len(config["password"]) > 0:  # if passworded room requested
         hashed, salt = hash_password(config["password"])  # hash password
@@ -124,114 +74,111 @@ def create_room():
     room = rooms_collection.insert_one(  # create room
         {
             "name": config["name"],
-            "users": [],
-            "admins": [],
-            "round": 0,
-            "time": config["time"],
-            "black": None,
-            "caesar": None,
-            "used_cards": [],
-            "user_count": 0,
-            "user_count_max": config["user_count_max"],
+            "play_time": config.get("play_time", 45),
+            "passworded": password is not None,
             "password": password,
+            "user_count_max": config.get("user_count_max", 8),
+            "states": [],
+            "admins": [user["_id"]],
+            "round": 0,
+            "round_start_time": None,
+            "caesar": None,
+            "black": None,
+            "round_ended": None,
+            "winner": None,
+            "used_white_cards": [],
+            "used_black_cards": [],
         }
     )
-    username = config.get("username", "anon")
-    join_room(room.inserted_id, username)
-    return jsonify({"room_id": room.inserted_id})
+    state = join_room(room.inserted_id, user=user)
+    return jsonify({"room_id": room.inserted_id, "public_id": state["public_id"]})
 
 
-@lobby_api.route("/join_room/<string:room_id>/<string:username>", methods=["GET", "POST"])
-def join_room(room_id, username):
+def gen_empty_user_state(user, username=None):
+    if username is None or len(username) == 0:
+        username = "anon"  # "Mr. X"
+    return {
+        "user": user["_id"],
+        "public_id": uuid(),
+        "name": username,
+        "cards_in_hand": None,
+        "cards_on_table": [],
+        "points": 0,
+    }
+
+
+@lobby_api.route("/join_room/<string:room_id>", methods=["GET", "POST"])
+def join_room(room_id, user=None):
     # join a room
-    # success: go to room
-    # fail: 403
-    user = joined_room_state(room_id)
     if user is None:
-        room = rooms_collection.find_one({"_id": ObjectId(room_id)})
-        if room is None:  # check room exists
-            abort(400)
-        if room["user_count"] >= int(room["user_count_max"]):  # check if room is full
-            abort(403)
-        if room["password"] is not None:  # check if room passworded
-            j = request.get_json()
-            if j is None or "password" not in j or len(j["password"]) == 0:  # check password was sent
-                abort(403)
-            hash = room["password"]["hash"]
-            salt = room["password"]["salt"]
-            password = j["password"]
-            hashed, _ = hash_password(password, salt)
-            if hashed != hash:  # check password
-                abort(403)
-        user_cookie = get_cookie()
-        if username is None or len(username) == 0:
-            username = "anon"  # "Mr. X"
-        user = users_collection.insert_one(  # add user state
-            {
-                "cookie": user_cookie,
-                "name": username,
-                "room": ObjectId(room_id),
-                "cards_in_hand": [],
-                "cards_on_table": [],
-                "points": 0
-            }
+        user = get_user()
+    room = list(rooms_collection.aggregate([
+        {"$match": {"_id": ObjectId(room_id)}},
+        {"$addFields": {"user_count": {"$size": "$states"}}}
+    ]))
+    if len(room) == 0:  # check room exists
+        abort(400)
+    room = room[0]
+    if room["user_count"] >= int(room["user_count_max"]):  # check if room is full
+        abort(403)
+    if room["_id"] not in user["rooms"]:  # check if room in user's rooms
+        users_collection.update_one(
+            {"_id": user["_id"]},
+            {"$push": {
+                "rooms": room["_id"],
+            }}
         )
-        if len(room["users"]) == 0:  # if room empty
-            rooms_collection.update_one(  # add user to room and set first user as admin
-                {
-                    "_id": ObjectId(room_id),
-                },
-                {
-                    "$push": {
-                        "users": user.inserted_id,
-                        "admins": user.inserted_id,
-                    },
-                    "$inc": {
-                        "user_count": 1,
-                    },
-                }
+    if not any([user["_id"] == state["user"] for state in room["states"]]):  # check if user in room's states
+        config = request.get_json()
+        if config is None:  # check json was posted
+            config = {}
+        if room["passworded"] is not False:  # check if room passworded
+            if "password" not in config:  # check password was sent
+                abort(403)
+            hashed, _ = hash_password(config["password"], room["password"]["salt"])
+            if hashed != room["password"]["hash"]:  # check password
+                abort(403)
+        state = gen_empty_user_state(user=user, username=config.get("username", None))
+        if len(room["admins"]) == 0:  # if there are no admins
+            rooms_collection.update_one(  # add user to room and set it as admin
+                {"_id": room["_id"]},
+                {"$push": {
+                    "admins": user["_id"],
+                    "states": state,
+                }}
             )
         else:
             rooms_collection.update_one(  # add user to room
-                {
-                    "_id": ObjectId(room_id),
-                },
-                {
-                    "$push": {
-                        "users": user.inserted_id,
-                    },
-                    "$inc": {
-                        "user_count": 1,
-                    },
-                }
+                {"_id": room["_id"]},
+                {"$push": {
+                    "states": state,
+                }}
             )
-    return "OK", 200
+    if request.path.startswith("/join_room/"):
+        return jsonify({"public_id": state["public_id"]})
+    else:
+        return state
 
 
 @lobby_api.route("/leave_room/<string:room_id>")
 def leave_room(room_id):
     # leave room
-    # success: go to /
-    # fail: go to /
-    user_cookie = get_cookie()
-    user = users_collection.find_one_and_delete(
-        {
-            "room": ObjectId(room_id),
-            "cookie": user_cookie
-        }, {"_id": 1, "room": 1})  # if user state exists delete it
-    if user is not None:  # if user was in the room
-        rooms_collection.update_one(  # remove user from room
-            {
-                "_id": ObjectId(user["room"]),
-            },
-            {
-                "$pull": {
-                    "users": user["_id"],
-                    "admins": user["_id"],
-                },
-                "$inc": {
-                    "user_count": -1,
-                },
-            }
-        )
+    user = get_user()
+    room_id = ObjectId(room_id)
+    if room_id not in user["rooms"]:  # check user in room
+        abort(403)
+    users_collection.update_one(
+        {"_id": user["_id"]},
+        {"$pull": {
+            "rooms": room_id,
+        }}
+    )
+    rooms_collection.update_one(
+        {"_id": ObjectId(room_id)},
+        {"$pull": {
+            "states": {"user": user["_id"]},
+            "admins": user["_id"],
+        }}
+    )
+    # TODO: check if was last admin and set another user as admin
     return "OK", 200

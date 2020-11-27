@@ -1,5 +1,6 @@
 import json
 import secrets
+from uuid import UUID
 
 from api import api
 from auth import auth
@@ -28,6 +29,8 @@ class JSONEncoder(json.JSONEncoder):
     def default(self, o):
         if isinstance(o, ObjectId):
             return str(o)
+        if isinstance(o, UUID):
+            return o.hex
         return json.JSONEncoder.default(self, o)
 
 

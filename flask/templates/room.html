@@ -14,7 +14,7 @@
         <div class="display-1 flex-grow-1 pb-3">
             {{ room.name }}
         </div>
-        {% if room.password is not none %}
+        {% if room.passworded is not false %}
         <div class="card text-white bg-secondary p-1">
             <i class="fas fa-lock"></i>
         </div>

@@ -4,7 +4,7 @@
         <script>
             function create_room() {
                 let j = jform("#CreateRoom");
-                post("/new_room", j)
+                post("/create_room", j)
                     .done((r) => {
                         let room_id = r.room_id;
                         redirect("/room/" + room_id);
@@ -28,7 +28,7 @@
             </div>
             <div class="form-group">
                 {{_("Time")}}<br>
-                <select id="time" name="time" required>
+                <select id="play_time" name="play_time" required>
                     <option value="30">30 sec</option>
                     <option value="45">45 sec</option>
                     <option value="60">60 sec</option>

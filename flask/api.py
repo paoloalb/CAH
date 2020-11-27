@@ -1,103 +1,256 @@
-from auth import get_cookie
+import time
+
+from auth import get_user
 from bson.objectid import ObjectId
-from db import cards_collection, rooms_collection, users_collection
-from flask import Blueprint, abort, jsonify, make_response, request
+from db import cards_collection, rooms_collection
+from flask import Blueprint, abort, jsonify, request
 
 api = Blueprint("api", __name__)
 
 
-@api.route("/my_room_status
-/<string:room_id>")
-def user_room_state(room_id):
-    # given cookie and room id, return all info about user
-    user_cookie = get_cookie()
-    state = users_collection.find_one(
+def get_room(room_id, user=None):
+    if user is None:
+        user = get_user()
+    room = list(rooms_collection.aggregate([
+        {"$match": {"_id": ObjectId(room_id)}},
+        {"$addFields": {"user_count": {"$size": "$states"}}}
+    ]))
+    if len(room) == 0:  # check room exists
+        abort(400)
+    room = room[0]
+    user_in_states = [user["_id"] == state["user"] for state in room["states"]]
+    if True in user_in_states:
+        state = room["states"][user_in_states.index(True)]
+    else:
+        state = None
+    if state is None or room["_id"] not in user["rooms"]:  # check if user in room's states
+        abort(403)
+    return room, state
+
+
+def has_round_ended(room, t=None):
+    # Returns True if round ended
+    if room["round_start_time"] is None:
+        return True
+    if t is None:
+        t = time.time()
+    return room["round_ended"] or t > room["round_start_time"] + room["play_time"]
+
+
+def pick(room, card_type, n=1):
+    if card_type == "white":
+        cards = list(cards_collection.aggregate([
+            {"$match": {
+                "_id": {"$nin": room["used_white_cards"]},
+                "$or": [{"pick": {"$exists": False}}, {"pick": None},  {"pick": 0}],
+            }},
+            {"$sample": {"size": n}},
+            {"$project": {"_id": 1}},
+        ]))
+    elif card_type == "black":
+        cards = list(cards_collection.aggregate([
+            {"$match": {
+                "_id": {"$nin": room["used_black_cards"]},
+                "pick": {"$gt": 0}
+            }},
+            {"$sample": {"size": n}},
+        ]))
+    else:
+        raise AssertionError("no such card type: {}".format(card_type))
+    if len(cards) == n:
+        cards = list(cards)
+    else:
+        cards = None
+    return cards
+
+
+@api.route("/players/<string:room_id>")
+def players(room_id):
+    # Returns current white card Ids and text in the user hand
+    room, state = get_room(room_id)
+    states = [{k: state[k] for k in ["public_id", "name", "points"]} for state in room["states"]]
+    return jsonify(states)
+
+
+@api.route("/new_round/<string:room_id>", methods=["GET", "POST"])
+def new_round(room_id):
+    # Starts a new round
+    room, state = get_room(room_id)
+    round_ended = has_round_ended(room)
+    if not round_ended and state["user"] not in room["admins"]:  # check round ended or admin skipped round
+        abort(403)
+    # pick a random black card
+    black_cards = pick(room, "black", 1)
+    if black_cards is None:
+        # put used black cards back in deck if not on table
+        room["used_black_cards"] = [room["black"]["_id"]]
+        # pick a random black card
+        black_cards = pick(room, "black", 1)
+        if black_cards is None:
+            print("could not find black unused cards", flush=True)
+            abort(500, "could not find black unused cards")
+    room["used_black_cards"] += [card["_id"] for card in black_cards]
+    # deal white cards to players
+    cards_in_hands = []
+    for s in room["states"]:
+        if s["cards_in_hand"] is None:
+            s["cards_in_hand"] = []
+        if round_ended:
+            cards_in_hand = s["cards_in_hand"]
+        else:
+            cards_in_hand = s["cards_in_hand"] + s["cards_on_table"]
+        # remove player cards from table
+        s["cards_on_table"] = []
+        cards_in_hands += cards_in_hand
+    needed_cards = (len(room["states"]) * 7) - len(cards_in_hands)
+    white_cards = pick(room, "white", needed_cards)
+    if white_cards is None:
+        # put used white cards back in deck if not in hands
+        room["used_white_cards"] = cards_in_hands
+        # pick a random black card
+        white_cards = pick(room, "white", needed_cards)
+        if white_cards is None:
+            print("could not find white unused cards", flush=True)
+            abort(500, "could not find white unused cards")
+    room["used_white_cards"] += white_cards
+    for s in room["states"]:
+        s["cards_in_hand"] += [white_cards.pop()["_id"] for i in range(7 - len(s["cards_in_hand"]))]
+    # update room
+    room.update({
+        "round": room["round"] + 1,
+        "round_start_time": time.time(),
+        "caesar": room["states"][room["round"] % len(room["states"])]["public_id"],
+        "black": black_cards[0],
+        "round_ended": False,
+        "winner": None,
+    })
+    rooms_collection.replace_one(
+        {"_id": ObjectId(room_id)},
+        room
+    )
+    return "OK", 200
+
+
+@api.route("/hand/<string:room_id>")
+def hand(room_id):
+    # Returns current white card Ids and text in the user hand
+    room, state = get_room(room_id)
+    cards = list(cards_collection.find(
+        {"_id": {"$in": state["cards_in_hand"] + state["cards_on_table"]}},
         {
-            "cookie": user_cookie,
-            "room": ObjectId(room_id),
+            "_id": 1,
+            "text": 1,
+        }
+    ))
+    return jsonify(cards)
+
+
+@api.route("/table/<string:room_id>")
+def table(room_id):
+    # Returns current white card Ids and text in the user hand
+    room, state = get_room(room_id)
+    cards = []
+    for s in room["states"]:
+        cards += s["cards_on_table"]
+        if s["public_id"] == room["caesar"]:
+            caesar = s
+    t = time.time()
+    if not has_round_ended(room, t):  # check round ended
+        cards = len(cards)
+        t -= room["play_time"]
+    else:
+        cards = list(cards_collection.find(
+            {"_id": {"$in": cards}},
+            {
+                "_id": 1,
+                "text": 1,
+                "pick": 1,
+            }
+        ))
+    table = {
+        "round": room["round"],
+        "time_left": room["play_time"] - (t - room["round_start_time"]),
+        "black": room["black"],
+        "caesar": caesar["public_id"],
+        "cards": cards,
+        "round_ended": room["round_ended"],
+        "winner": room["winner"],
+    }
+    return jsonify(table)
+
+
+@api.route("/play_cards/<string:room_id>", methods=["GET", "POST"])
+def play_cards(room_id):
+    # Takes a list of card ids and moves them from the player's hand to the table
+    room, state = get_room(room_id)
+    round_ended = has_round_ended(room)
+    if round_ended:  # check round not ended
+        abort(403)
+    if state["public_id"] == room["caesar"]:  # check if user is caezar
+        abort(403)
+    config = request.get_json()
+    if config is None or "cards" not in config or type(config["cards"]) is not list:  # check json config
+        abort(400)
+    if len(config["cards"]) != room["black"]["pick"]:  # check number of cards submitted
+        abort(400)
+    cards = [ObjectId(card) for card in config["cards"]]
+    if any([card not in state["cards_in_hand"] for card in cards]):  # check user has played cards
+        abort(403)
+    everybody_played = all([len(s["cards_on_table"]) > 0 or s["cards_in_hand"] is None for s in room["states"] if s["public_id"] != room["caesar"] and s["user"] != state["user"]])  # check if all others played
+    # put player's cards on table and end round if needed
+    rooms_collection.update_one(
+        {
+            "_id": room["_id"],
+            "states.user": state["user"],
+        },
+        {
+            "$pull": {"states.$.cards_in_hand": {"$in": cards}},
+            "$set": {
+                "states.$.cards_on_table": cards,
+                "states.$.played": True,
+                "round_ended": round_ended or everybody_played,
+            },
         }
     )
-    return jsonify(state)
-
-@api.route("/play_cards/<string:my_room_id>", methods=["GET", "POST"])
-def play_cards(my_room_id):
-    # Takes a list of card Ids and move the cards from the player's hand to the table
-    config = request.get_json()
-    list_of_card_ids = config["list"]
-    user_cookie = get_cookie()
-    my_user_id = users_collection.find_one({"cookie": user_cookie, "room": ObjectId(my_room_id)})["_id"]
-
-    for card in list_of_card_ids:
-        my_card = users_collection.find_one(
-            {"_id": my_user_id,
-             "cards_in_hand": ObjectId(card)}
-        )
-        if my_card is None:  # Make sure that the card is in the hand of the user
-            abort(403)  # If not, forbidden error
-
-    for card in list_of_card_ids:
-        # remove card from player's hand and put it on the table
-        users_collection.update_one(
-            {"_id": my_user_id},
-            {
-                "$pull": {"cards_in_hand": ObjectId(card)},
-                "$push": {"cards_on_table": ObjectId(card)}
-            }
-        )
-    return make_response("OK", 200)
+    return "OK", 200
 
 
-@api.route("/user_wins/<string:my_room_id>")
-def user_wins(my_room_id):
-    # Grants a point to the winner and deletes all the cards from the table
-    user_cookie = get_cookie()
-    my_user_id = users_collection.find_one({"cookie": user_cookie, "room": ObjectId(my_room_id)})
-    if my_user_id is None:  # Make sure that the user exists with this cookie
+@api.route("/card_wins/<string:room_id>/<string:card_id>")
+def card_wins(room_id, card_id):
+    # Grants a point to the winner
+    room, state = get_room(room_id)
+    if state["public_id"] != room["caesar"]:  # check if user is caezar
         abort(403)
-    # Update the points of the user
-    users_collection.update_one(
-        {"_id": ObjectId(my_user_id["_id"])},
-        {"$inc": {"points": 1}}
+    if not has_round_ended(room):  # check round ended
+        abort(403)
+    # get winning player
+    winner = None
+    card_id = ObjectId(card_id)
+    for state in room["states"]:
+        if card_id in state["cards_on_table"]:
+            winner = state
+    if winner is None:  # check if winner exists
+        abort(409)
+    # update round winner and winner points
+    rooms_collection.update_one(
+        {
+            "_id": room["_id"],
+            "states.user": winner["user"],
+        },
+        {
+            "$set": {
+                "winner": {
+                    "public_id": winner["public_id"],
+                    "cards": list(cards_collection.find({"_id": {"$in": winner["cards_on_table"]}})),
+                }
+            },
+            "$inc": {"states.$.points": 1},
+        }
     )
-    # Remove all the cards on the table:
-    users_collection.update(
-        {"room": ObjectId(my_room_id)},
-        {"$set": {"cards_on_table": []}},
-        multi=True
-    )
-    return make_response("OK", 200)
+    return "OK", 200
 
 
-@api.route("/current_white/<string:my_room_id>")
-def current_white(my_room_id):
-    # Returns current white card Ids and text in the user hand
-    user_cookie = get_cookie()
-    my_card_ids = users_collection.find_one(
-        {"cookie": user_cookie,
-         "room": ObjectId(my_room_id)},
-        {"cards_in_hand": 1}
-    )
-
-    my_cards = list(cards_collection.find({"_id": {"$in": my_card_ids["cards_in_hand"]}}, {"text": 1}))
-    return jsonify(my_cards)
-
-
-@api.route("/current_black/<string:my_room_id>")
-def current_black(my_room_id):
-    # Returns everything about the current black card on the table as a json
-    black_id = rooms_collection.find_one(
-        {"_id": ObjectId(my_room_id)},
-        {"black": 1}
-    )
-    black = cards_collection.find_one({"_id": black_id["black"]})
-    return jsonify(black)
-
-
-@api.route("/user_list/<string:my_room_id>")
-# Returns a list with all the informations about users in the room
-def user_list(my_room_id):
-    users = list(users_collection.find({"room": ObjectId(my_room_id)}))
-    return users
+# --------------------------------------------------
 
 
 @api.route("/init_user_page/<string:my_room_id>")
@@ -109,77 +262,3 @@ def init_user_page(my_room_id):
     black_cards = random_black_card(my_room_id)
     dict_to_print = dict({"users": users, "white_cards": white_cards, "black_cards": black_cards})
     return dict_to_print
-
-
-@api.route("/get_room/<string:my_room_id>")
-# not even tested yet
-def get_room(my_room_id):
-    rooms = rooms_collection.find_one(
-        {
-            "room": ObjectId(my_room_id),
-        }
-    )
-    return jsonify(rooms)
-
-
-# just for test it should be add user cookie and room id
-@api.route("/randomWhiteCards/<int:number_of_cards>")
-def random_white_cards_test(number_of_cards):
-    pipeline = [
-        {"$match": {"pick": "0"}},
-        {"$sample": {"size": number_of_cards}}
-    ]
-    cards = list(cards_collection.aggregate(pipeline))
-    return cards
-
-
-@api.route("/randomWhiteCards/<string:my_room_id>/<int:number_of_cards>")
-def random_white_cards(number_of_cards, my_room_id):
-    # Updates user's hand, used card list and returns the picked cards in a json format
-    user_cookie = get_cookie()
-    my_user_id = users_collection.find_one({"cookie": user_cookie, "room": ObjectId(my_room_id)})["_id"]
-    list_of_used_cards = rooms_collection.find_one({"_id": ObjectId(my_room_id)})["used_cards"]
-    pipeline = [
-        {"$match": {"pick": "0", "_id": {"$nin": list_of_used_cards}}},
-        {"$sample": {"size": number_of_cards}}
-    ]
-    cards = list(cards_collection.aggregate(pipeline))
-    rooms_collection.update_one(
-        {"_id": ObjectId(my_room_id)},
-        {"$push":
-         {"used_cards": {"$each": [c["_id"] for c in cards]}}
-         }
-    )
-    users_collection.update_one(
-        {"_id": ObjectId(my_user_id)},
-        {"$push":
-         {"cards_in_hand": {"$each": [c["_id"] for c in cards]}}
-         }
-    )
-    return jsonify(cards)  # if i want only text : return jsonify({"cards": [c["text"] for c in cards]})
-
-
-# just for test it should be add user cookie and room id
-@api.route("/randomBlackCardTest")
-def random_black_card_test():
-    pipeline = [
-        {"$match": {"pick": {"$gt": 0}}},
-        {"$sample": {"size": 1}}
-    ]
-    card = list(cards_collection.aggregate(pipeline))
-    return card
-
-
-@api.route("/randomBlackCard/<string:my_room_id>")
-def random_black_card(my_room_id):
-    pipeline = [
-        {"$match": {"pick": {"$gt": 0}}},
-        {"$sample": {"size": 1}}
-    ]
-    card = cards_collection.aggregate(pipeline).next()
-    rooms_collection.update_one(
-        {"_id": ObjectId(my_room_id)},
-        {"$push": {"used_cards": card["_id"]},
-         "$set": {"black": card["_id"]}}
-    )
-    return card
